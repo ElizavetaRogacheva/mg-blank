@@ -1,0 +1,50 @@
+<?php mgAddMeta('components/product-item/css/product-item.css'); ?>
+
+<!--блок карточки товара-->
+<div class="product-block">
+
+    <!--картинки карточки товара-->
+    <a title="" href="<?php echo $data['link'] ?>" class="product-block__link">
+        <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img">
+        <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][1] ?>" alt="" class="product-block__img product-block__img--hover">
+    </a>
+
+    <div class="product-block-content">
+
+        <!--рейтинг товара-->
+        <ul class="rating-block">
+            <div class="product-container__rating">
+                <div class="c-product__row">
+                    [mg-product-rating id="<?php echo $data['id'] ?>"]
+                </div>
+            </div>
+        </ul>
+
+        <!--название товара на карточке-->
+        <h4 class="product-block__title">
+            <a title="" href="#"><?php echo $data['title'] ?></a>
+        </h4>
+
+        <!--цена товара на карточке с указанием валюты-->
+        <p class="price">
+            <?php echo $data['price']; ?>
+            <?php echo $data['currency']; ?>
+        </p>
+
+        <!--кнопки опции карточки товара-->
+        <ul class="product-options">
+            <li class="product-options__item">
+                <button class="product-options__btn product-options__btn--wishlist"></button>
+            </li>
+            <li class="product-options__item">
+                <button class="product-options__btn product-options__btn--view"></button>
+            </li>
+            <li class="product-options__item">
+                <button class="product-options__btn product-options__btn--compare"></button>
+            </li>
+            <li class="product-options__item">
+                <button class="product-options__btn product-options__btn--cart"></button>
+            </li>
+        </ul>
+    </div>
+</div> <!--end product-block-->

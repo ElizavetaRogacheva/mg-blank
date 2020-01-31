@@ -83,20 +83,12 @@ function getThumbsFromUrl($url, $id)
   return $thumbsArr;
 }
 
-function getMainStyleLink() {
-// Если включено объединение css/js, то для minify-css.css
-  if ((MG::getSetting('cacheCssJs') == true)) {
-    $docRoot = URL::getDocumentRoot();
-    $controller = str_replace('controllers_', '', MG::get('controller'));
-    $dirCache = $docRoot . PATH_TEMPLATE . DS . 'cache' . DS . $controller . DS;
-    $decodeDirCache = urldecode($dirCache);
-    if (file_exists($decodeDirCache . DS . 'minify-css.css')) {
-      $styleDir = $docRoot . PATH_TEMPLATE . DS . 'cache' . DS . $controller . DS . 'minify-css.css';
-      return PATH_SITE_TEMPLATE . '/cache/' . $controller . '/minify-css.css?rev=' . filemtime($styleDir);
-    }
-  } else {
-    // Если нет, то для style.css
-    return PATH_SITE_TEMPLATE . '/css/style.css';
-  }
+function console_log($var) {
+  $str = json_encode($var,true);
+  echo "<script>window.str = $str;
+  console.log(str);</script>";
 }
+
+
+
 

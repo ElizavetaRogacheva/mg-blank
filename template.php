@@ -13,23 +13,18 @@ Version: 1.0.0
 ?>
 <html <?php getHtmlAttributes() ?>>
 <head>
-    <meta name="format-detection"
-          content="telephone=no">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <?php
-    /**
-    * Добавляем предзагрузку файла стилей
-    * @link https://developer.mozilla.org/ru/docs/Web/HTML/Preloading_content
-    * */
-    $mainStyleUrl = getMainStyleLink();
-    if ($mainStyleUrl !== '') {
-        ?>
-        <link rel="preload"
-              href="<?php echo $mainStyleUrl ?>"
-              as="style">
-    <?php } ?>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <?php
     // Полифил для css-переменных
@@ -85,39 +80,40 @@ Version: 1.0.0
 ?>
 <body class="<?php MG::addBodyClass('l-'); ?>" <?php backgroundSite(); ?>">
 
+<div class="main-container">
+        <div class="main-bg-fade"></div>
+        <?php
+        // Шапка сайта
+        // layout/layout_header.php
+        layout('header', $data);
+        ?>
+
+        <?php if(MG::get('controller')=="controllers_catalog"): ?>
+            <section class="products-section">
+                <?php component('aside', $data);?> 
+                <?php layout('page'); ?>
+            </section>
+        <?php else: ?>
+            <?php layout('page'); ?>
+        <?php endif; ?>
+
+        <?php
+        // Шапка сайта
+        // layout/layout_footer.php
+        layout('footer');
+        ?>
+        <a title="" href="#" class="scroll-top js-scroll-top"></a>
+    </div>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/hidden-blocks.js"></script>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/accordion.js"></script>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/slick.js"></script>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/sliders.js"></script>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/timer.js"></script>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/popup.js"></script>
+    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/product-table.js"></script>
 
 
-<?php
-// Шапка сайта
-// layout/layout_header.php
-layout('header', $data);
-?>
 
-<?php
-// Проверяем подключен ли плагин слайдера и выводим его шорткод
-if (class_exists('Slider')) {
-// Параметр id в шорткоде плагина может отличаться
-// Скопируйте шорткод из слайдера, который вы хотите вставить
-    ?>
-    [mgslider id="1"]
-<?php } ?>
-
-<?php
-// Сайдбар
-// layout/layout_sidebar.php
-layout('sidebar');
-?>
-
-<?php
-// Главный контейнер с контентом страницы
-// layout/layout_page.php
-layout('page'); ?>
-
-<?php
-// Шапка сайта
-// layout/layout_footer.php
-layout('footer');
-?>
 
 <?php
 // Подключение общего скрипта шаблона

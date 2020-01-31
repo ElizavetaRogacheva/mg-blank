@@ -38,115 +38,11 @@ mgSEO($data);
 ?>
 
 <?php
-// Если это не поиск, то выводим обычный заголовок
-if (empty($data['searchData'])): ?>
-    <!--  Заголовок каталога/категории  -->
-    <h1>
-        <?php echo $data['titleCategory'] ?>
-    </h1>
-
-<?php
-// А если поиск, то выводим заголовок с результатми поиска
-else: ?>
-
-    <h1>
-        <?php echo lang('search1'); ?>
-        «<?php echo $data['searchData']['keyword'] ?>»
-        <?php echo lang('search2'); ?>
-            <?php
-            echo mgDeclensionNum(
-              $data['searchData']['count'],
-              array(
-                lang('search3-1'),
-                lang('search3-2'),
-                lang('search3-3')
-              )
-            );
-            ?>
-    </h1>
-
-<?php endif; ?>
-
-    <?php
-    /*
-    * Описание категории
-     * Если описание не пустое или не стостоит только из пробелов, то выводим его
-    * */
-    if ($cd = str_replace("&nbsp;", "", $data['cat_desc'])): ?>
-
-        <?php
-        /*
-         * Изображение категории
-         * Если у категории есть изображение, выводим его
-         * */
-        if ($data['cat_img']): ?>
-            <img src="<?php echo SITE . $data['cat_img'] ?>"
-                 alt="<?php echo $data['seo_alt'] ?>"
-                 title="<?php echo $data['seo_title'] ?>">
-        <?php endif; ?>
-
-    <?php endif; ?>
-
-
-    <?php
-    /*
-     * Список подкатегорий, выводим, если разрешено в настройках
-     * */
-    if (MG::getSetting('picturesCategory') == 'true'): ?>
-        <?php
-        // Список категорий каталога
-        component(
-          'catalog/categories',
-          $data['cat_id']
-        );
-        ?>
-    <?php endif; ?>
-
-
-    <?php
-    // Список свойств, которые выбраны в фильтре
     component(
-      'filter/applied',
-      $data['applyFilter']
+    'selected-category-products',
+    $data
     );
-    ?>
+?>
 
-    <?php
-    /*
-     * Циклом выводим миникарточки товаров
-     * */
-    foreach ($data['items'] as $item) : ?>
 
-        <?php
-        // Миникарточка товара
-        component(
-          'catalog/item',
-          ['item' => $item]
-        ); ?>
-
-    <?php endforeach; ?>
-
-    <?php
-    /*
-     * Выводится, если на странице нет товаров
-     * */
-    if (count($data['items']) == 0 && $_GET['filter'] == 1) { ?>
-
-        Нет товаров
-
-    <?php } ?>
-
-    <?php
-    /*
-     * Компонент постраничной навигации, если она требуется
-     * */
-    if (!empty($data['pager'])) {
-        component('pagination', $data['pager']);
-    } ?>
-
-     <?php if (!empty($data['cat_desc_seo'])) { ?>
-         <?php
-        // Выводим дополнительное описание страницы, если оно заполнено в админке
-        echo $data['cat_desc_seo'] ?>
-    <?php } ?>
 

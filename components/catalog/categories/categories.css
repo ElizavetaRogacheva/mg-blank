@@ -1,0 +1,25 @@
+.subcategories {
+    padding: 0 15px;
+}
+
+.subcategories__list {
+    display: flex;
+}
+
+.subcategories__item {
+    margin: 0 10px 5px 0;
+}
+
+.subcategories__link {
+    color:#333;
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    background-color:#fff;
+}
+
+.subcategories__link:hover {
+    color: #6ea820;;
+    border-color: #6ea820;
+}

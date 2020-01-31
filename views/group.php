@@ -33,22 +33,24 @@
 mgSEO($data);
 ?>
 
-<h1><?php echo $data['titleCategory'] ?></h1>
 
+
+<?php  //viewData($data) ?>
+<section class="products-section">
 <?php
-// Циклом выводим все товары группы
-foreach ($data['items'] as $item) { ?>
-    <?php
-    // Миникарточка товара
     component(
-      'catalog/item',
-      ['item' => $item]
+    'aside',
+    $data
     );
-    ?>
-<?php } ?>
+  ?>
 
 <?php
-// Если несколько страниц, то выводим постраничную навигацию
-if (!empty($data['pager'])): ?>
-    <?php component('pagination', $data['pager']); ?>
-<?php endif; ?>
+    component(
+    'selected-category-products',
+    $data
+    );
+  ?>
+</section>
+
+
+

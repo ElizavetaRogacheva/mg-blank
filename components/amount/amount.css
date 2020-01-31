@@ -1,0 +1,54 @@
+.cart_form {
+    width: auto;
+    height: 40px;
+}
+
+.c-buy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-buy__buttons {
+    display: flex;
+}
+
+.amount_change {
+    display: flex;
+    width: 100%;
+}
+
+.amount_change input {
+    height: 49px;
+    width: 50px;
+}
+
+.amount_change button {
+    position: relative;
+    height: 55px;
+    width: 40px;
+    border: none;
+    background-color: var(--main-color-green);
+}
+
+.amount_change button:hover {
+    background-color: #000;
+}
+
+.down::before {
+    content: '<';
+    color: #fff;
+    position: absolute;
+    top: 17px;
+    left: 10px;
+    font-size: 20px;
+}
+.up::before {
+    content: '>';
+    color: #fff;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    font-size: 20px;
+}
+
+

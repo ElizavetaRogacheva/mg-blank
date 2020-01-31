@@ -14,7 +14,7 @@
  *   $data['url'] => URL продукта
  *   $data['image_url'] => Главная картинка товара
  *   $data['code'] => Артикул товара
- *   $data['count'] => Количество товара на складе
+ *   $data['count'] => Количество товара на складе  
  *   $data['activity'] => Флаг активности товара
  *   $data['old_price'] => Старая цена товара
  *   $data['recommend'] => Флаг рекомендуемого товара
@@ -51,280 +51,239 @@
 mgSEO($data);
 ?>
 
-<div class="c-product product-details-block">
-    <div class="l-row" itemscope itemtype="http://schema.org/Product">
-        <div class="l-col min-0--12">
-            <div class="product-status js-product-page">
 
-                <?php if (class_exists('BreadCrumbs')): ?>
-                    [brcr]
-                <?php endif; ?>
+<!--хлебные крошки-->
+<?php if (class_exists('BreadCrumbs')): ?>
+    [brcr]
+<?php endif; ?>
 
-                <div class="l-row">
-
-                    <div class="l-col min-0--12 min-768--6">
-                        <?php
-                        // Карусель изображений товара
-                        component(
-                            'product/images',
-                            $data
-                        );
-                        ?>
+<!--секция с продуктом-->
+<section class="product-section">
+    <div class="product-container">
+        <!--блок с картинками одного товара-->
+        <div class="product-container__left">
+            <?php
+                component(
+                'product/images',
+                $data       
+                );
+            ?>
+        </div>
+        <!--информация и опции для продукта-->
+        <div class="product-container__right">
+            <h3 class="product__title"><?php echo ($data['title']); ?> </h3>
+            
+            <!--рейтинг товара-->
+            <div class="product-container__rating">
+                    <div class="c-product__row">
+                    [mg-product-rating id="<?php echo $data['id'] ?>"]
                     </div>
+            </div>
 
-                    <div class="l-col min-0--12 min-768--6">
+            <!--информация артикул и наличие-->
+            <div class="product-info">
+                <ul class="product-info__list">
+                    <li class="product-info__item">
+                        <span class="product-info-bold">Product Code:</span>
+                        <span><?php echo ($data['code']); ?></span>
+                    </li>
+                    <li class="product-info__item">
+                        <span class="product-info-bold">Availability:</span>
+                        <span><?php echo ($data['count']); ?></span>
+                    </li>
+                </ul>
+            </div>
 
-                        <div class="c-product__content buy-block">
-                            <div class="buy-block-inner">
-                                <div class="product-bar">
-                                    <div class="c-product__row">
-                                        <h1 class="c-title" itemprop="name">
-                                            <?php echo $data['title'] ?>
-                                        </h1>
-                                    </div>
-
-                                    <div class="c-product__row">
-                                        <div class="c-product__block">
-                                            <div class="c-product__block--left">
-                                                <div class="c-product__row">
-
-                                                    <?php
-                                                    // Блок с артикулом товара
-                                                    component(
-                                                        'product/code',
-                                                        $data['code']
-                                                    );
-                                                    ?>
-
-                                                    <div class="available">
-                                                        <?php
-                                                        // Блок с количеством товара
-                                                        component(
-                                                            'product/count',
-                                                            $data
-                                                        );
-                                                        ?>
-                                                    </div>
-
-                                                </div>
-
-                                                <?php if (class_exists('NonAvailable')): ?>
-                                                    <div class="c-product__row">
-                                                        [non-available id="<?php echo $data['id'] ?>"]
-                                                    </div>
-                                                <?php endif; ?>
-
-                                                <div class="c-product__row">
-                                                    <ul class="product-status-list">
-                                                        <li style="display:<?php echo (!$data['weight']) ? 'none' : 'block'; ?>">
-                                                            <?php echo lang('productWeight1'); ?>
-                                                            <span class="label-black weight">
-                                                                <?php echo $data['weightCalc'] ?>
-                                                            </span>
-                                                            <?php echo lang('weightUnit_' . $data['weightUnit']); ?>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="c-product__block--right">
-                                                <div class="c-product__row">
-                                                    <div class="default-price">
-                                                        <div class="product-price">
-                                                            <ul itemprop="offers" itemscope
-                                                                itemtype="http://schema.org/Offer"
-                                                                class="product-status-list">
-
-                                                                <li>
-                                                                    <div class="c-product__price c-product__price--current normal-price">
-                                                                        <div class="c-product__price--title">
-                                                                            <?php echo lang('productPrice'); ?>
-                                                                        </div>
-                                                                        <span class="c-product__price--value price js-change-product-price">
-                                                                            <span itemprop="price"
-                                                                                  content="<?php echo MG::numberDeFormat($data['price']); ?>">
-                                                                                <?php echo $data['price'] ?>
-                                                                            </span>
-                                                                            <span itemprop="priceCurrency"
-                                                                                  content="<?php echo MG::getSetting('currencyShopIso'); ?>">
-                                                                                <?php echo $data['currency']; ?>
-                                                                            </span>
-
-                                                                            <?php
-                                                                            if ($data['count'] === 0 || $data['count'] === '0') {
-                                                                                $availability = "OutOfStock";
-                                                                            } else {
-                                                                                $availability = "InStock";
-                                                                            }
-                                                                            ?>
-                                                                            <meta itemprop="availability"
-                                                                                  content="http://schema.org/<?php echo $availability ?>">
-                                                                            <link itemprop="url"
-                                                                                  href="<?php echo SITE . URL::getClearUri() ?>">
-
-                                                                        </span>
-                                                                    </div>
-                                                                </li>
-
-                                                                <li style="display:<?php echo (!$data['old_price']) ? 'none' : 'block'; ?>">
-                                                                    <div class="c-product__price c-product__price--old old">
-                                                                        <div class="c-product__price--title">
-                                                                            <?php echo lang('productOldPrice'); ?>
-                                                                        </div>
-                                                                        <s class="c-product__price--value old-price">
-                                                                            <?php echo MG::numberFormat($data['old_price']) . " " . $data['currency']; ?>
-                                                                        </s>
-                                                                    </div>
-                                                                </li>
-
-                                                            </ul>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="c-product__row">
-
-                                                    <?php if (class_exists('Rating')): ?>
-                                                        <div class="c-product__row">
-                                                            [rating id ="<?php echo $data['id'] ?>"]
-                                                        </div>
-                                                    <?php endif; ?>
-
-                                                    <?php if (class_exists('ProductCommentsRating')): ?>
-                                                        <div class="c-product__row">
-                                                            [mg-product-rating id="<?php echo $data['id'] ?>"]
-                                                        </div>
-                                                    <?php endif; ?>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="c-product__row product-opfields-data">
-                                        <?php
-                                        // Дополнительные поля товара
-                                        component(
-                                            'product/opfields',
-                                            $data
-                                        );
-                                        ?>
-                                    </div>
-
-                                    <div class="c-product__row wholesales-data">
-                                        <?php
-                                        // Оптовые цены
-                                        component(
-                                            'product/wholesales',
-                                            $data['wholesalesData']
-                                        );
-                                        ?>
-                                    </div>
-
-                                    <div class="c-product__row">
-                                        <?php
-                                        // Оптовые цены
-                                        component(
-                                            'product/storages',
-                                            $data
-                                        );
-                                        ?>
-
-
-                                        <form action="<?php echo SITE . $data['liteFormData']['action'] ?>"
-                                              method="<?php echo $data['liteFormData']['method'] ?>"
-                                              class="property-form js-product-form <?php echo $data['liteFormData']['catalogAction'] ?>"
-                                              data-product-id='<?php echo $data['liteFormData']['id'] ?>'>
-
-                                            <div class="c-goods__footer">
-                                                <div class="c-form">
-                                                    <?php
-                                                    // Варианты товара
-                                                    component(
-                                                        'product/variants',
-                                                        $data
-                                                    );
-                                                    ?>
-
-                                                    <?php
-                                                    // Сложные характеристики – чекбоксы, радиокнопки, селекты
-                                                    component(
-                                                        'product/html-properties',
-                                                        $data['propertyForm']['htmlProperty']
-                                                    );
-                                                    ?>
-
-                                                </div>
-
-                                                <div class="c-buy js-product-controls">
-
-                                                    <?php
-                                                        component(
-                                                            'amount',
-                                                            [
-                                                                'id' => $data['id'],
-                                                                'maxCount' => $data['liteFormData']['maxCount'],
-                                                                'count' => '1',
-                                                            ]
-                                                        );
-                                                    ?>
-
-                                                    <div class="c-buy__buttons">
-                                                        <?php
-                                                        // Кнопка добавления товара в корзину
-                                                        component(
-                                                            'cart/btn/add',
-                                                            $data
-                                                        );
-                                                        ?>
-
-                                                        <?php
-                                                        if (
-                                                            (EDITION == 'gipermarket' || EDITION == 'market') &&
-                                                            ($data['liteFormData']['printCompareButton'] == 'true')
-                                                        ) {
-                                                            // Кнопка добавления товара в сравнение
-                                                            component(
-                                                                'compare/btn/add',
-                                                                $data
-                                                            );
-                                                        }
-                                                        ?>
-
-
-                                                        <!-- Плагин купить одним кликом-->
-                                                        <?php if (class_exists('BuyClick')): ?>
-                                                            [buy-click id="<?php echo $data['id'] ?>"]
-                                                        <?php endif; ?>
-                                                        <!--/ Плагин купить одним кликом-->
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </form>
-                                    </div>
-
-                                </div>
+            
+            <div class="options">
+                <h3 class="options__title">Available Options</h3>
+                <div class="variants-container">
+                    <form action="<?php echo SITE . $data['liteFormData']['action'] ?>"
+                        method="<?php echo $data['liteFormData']['method'] ?>"
+                        class="property-form js-product-form <?php echo $data['liteFormData']['catalogAction'] ?>"
+                        data-product-id='<?php echo $data['liteFormData']['id'] ?>'>
+                        
+                        <?php if(!(empty($data['variants']))): ?>
+                        <!--блок с выбором вариантов товара-->
+                        <div class="c-goods__footer">
+                            <div class="c-form">                                                  
+                                <?php
+                                    component(
+                                    'product/variants',
+                                    $data
+                                );
+                                ?>
                             </div>
                         </div>
+                        <?php endif; ?>
 
-                    </div>
 
-                    <div class="l-col min-0--12">
-                        <?php
-                        component('tabs', $data, 'tabs_product');
-                        ?>
-                    </div>
+                        <!--изменяющаяся цена при выборе варианта-->
+                        <div class="product-price-block">
+                            <div class="c-product__price--title">
+                                <?php echo lang('productPrice'); ?>
+                            </div>
+                            <span class="product-price js-change-product-price">
+                                <span itemprop="price"
+                                        content="<?php echo MG::numberDeFormat($data['price']); ?>">
+                                    <?php echo $data['price'] ?>
+                                </span>
+                                <span itemprop="priceCurrency"
+                                        content="<?php echo MG::getSetting('currencyShopIso'); ?>">
+                                    <?php echo $data['currency']; ?>
+                                </span>
 
+                                <?php
+                                if ($data['count'] === 0 || $data['count'] === '0') {
+                                    $availability = "OutOfStock";
+                                } else {
+                                    $availability = "InStock";
+                                }
+                                ?>
+                                <meta itemprop="availability"
+                                        content="http://schema.org/<?php echo $availability ?>">
+                                <link itemprop="url"
+                                        href="<?php echo SITE . URL::getClearUri() ?>">
+
+                            </span>
+                        </div>
+
+                        <!--старая цена-->
+                        <div class="c-product__price c-product__price--old old">
+                            <div class="c-product__price--title">
+                                <?php echo lang('productOldPrice'); ?>
+                            </div>
+                            <s class="c-product__price--value old-price">
+                                <?php echo MG::numberFormat($data['old_price']) . " " . $data['currency']; ?>
+                            </s>
+                        </div>
+
+                        <!--опция выбора количества продукта-->
+                        <div class="c-buy js-product-controls">
+                            <?php
+                                component(
+                                    'amount',
+                                    [
+                                        'id' => $data['id'],
+                                        'maxCount' => $data['liteFormData']['maxCount'],
+                                        'count' => '1',
+                                    ]
+                                );
+                            ?>
+                            <!--добавление в корзину кнопка-->
+                            <div class="c-buy__buttons">
+
+                                <div class="add-to-cart-btn">
+                                    <?php
+                                        component(
+                                            'add-to-cart-btn',
+                                            $data
+                                        );
+                                        ?>
+                                    </div>
+
+                                <!--добавление в сравнение кнопка-->
+                                <?php
+                                if (
+                                    (EDITION == 'gipermarket' || EDITION == 'market') &&
+                                    ($data['liteFormData']['printCompareButton'] == 'true')
+                                ) {
+                                    component(
+                                        'add-compare-btn',
+                                        $data
+                                    );
+                                }
+                                ?>
+
+                                <!--добавление товара в избранное кнопка-->
+                                <div class="product-qty-group__btn wishlist-btn">
+                                    <?php
+                                        component(
+                                            'favorites-btn',
+                                            $data
+                                        );
+                                        ?>
+                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    </div>
+
+                                <!-- Плагин купить одним кликом-->
+                                <?php if (class_exists('BuyClick')): ?>
+                                    [buy-click id="<?php echo $data['id'] ?>"]
+                                <?php endif; ?>
+                                <!--/ Плагин купить одним кликом-->
+
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
             </div>
-        </div>
+        </div> <!--end prodict-container__right-->
+    </div> <!--end prodict-container-->
 
+    <!--вкладки описания отзывов и характеристик-->
+    <div class="product-tabs-info">
+        <ul class="product-tabs-info__nav-list">
+            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link">Description</a></li>
+            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link">Specification</a></li>
+            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link">Reviews <span>([mg-product-count-comments item="<?php echo ($data['id']) ?>"])</span></a></li>
+        </ul>
+        <ul class="products-tabs-info__list">
+            <li class="products-tabs-info__item active-item js-desc-item">
+                <!--добавление описания продукта-->
+                <p class="products-tabs-info__description">
+                <?php echo ($data['description']); ?>
+                </p>
+            </li>
+            <li class="products-tabs-info__item js-desc-item">
+                <!--добавление характеристик продукта-->
+                <table class="products-tabs-info__table">                        
+                    <?php if(!(empty($data['stringPropertiesSorted']['groupProperty']))) : ?>
+                        <?php foreach ($data['stringPropertiesSorted']['groupProperty'] as $groupChar): ?>
+                            <tr>
+                                <td class="table-head" colspan="2">
+                                    <?php echo ($groupChar['name_group']) ?>
+                                </td>
+                            </tr>                           
+                            <?php foreach ($groupChar['property'] as $subcharscteristic): ?>
+                                <tr>
+                                    <td>
+                                        <?php echo ($subcharscteristic['key_prop']) ?>
+                                    </td>
+                                    <td>
+                                        <?php echo ($subcharscteristic['name_prop']) ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>                       
+                        <?php endforeach;?>
+                    <?php endif; ?> 
+                    <?php foreach ($data['stringPropertiesSorted']['unGroupProperty'] as $characteristic): ?>
+                        <?php if(!(empty($characteristic['name']))): ?>
+                            <tr>
+                                <td>
+                                    <?php echo ($characteristic['name_prop']) ?>
+                                </td>
+                                <td>
+                                    <?php echo ($characteristic['name']) ?>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </table>
+            </li>
+            <li class="products-tabs-info__item js-desc-item">
+                <!--плагин с отзывом-->
+                <div class="tab-reviews">
+                    [mg-product-comments-rating id="<?php echo ($data['id']) ?>"] 
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--с этим товаром покупают-->
+    <?php if(!empty($data['related'])) : ?>
         <?php
-        // Карусель «С этим товаром покупают»
         component(
-            'catalog/carousel',
+            'related-product-carousel',
             [
                 'items' => $data['related']['products'],
                 'title' => lang('relatedAdd'),
@@ -332,22 +291,5 @@ mgSEO($data);
             ]
         );
         ?>
-
-        <?php if (class_exists('RecentlyViewed')) { ?>
-            <div class="l-col min-0--12">
-                <div class="c-carousel__title">
-                <span class="c-carousel__title--span">
-                    <?php echo lang('RecentlyViewed'); ?>
-                </span>
-                </div>
-                [recently-viewed countPrint=4 count=5 random=1]
-            </div>
-        <?php } ?>
-
-        <div class="l-col min-0--12">
-            <?php if (class_exists('SetGoods')): ?>
-                [set-goods id="<?php echo $data['id'] ?>"]
-            <?php endif; ?>
-        </div>
-    </div>
-</div>
+    <?php endif; ?>
+</section>
