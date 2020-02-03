@@ -37,15 +37,17 @@ mgSEO($data);
 <h1>
     <?php echo $data['titleCategory'] ?>
 </h1>
+<div class="c-goods">
+  <?php
+  // Циклом выводим избранные товары
+  foreach ($data['items'] as $item) { ?>
+      <?php
+      // Миникарточка товара
+      component(
+        'catalog/item',
+        ['item' => $item]
+      );
+      ?>
+  <?php } ?>
 
-<?php
-// Циклом выводим избранные товары
-foreach ($data['items'] as $item) { ?>
-    <?php
-    // Миникарточка товара
-    component(
-      'catalog/item',
-      ['item' => $item]
-    );
-    ?>
-<?php } ?>
+</div>

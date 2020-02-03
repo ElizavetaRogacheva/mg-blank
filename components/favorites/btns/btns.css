@@ -32,8 +32,6 @@
 .mg-add-to-favorites:hover svg,
 .mg-remove-to-favorites svg {
     display: none;
-    stroke: #ffd325;
-    fill: #ffc107;
 }
 
 .remove__hover {
@@ -85,4 +83,17 @@
 .product-options__item--wishlist a:hover svg {
     fill: var(--main-color-green);
     display: block;
+}
+
+.c-goods__item .mg-add-to-favorites,
+.c-goods__item .mg-remove-to-favorites {
+    color: var(--main-color-green);
+    border: 1px solid var(--main-color-green);
+    background-color: #fff;
+    font-size: 15px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    margin: 0;
+
 }

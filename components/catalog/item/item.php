@@ -15,13 +15,6 @@
           }
           ?>">
 
-  <?php
-  // Кнопки добавлени товара в избранное
-  component(
-    'favorites/btns',
-    $data['item']
-  );
-  ?>
 
     <span itemprop="name"
           class="hidden">
@@ -75,7 +68,7 @@
     </div>
 
     <div class="c-goods__right">
-        <div class="c-goods__price">
+        <div class="price">
           <?php if ($data['item']["old_price"] != ""): ?>
               <s class="c-goods__price--old product-old-price old-price"
                 <?php echo (!$data['item']['old_price']) ? 'style="display:none"' : '' ?>>
@@ -83,13 +76,13 @@
               </s>
           <?php endif; ?>
 
-            <div class="c-goods__price--current product-price js-change-product-price">
+            <div class="c-goods__price--current price js-change-product-price">
                 <span><?php echo priceFormat($data['item']["price"]) ?></span>
                 <span><?php echo $data['item']['currency']; ?></span>
             </div>
         </div>
 
-        <a class="c-goods__title"
+        <a class="product-block__title"
            title="<?php echo $data['item']["title"] ?>"
            href="<?php echo $data['item']["link"] ?>">
             <span><?php echo $data['item']["title"] ?></span>
@@ -157,6 +150,14 @@
                             );
                           }
                           ?>
+
+                          <?php
+                            // Кнопки добавлени товара в избранное
+                            component(
+                              'favorites/btns',
+                              $data['item']
+                            );
+                            ?>
                         </div>
 
                         <!-- Плагин купить одним кликом-->
