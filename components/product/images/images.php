@@ -21,10 +21,7 @@ if (MG::getSetting('connectZoom') == 'true') : ?>
 
 <section class="c-images mg-product-slides">
 
-  <?php
-  // Кнопка добавить-удалить из избранного
-  component('favorites/btns', $data);
-  ?>
+  
 
     <ul class="main-product-slide js-main-img-slider <?php echo (count($data["images_product"]) > 1) ? 'owl-carousel' : ''; ?> ">
       <?php foreach ($data["images_product"] as $key => $image) {

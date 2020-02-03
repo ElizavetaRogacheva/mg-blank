@@ -205,15 +205,11 @@ mgSEO($data);
                                 ?>
 
                                 <!--добавление товара в избранное кнопка-->
-                                <div class="product-qty-group__btn wishlist-btn">
-                                    <?php
-                                        component(
-                                            'favorites-btn',
-                                            $data
-                                        );
-                                        ?>
-                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                    </div>
+
+                                <?php
+                                    // Кнопка добавить-удалить из избранного
+                                    component('favorites/btns', $data);
+                                ?>
 
                                 <!-- Плагин купить одним кликом-->
                                 <?php if (class_exists('BuyClick')): ?>
