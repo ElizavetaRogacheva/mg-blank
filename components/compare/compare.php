@@ -31,15 +31,9 @@ if (!empty($data)) { ?>
                 <div class="c-compare__top__buttons">
                     <a class="c-button c-compare__clear   mg-clear-compared-products"
                        href="<?php echo SITE ?>/compare?delCompare=1">
-                        <svg class="icon icon--remove">
-                            <use xlink:href="#icon--remove"></use>
-                        </svg>
                         <?php echo lang('compareClean'); ?>
                     </a>
                     <a class="c-button" href="<?php echo SITE ?>">
-                        <svg class="icon icon--arrow-left">
-                            <use xlink:href="#icon--arrow-left"></use>
-                        </svg>
                         <?php echo lang('compareBack'); ?>
                     </a>
                 </div>

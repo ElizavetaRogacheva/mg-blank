@@ -80,6 +80,15 @@ mgSEO($data);
                     </div>
             </div>
 
+            <div class="product-compare">
+            <?php
+                component(
+                'compare/link',
+                $data
+            );
+            ?>
+            </div>
+
             <!--информация артикул и наличие-->
             <div class="product-info">
                 <ul class="product-info__list">
