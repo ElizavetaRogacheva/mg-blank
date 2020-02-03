@@ -1,6 +1,6 @@
 /* Избранное */
-.mg-add-to-favorites,
-.mg-remove-to-favorites {
+.c-buy__buttons .mg-add-to-favorites,
+.c-buy__buttons .mg-remove-to-favorites {
     color: var(--main-color-green);
     border: 1px solid var(--main-color-green);
     background-color: #fff;
@@ -16,13 +16,6 @@
     border-color: #afafaf;
 }
 
-
-.c-goods__item:hover .mg-add-to-favorites,
-.c-goods__item:hover .mg-remove-to-favorites {
-    opacity: 1;
-    visibility: visible;
-}
-
 .mg-add-to-favorites svg,
 .mg-remove-to-favorites svg {
     width: 15px;
@@ -32,16 +25,13 @@
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    display: none;
 }
 
-.mg-add-to-favorites svg,
-.mg-remove-to-favorites:hover svg {
-    stroke: #333;
-    fill: #fff;
-}
 
 .mg-add-to-favorites:hover svg,
 .mg-remove-to-favorites svg {
+    display: none;
     stroke: #ffd325;
     fill: #ffc107;
 }
@@ -62,4 +52,37 @@
 
 .mg-remove-to-favorites:hover .remove__hover {
     display: inline-block;
+}
+
+
+.product-options__item--wishlist a {
+    width: 25px!important;
+    height: 25px!important;
+    border: none!important;
+    padding: 0;
+    font-size: 0;
+    position: relative;
+    background-color: transparent;
+    display: none;
+}
+
+.product-options__item--wishlist .mg-add-to-favorites {
+    display: block!important;
+}
+
+.product-options__item--wishlist .mg-remove-to-favorites {
+    display: none!important;
+}
+
+
+.product-options__item--wishlist a svg {
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    fill:  #878787;
+}
+
+.product-options__item--wishlist a:hover svg {
+    fill: var(--main-color-green);
+    display: block;
 }

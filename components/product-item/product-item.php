@@ -33,8 +33,11 @@
 
         <!--кнопки опции карточки товара-->
         <ul class="product-options">
-            <li class="product-options__item">
-                <button class="product-options__btn product-options__btn--wishlist"></button>
+            <li class="product-options__item--wishlist">
+            <?php
+                // Кнопка добавить-удалить из избранного
+                component('favorites/btns', $data);
+            ?>
             </li>
             <li class="product-options__item">
                 <button class="product-options__btn product-options__btn--view">
