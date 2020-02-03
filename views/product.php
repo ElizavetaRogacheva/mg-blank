@@ -189,7 +189,7 @@ mgSEO($data);
                                     ($data['liteFormData']['printCompareButton'] == 'true')
                                 ) {
                                     component(
-                                        'add-compare-btn',
+                                        'compare/btn/add',
                                         $data
                                     );
                                 }
