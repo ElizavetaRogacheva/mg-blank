@@ -39,9 +39,13 @@
                 </div>
 
                 <!--корзина кнопка-->
+
                 <div class="main-header__cart">
-                    <button class="cart__btn">Сart</button>
-                    <span class="cart__counter">0</span>
+                    <?php 
+                    component(
+                        'cart/small', 
+                        $data);
+                    ?>
                 </div>
 
                 <!--блок опций для пользователя-->

@@ -186,7 +186,7 @@ mgSEO($data);
                                 <div class="add-to-cart-btn">
                                     <?php
                                         component(
-                                            'add-to-cart-btn',
+                                            'cart/btn/add',
                                             $data
                                         );
                                         ?>

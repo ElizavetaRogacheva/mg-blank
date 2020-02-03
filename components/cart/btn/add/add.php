@@ -1,7 +1,5 @@
 <?php
-mgAddMeta('components/add-to-cart-btn/add-to-cart-btn.js');
-mgAddMeta('components/add-to-cart-btn/add-to-cart-btn.css');
-
+mgAddMeta('components/cart/btn/add/add.js');
 ?>
 
 <?php
