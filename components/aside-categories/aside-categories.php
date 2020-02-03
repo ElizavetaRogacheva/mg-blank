@@ -1,10 +1,8 @@
-<!--категории товаров в блоке-->
+
 <div class="categories">
     <div class="categories__title js-categories__title aside-title">
         <span>categories</span>
     </div>
-
-    <!--наполнение блока категориями-->
     <ul class="categories__list js-categories__list"> 
 
         <?php foreach ($data['menuCategories'] as $category) : ?>

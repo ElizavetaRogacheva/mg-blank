@@ -1,8 +1,7 @@
 <?php mgAddMeta('components/search/search.js'); ?>
 <?php mgAddMeta('components/search/search.css'); ?>
 
-
-
+<div class="c-search">
     <form class="search-form"
           aria-label="<?php echo lang('searchAriaLabel'); ?>"
           role="search"
@@ -26,3 +25,5 @@
     <div class="c-search__dropdown wraper-fast-result">
         <div class="fastResult"></div>
     </div>
+
+</div>

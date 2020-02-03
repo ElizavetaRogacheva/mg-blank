@@ -33,32 +33,6 @@
             <a title="" href="#" class="product-compare__link">Product Compare <span>(0)</span></a>
         </div>
     </div>
-    <div class="filterboard__right">
-        <div class="sort-by">
-            <label for="sort-input" class="sort-by__label">Sort by:</label>
-            <select name="sort-by" id="sort-input" class="select sort-by__select">
-                <option selected="selected" class="sort-by__option">Default</option>
-                <option class="sort-by__option">Name (A - Z)</option>
-                <option class="sort-by__option">Name (Z - A)</option>
-                <option class="sort-by__option">Price (Low > High)</option>
-                <option class="sort-by__option">Price (High > Low)</option>
-                <option class="sort-by__option">Rating (Highest)</option>
-                <option class="sort-by__option">Rating (Lowest)</option>
-                <option class="sort-by__option">Model (A - Z)</option>
-                <option class="sort-by__option">Model (Z - A)</option>
-            </select>
-        </div>
-        <div class="sort-show">
-            <label for="sort-show-input">Show:</label>
-            <select name="sort-show" id="sort-show-input" class="select sort-show__select">
-                <option selected="selected" class="sort-show__option">12</option>
-                <option class="sort-show__option">25</option>
-                <option class="sort-show__option">50</option>
-                <option class="sort-show__option">75</option>
-                <option class="sort-show__option">100</option>
-            </select>
-        </div>
-    </div>
   </div>
 
 

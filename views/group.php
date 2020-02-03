@@ -36,6 +36,7 @@ mgSEO($data);
 
 
 <?php  //viewData($data) ?>
+
 <section class="products-section">
 <?php
     component(
@@ -50,6 +51,7 @@ mgSEO($data);
     $data
     );
   ?>
+
 </section>
 
 

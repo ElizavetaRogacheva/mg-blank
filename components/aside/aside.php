@@ -1,5 +1,5 @@
 <aside class="products-aside">
-    <!--добавление категорий в блок категорий-->
+    
     <?php if (!(empty($data['menuCategories']))) : ?>
         <?php
             component(
@@ -9,32 +9,22 @@
         ?>
     <?php endif; ?>
 
-
     <div class="filter">
-        <div class="filter-title js-filter-title aside-title">filter</div>
-            <!--добавление фильтрации товаров-->
-            <?php
-                component(
-                'filter',
-                $data
-            );
-            ?>
-        </div>
-    </div> <!--end filter-->
+        <?php
+            component(
+            'filter',
+            $data
+        );
+        ?>
+    </div>
 
-
-    <!--реклама по шаблону-->
     <div class="advertising">
         <a title="" href="#" class="advertising-block__link">
-            <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/left-banner-1-278x320.jpg" alt="">
+            <img title="" src="./img/left-banner-1-278x320.jpg" alt="">
         </a>
     </div>
-    
-    <!--последние товары по шаблону-->
     <div class="latest-products">
-        <div class="latest-products__title js-latest-products__title aside-title">
-            <span>latest</span>
-        </div>
+        <div class="latest-products__title js-latest-products__title aside-title"><span>latest</span></div>
         <ul class="latest-products__list js-latest-products__list">
             <li class="latest-products__item">
                 <div class="latest-product-card">
@@ -81,3 +71,4 @@
         </ul>
     </div>
 </aside>
+
