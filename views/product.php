@@ -58,6 +58,7 @@ mgSEO($data);
 <?php endif; ?>
 
 <!--секция с продуктом-->
+
 <section class="product-section">
     <div class="product-container">
         <!--блок с картинками одного товара-->

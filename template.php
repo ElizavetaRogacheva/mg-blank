@@ -88,6 +88,13 @@ Version: 1.0.0
         layout('header', $data);
         ?>
 
+        <?php
+            component(
+                'favorites/informer',
+                $data
+            );
+        ?>
+
         <?php if(MG::get('controller')=="controllers_catalog"): ?>
             <section class="products-section">
                 <?php component('aside', $data);?> 

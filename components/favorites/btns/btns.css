@@ -63,28 +63,3 @@
 .mg-remove-to-favorites:hover .remove__hover {
     display: inline-block;
 }
-
-/*.mg-product-slides .mg-remove-to-favorites--product,
-.mg-product-slides .mg-add-to-favorites--product {
-    position: absolute;
-    visibility: visible;
-    opacity: 1;
-    top: 5px;
-    z-index: 51;
-    border: 0;
-    background: transparent;
-    font-size: 12px;
-    width: 145px;
-}
-
-.mg-product-slides .mg-remove-to-favorites--product svg,
-.mg-product-slides .mg-add-to-favorites--product svg {
-    vertical-align: bottom;
-    width: 20px;
-    height: 20px;
-}
-
-.c-images.mg-product-slides {
-    position: relative;
-}*/
-
