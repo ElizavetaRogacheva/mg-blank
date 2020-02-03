@@ -37,10 +37,21 @@
                 <button class="product-options__btn product-options__btn--wishlist"></button>
             </li>
             <li class="product-options__item">
-                <button class="product-options__btn product-options__btn--view"></button>
+                <button class="product-options__btn product-options__btn--view">
+                </button>
             </li>
-            <li class="product-options__item">
-                <button class="product-options__btn product-options__btn--compare"></button>
+            <li class="product-options__item product-options__item--compare">
+                <?php
+                    if (
+                        (EDITION == 'gipermarket' || EDITION == 'market') &&
+                        ($data['liteFormData']['printCompareButton'] == 'true')
+                    ) {
+                        component(
+                            'compare/btn/add',
+                            $data
+                        );
+                    }
+                    ?>
             </li>
             <li class="product-options__item">
                 <button class="product-options__btn product-options__btn--cart"></button>

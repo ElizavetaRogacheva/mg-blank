@@ -30,7 +30,12 @@
         <button class="show-grid show-grid--active">grid</button>
         <button class="show-list">list</button>
         <div class="product-compare">
-            <a title="" href="#" class="product-compare__link">Product Compare <span>(0)</span></a>
+        <?php
+                component(
+                'compare/link',
+                $data
+            );
+            ?>
         </div>
     </div>
   </div>

@@ -2,3 +2,31 @@
     text-transform: uppercase;
 }
 
+.compare-btn svg {
+    display: none;
+}
+
+.product-options__item--compare a {
+    width: 25px!important;
+    height: 25px!important;
+    border: none!important;
+    display: block!important;
+    padding: 0;
+    font-size: 0;
+    position: relative;
+    background-color: transparent;
+}
+
+.product-options__item--compare a svg {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    fill:  #878787;
+}
+
+.product-options__item--compare a:hover svg {
+    fill: var(--main-color-green);
+}
+
+
+

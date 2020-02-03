@@ -1,9 +1,6 @@
-.product-compare {
-    margin: 0!important;
+.product-container__right .product-compare {
+    margin: 0;
     position: relative;
-}
-
-.product-compare__link {
 }
 
 .c-compare__link--count {
@@ -14,4 +11,10 @@
 
 .c-compare__link:hover .c-compare__link--text {
     text-decoration: underline;
+}
+
+.filterboard .product-compare {
+    position: relative;
+    margin: 0 20px;
+    width: 100px;
 }
