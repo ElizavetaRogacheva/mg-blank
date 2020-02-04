@@ -1,0 +1,48 @@
+.categories {
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.categories__list {
+    padding: 0 15px 15px;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.categories__item {
+    padding: 5px 0;
+}
+
+.categories__link {
+    padding: 4px 0;
+    color: #262626;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+.aside-subcategiries {
+    padding: 5px 15px 0;
+}
+
+.aside-subcategories__item {
+    margin-bottom: 5px;
+    
+}
+
+
+.aside-subcategories__link {
+    color: #555555;
+    
+    &:hover {
+        color: $green;
+    }
+}
+

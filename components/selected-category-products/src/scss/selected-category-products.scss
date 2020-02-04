@@ -1,0 +1,275 @@
+.products-category-content {
+    width: 75%;
+    background-color: $bg-gray;
+
+    @include tablets {
+        order: 1;
+        width: 100%;
+    }
+}
+
+.products-category-content__title {
+    color:#000000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font: 500 18px/26px;
+    padding: 0 15px;
+}
+
+.products-category-content__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.products-category-content__desc {
+    padding: 0 15px;
+}
+
+.products-category-content__text {
+    margin-bottom: 10px;
+}
+
+.subcategories {
+    padding: 0 15px;
+}
+
+.subcategories__title {
+    margin-bottom: 18px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.subcategories__list {
+    display: flex;
+}
+
+.subcategories__item {
+    margin: 0 10px 5px 0;
+}
+
+.subcategories__link {
+    color:#333;
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid#e6e6e6;
+    background-color:#fff;
+
+    &:hover {
+        color: $green;
+        border-color: $green;
+    }
+}
+
+.filterboard {
+    margin: 10px 0 10px;
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid#ddd;
+    padding: 0 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.filterboard__left {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
+.show-grid {
+    width: 24px;
+    height: 24px;
+    font-size: 0px;
+    border: none;
+    background: url(../img/sprite.png) no-repeat scroll -4px -31px;
+    margin-right: 8px;
+
+    &:hover,
+    &--active {
+        background-position: -4px -1px;
+    }
+}
+
+.show-list {
+    width: 24px;
+    height: 24px;
+    font-size: 0px;
+    border: none;
+    background: url(../img/sprite.png) no-repeat scroll -41px -31px;
+    margin-right: 8px;
+
+    &:hover,
+    &--active {
+        background-position: -41px -1px;
+    }
+}
+
+.product-compare {
+    margin: 0 20px 0;
+}
+
+.product-compare__link {
+    color: #555555;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+.filterboard__right {
+    display: flex;
+}
+
+.sort-by {
+    margin-right: 10px;
+}
+
+.sort-by__label {
+    margin: 8px 10px 5px 0;
+}
+
+.select {
+    height: 34px;
+    font-size: 12px;
+    padding: 6px 12px;
+    color:#222222;
+    background-color:#fff;
+    border: 1px solid#e5e5e5;
+    cursor: pointer;
+
+    option {
+        cursor: pointer;
+    }
+}
+
+.sort-by__select {
+    width: 150px;
+}
+
+.products-block__list {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.products-block__item {
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+    margin: 15px;
+    box-sizing: border-box;
+
+    @include tablets {
+        width: 45%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease-in-out;
+
+        .product-block__img {
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            &--hover {
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .product-options {
+            right: 0;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .sale-sticker {
+            left: 10px;
+            opacity: 1;
+            transition: all 0.4 ease-in-out;
+        }
+    }
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 0;
+    margin: 20px 0 10px;
+
+    @include phones {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.pagination-text {
+    @include phones {
+        order: 2;
+    }
+}
+
+.pagination {
+    @include phones {
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
+
+.pagination__list {
+    display: flex; 
+}
+
+.pagination__item {
+    margin-right: 3px;
+}
+
+.pagination__link {
+    position: relative;
+    padding: 7px 14px;
+    color: #ffffff;
+    background-color: #000000;
+
+    &:hover,
+    &--active {
+        background-color: $green;
+    }
+}
+
+.plant-footer {
+    background-color: #fff;
+
+    .footer-newsletter__input {
+        background-color: #f4f4f4;
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.rotate {
+    &::before {
+        transform: rotate(180deg);
+    }
+}
+

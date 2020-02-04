@@ -1,0 +1,351 @@
+.main-footer {
+    background-color: #f4f4f4;
+    background-image: url(../img/footer-bkg.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @include tablets {
+        background-image: none;
+    }
+}
+
+.main-footer-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 130px 0 0;
+    position: relative;
+    text-align: left;
+    letter-spacing: 0.5px;
+    color:#b2b2b2;
+    font-weight: 300;
+
+    @include tablets {
+        padding: 25px 0 0;;
+    }
+}
+
+.main-footer-top {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @include tablets {
+        flex-direction: column;
+
+    }
+}
+
+.main-footer__block {
+    width: 33%;
+    position: relative;
+
+    &:not(:last-child) {
+        &::after {
+            content: " ";
+            border-right: 1px solid#d6d6d6;
+            width: 1px;
+            height: 110px;
+            text-align: center;
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 0;
+        } 
+    
+    }    
+
+    @include tablets {
+        width: 100%;
+
+        &:not(:last-child) {
+            &::after {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
+.main-footer__block-title {
+    color:#000000;
+    text-transform: uppercase !important;
+    margin: 0 0 25px 0;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+
+    @include tablets {
+        text-align: left; 
+
+        &::after {
+            color:#000000;
+            content: "\f107";
+            font-family: "FontAwesome";
+            font-size: 22px;
+            font-weight: 400;
+            height: 20px;
+            line-height: 26px;
+            margin: 0;
+            position: absolute;
+            right: 10px;
+            text-align: center;
+            top: 8px;
+            width: 20px;
+        }
+
+        &--not-arrow {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.rotate {
+    &::after {
+        transform: rotate(180deg);
+    }
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablets {
+        align-items: flex-start;
+        margin-bottom: 25px;
+        display: none;
+    }
+}
+
+.contacts__item {
+    margin-bottom: 5px;
+}
+
+.footer-info__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        display: none;
+    }
+}
+
+.footer-info__item {
+    margin-right: 10px;
+}
+
+.footer-info__link {
+    letter-spacing: 0.5px;
+    color:#b2b2b2;
+    font-weight: 300;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+.newsletter__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablets {
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+    
+}
+
+.footer-newsletter__text {
+    margin-bottom: 20px;
+}
+
+.footer-newsletter__form {
+    display: flex;
+
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.footer-newsletter__input {
+    max-width: 225px;
+    padding: 5px 20px 5px 10px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(240,231,221,.2);
+    background-color: #ffffff;
+    font-size: $font-small;
+    letter-spacing: .4px;
+    color:#000000;
+    font-weight: 300;
+
+    @include tablets {
+        max-width: 90%;
+        padding: 0 20px 0 10px;
+    }
+}
+
+.footer-newsletter__btn {
+    margin-left: 0px;
+    color:#ffffff;
+    background: #6ea820;
+    right: 0;
+    font-size: $font-small;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding:  0 20px;
+
+    &:hover {
+        background-color: #000000;
+    }
+}
+
+.main-footer__socials {
+    margin-bottom: 70px;
+
+    @include tablets {
+        margin-bottom: 25px;
+    }
+}
+
+.socials__list {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.social__link {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #d7d6d6;
+    margin-right: 6px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 2px;
+        font-family: "FontAwesome";
+        font-size: $font-normal;
+        font-weight: 400;
+        color:#666666;
+    }
+
+    &--fb {
+        &:before {
+            content: "\f09a";
+            left: 9px;
+        }
+    }
+
+    &--tw {
+        &:before {
+            content: "\f099";
+            left: 8px;
+        }
+    }
+
+    &--rss {
+        &:before {
+            content: "\f09e";
+            left: 9px;
+        }
+    }
+
+    &--google {
+        &:before {
+            content: "\f0d5";
+            left: 7px;
+        }
+    }
+
+    &--ig {
+        &:before {
+            content: "\F16D";
+            left: 8px;
+        }
+        
+    }
+
+
+    &:hover {
+        background-color: $green;
+
+        &::before {
+            color: #ffffff;
+        }
+    }
+}
+
+.main-footer-bottom {
+    padding: 15px 0 30px;
+    border-top: 1px solid #d6d6d6;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0 30px;
+    }
+}
+
+.payment__list {
+    display: flex;
+    
+    @include tablets {
+        order: 1;
+    }
+}
+
+.payment__item {
+    margin-right: 10px;
+
+    img {
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}
+
+.copyright {
+    @include tablets {
+        order: 2;
+    }
+}
+
+.visible {
+    display: block;
+}
+
+.scroll-top {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: url(../img/top-arrow.png);
+    display: none;
+}
+
+.show-scroll {
+    display: block;
+}

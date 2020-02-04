@@ -1,0 +1,266 @@
+.main-header {
+    width: 100%;
+    z-index: 20;
+}
+
+.main-header__container{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablets {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.main-header__top {
+    @include tablets {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.main-header__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+
+    @include tablets {
+        width: 100%;
+        align-items: center;
+        position: relative;
+    }
+}
+
+.main-logo {
+    box-sizing: border-box;
+}
+
+.main-logo__link {
+    display: block;
+        
+    img {
+        vertical-align: middle;
+    }
+
+     @include tablets {
+        text-align: center;
+        padding: 25px 0;
+    }
+}
+
+
+.main-header__search {
+    position: relative;
+    height: 100%;
+}
+
+
+.search__btn {
+    font-size: 0;
+    padding: 0;
+    text-align: center;
+    background: url(../img/nav-icon.png) no-repeat scroll 0px 2px;
+    height: 25px;
+    width: 25px;
+    border: none;
+
+    &:hover {
+        background: url(../img/nav-icon.png) no-repeat scroll 0px -37px;
+    }
+}
+
+.search-container {
+    position: absolute;
+    display: none;
+    width: 390px;
+    top: 75px;
+    right: 0;
+    z-index: 40;
+    @include tablets {
+        top: 40px;
+        width: 200px;
+    }
+}
+
+.search-form {
+    display: flex;
+    position: relative;
+}
+
+.search-form__input {
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 0px 10px 10px;
+    font-size: 13px;
+    font-style: italic;
+    text-transform: capitalize;
+    border: 1px solid #e6e6e6;
+}
+
+.search-form__btn {
+    width: 43px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: 11px;
+    border: none;
+    border-left: 1px solid #ddd;
+    font-size: 0;
+    background-color: sandybrown;
+    background: url(../img/nav-icon.png) no-repeat scroll 8px 2px;
+    &:hover {
+        background: url(../img/nav-icon.png) no-repeat scroll 8px -37px;
+    }
+}
+
+.main-header__cart {
+    position: relative;
+}
+
+.cart__btn {
+    font-size: 0;
+    height: 25px;
+    width: 25px;
+    background: url(../img/nav-icon.png) no-repeat scroll 0px -83px;
+    border: none;
+
+    &:hover {
+        background: url(../img/nav-icon.png) no-repeat scroll 0px -129px;
+
+    }
+}
+
+.cart__counter {
+    position: absolute;
+    display: block;
+    background-color: $green;
+    color: #ffffff;
+    border-radius: 20px;
+    line-height: 13px;
+    font-size: 13px;
+    padding:  1px 3px;
+    top: -2px;
+    right: 0;
+}
+
+.main-header__account {
+    position: relative;
+}
+
+.account__btn {
+    font-size: 0;
+    height: 25px;
+    width: 25px;
+    background: url(../img/nav-icon.png) no-repeat scroll 0px -168px;
+    border: none;
+
+    &:hover {
+        background: url(../img/nav-icon.png) no-repeat scroll 0px -206px;
+    }
+}
+
+.account-container {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 250px;
+    padding-left: 15px;
+    display: none;
+    z-index: 40;
+    background-color: #fff;
+
+    @include tablets {
+        top: 40px;
+    }
+}
+
+
+.account-menu__link {
+    color: $gray;
+    display: block;
+    padding: 5px 0;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+.account__language-menu {
+    padding-top: 10px;
+}
+
+.language__title,
+.currency__title {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 10px;
+}
+
+.language-current {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 11px;
+    background: url(../img/en-gb.png) center center no-repeat;
+}
+
+.language-menu__list,
+.currency-menu__list {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.language-menu__item,
+.currency-menu__item {
+    margin-right: 5px;
+}
+
+.language-menu__btn {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 5px 10px 5px 35px;
+
+    &:hover {
+        color: $green;
+    }
+
+    &--english {
+        background: url(../img/en-gb.png) 10px 6px  no-repeat;
+    }
+
+    &--arabic {
+        background: url(../img/ar.png) 10px 6px  no-repeat;
+
+    }
+}
+
+.currency-menu__btn {
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 5px 15px;
+
+    &:hover {
+        color: $green;
+    }
+}
+
+
+
+.visible {
+    display: block;
+}
+
+

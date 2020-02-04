@@ -1,0 +1,119 @@
+.popular-products-block {
+    width: 100%;
+    padding: 90px 0 70px;
+    background: url(../img/producttab-bkg.jpg) repeat;
+}
+
+.popular-products__menu-list {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    @include tablets {
+        width: 70%;
+    }
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.popular-products__menu-link {
+    color:#666;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 15px;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        color: $green;
+    }
+
+    &--active {
+        color: $green; 
+    }
+}
+
+.popular-products__list {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.popular-products__item {
+    width: 30%;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    position: relative;
+
+
+    &:hover {
+        .product-block__img {
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            &--hover {
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .product-options {
+            right: 0;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .sale-sticker {
+            left: 10px;
+            opacity: 1;
+            transition: all 0.4 ease-in-out;
+        }
+    }
+
+    @include tablets {
+        width: 45%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+
+
+.btn__link {
+    display: block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    background-image: none;
+    white-space: nowrap;
+    padding: 8px 30px 8px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    color:#ffffff;
+    background-color: $green; 
+    transition: background-color 0.2s ease-in-out;
+    width: 200px;
+    margin: 0 auto;
+
+
+    &:hover {
+        background-color: #000000;
+        transition: background-color 0.2s ease-in-out;
+    }
+}
+
+
+
+
