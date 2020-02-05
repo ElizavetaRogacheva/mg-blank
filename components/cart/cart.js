@@ -67,8 +67,4 @@ $(document).ready(function() {
         return false;
     });
 
-    if ($('.small-cart-table tr').length == 0) {
-        $('.product-cart, .checkout-form-wrapper, .small-cart').hide();
-        $('.empty-cart-block').show();
-    }
 });

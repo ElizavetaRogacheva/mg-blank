@@ -65,12 +65,13 @@
 <?php endif; ?>
 
 <!--секция по шаблону с рекомендованными товарами-->
+<?php viewData(MG::get('templateParams')); ?>
 <section class="featured-products-section">
     <div class="featured-products-wrapper">
         <div class="banners">
             <ul class="banners__list">
                 <li class="banners__item banners__item--left">
-                    <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/cms-banner-1.jpg" alt="">
+                    <img title="" src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerLeftUrl'] ?>" alt="">
                 </li>
                 <li class="banners__item banners__item--right">
                     <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/cms-banner-2.jpg" alt="">
@@ -83,7 +84,49 @@
                     <h3 class="italic-title">Featured Products</h3>
                 </div>
                 <div class="featured-products-carousel js-featured-products-carousel">
-                    <ul class="featured-products-carousel__list">
+                    
+                    <?php
+                    $newsArr = array_chunk($data['newProducts'], 3);
+                    // viewData($newsArr); 
+                    foreach($newsArr as $newsBlock) { ?>
+                        <ul class="featured-products-carousel__list">
+                            <?php foreach($newsBlock as $newsItem) { ?>
+                                <li class="featured-products-carousel__item featured-product-card">
+                                <a title="" href="#" class="featured-product-card__link">
+                                    <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/03-360x302.jpg" alt="">
+                                </a>
+                                <div class="product-block-content">
+                                    <ul class="rating-block">
+                                        <li class="rating-block__item"></li>
+                                        <li class="rating-block__item"></li>
+                                        <li class="rating-block__item"></li>
+                                        <li class="rating-block__item"></li>
+                                        <li class="rating-block__item rating-block__item--empty"></li>
+                                    </ul>
+                                    <h4 class="product-block__title">
+                                        <a title="" href="#">Aliquam Quaerat</a>
+                                    </h4>
+                                    <p class="price">$108.80</p>
+                                    <ul class="product-options">
+                                        <li class="product-options__item">
+                                            <button class="product-options__btn product-options__btn--wishlist"></button>
+                                        </li>
+                                        <li class="product-options__item">
+                                            <button class="product-options__btn product-options__btn--view"></button>
+                                        </li>
+                                        <li class="product-options__item">
+                                            <button class="product-options__btn product-options__btn--compare"></button>
+                                        </li>
+                                        <li class="product-options__item">
+                                            <button class="product-options__btn product-options__btn--cart"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                             </li>
+                            <?php } ?>
+                        </ul>
+                    <?php } ?>
+                    <!-- <ul class="featured-products-carousel__list">
                         <li class="featured-products-carousel__item featured-product-card">
                             <a title="" href="#" class="featured-product-card__link">
                                 <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/03-360x302.jpg" alt="">
@@ -385,7 +428,8 @@
                                 </ul>
                             </div>
                         </li>
-                    </ul>
+                    </ul> -->
+
                 </div>
                 <div class="featured-products__arrows">
                     <button class="featured-products__arrow featured-products__arrow--left"></button>

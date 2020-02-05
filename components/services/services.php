@@ -2,7 +2,9 @@
     <li class="services-item">
         <div class="services-item__icon services-item__icon--shipping"></div>
         <div class="services-item__content">
-            <div class="services-item__title">Free Shipping Worldwide</div>
+            <div class="services-item__title">
+                <?php echo lang('services1-title'); ?>
+            </div>
             <div class="services-item__description">Lorem ipsum is simply dummy</div>
         </div>
     </li>

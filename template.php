@@ -107,7 +107,7 @@ Version: 1.0.0
         <?php
         // Шапка сайта
         // layout/layout_footer.php
-        layout('footer');
+        layout('footer', $data);
         ?>
         <a title="" href="#" class="scroll-top js-scroll-top"></a>
     </div>

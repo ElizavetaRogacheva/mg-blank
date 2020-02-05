@@ -296,5 +296,6 @@ $locale = array(
   'paginationLabel4' => 'Go to the previous page',
   'paginationLabel5' => 'Go to the next page',
   'paginationLabel6' => 'Go to the last page',
+  'services1-title' => 'Free Shipping Worldwide',
 );
 ?>
