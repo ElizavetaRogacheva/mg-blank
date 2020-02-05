@@ -29,74 +29,78 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
-
-<?php
-// Если ошибка отправки формы, то выводим эту ошибку
-if (!empty($data['error'])): ?>
+<section class="static-page-section">
     <?php
-    // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
-    echo $data['error']; ?>
-<?php endif; ?>
-
-<?php
-// Если форма ещё не отправлена, выводим её
-if ($data['dislpayForm']): ?>
-
+    // Если ошибка отправки формы, то выводим эту ошибку
+    if (!empty($data['error'])): ?>
+        <?php
+        // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
+        echo $data['error']; ?>
+    <?php endif; ?>
+    
     <?php
-    // Если в админке в разделе страниц заполнено описание страницы, то выводим его
-    if (!empty($data['html_content']) && $data['html_content'] != '&nbsp;'):?>
-        <?php echo $data['html_content'] ?>
+    // Если форма ещё не отправлена, выводим её
+    if ($data['dislpayForm']): ?>
+    
+        <?php
+        // Если в админке в разделе страниц заполнено описание страницы, то выводим его
+        if (!empty($data['html_content']) && $data['html_content'] != '&nbsp;'):?>
+            <?php echo $data['html_content'] ?>
+        <?php endif; ?>
+    
+        <form action=""
+              method="post"
+              name="feedback"
+              class="feedback-form">
+            <input type="text"
+                   name="fio"
+                   placeholder="<?php echo lang('fio'); ?>"
+                   value="<?php echo !empty($_POST['fio']) ? $_POST['fio'] : '' ?>">
+            <input type="text"
+                   name="email"
+                   placeholder="Email"
+                   value="<?php echo !empty($_POST['email']) ? $_POST['email'] : '' ?>">
+            <textarea class="address-area"
+                      placeholder="<?php echo lang('feedbackMessage'); ?>"
+                      name="message"><?php echo !empty($_REQUEST['message']) ? $_REQUEST['message'] : '' ?></textarea>
+    
+    
+            <?php
+            // Если включена captcha и выключена ReCaptcha, то выводим капчу
+            if (
+              MG::getSetting('useCaptcha') == "true"
+              && MG::getSetting('useReCaptcha') != 'true'
+            ): ?>
+                <img src="captcha.html"
+                     width="140"
+                     height="36">
+    
+                <input type="text"
+                       name="capcha"
+                       class="captcha">
+    
+            <?php else: ?>
+                <?php
+                // А если нет, выводим ReCaptcha
+                echo MG::printReCaptcha(); ?>
+            <?php endif; ?>
+    
+            <input type="submit"
+                   name="send"
+                   value="<?php echo lang('send'); ?>">
+        </form>
+    
+        <?php
+        // Функция валидации формы
+        mgFormValid('feedback', 'feedback'); ?>
+    
+    <?php
+    // Если форма уже отправлена, то выводим сообщение об успешной отправке
+    else: ?>
+        <?php
+        // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
+        echo $data['message'] ?>
     <?php endif; ?>
 
-    <form action=""
-          method="post"
-          name="feedback">
-        <input type="text"
-               name="fio"
-               placeholder="<?php echo lang('fio'); ?>"
-               value="<?php echo !empty($_POST['fio']) ? $_POST['fio'] : '' ?>">
-        <input type="text"
-               name="email"
-               placeholder="Email"
-               value="<?php echo !empty($_POST['email']) ? $_POST['email'] : '' ?>">
-        <textarea class="address-area"
-                  placeholder="<?php echo lang('feedbackMessage'); ?>"
-                  name="message"><?php echo !empty($_REQUEST['message']) ? $_REQUEST['message'] : '' ?></textarea>
 
-
-        <?php
-        // Если включена captcha и выключена ReCaptcha, то выводим капчу
-        if (
-          MG::getSetting('useCaptcha') == "true"
-          && MG::getSetting('useReCaptcha') != 'true'
-        ): ?>
-            <img src="captcha.html"
-                 width="140"
-                 height="36">
-
-            <input type="text"
-                   name="capcha"
-                   class="captcha">
-
-        <?php else: ?>
-            <?php
-            // А если нет, выводим ReCaptcha
-            echo MG::printReCaptcha(); ?>
-        <?php endif; ?>
-
-        <input type="submit"
-               name="send"
-               value="<?php echo lang('send'); ?>">
-    </form>
-
-    <?php
-    // Функция валидации формы
-    mgFormValid('feedback', 'feedback'); ?>
-
-<?php
-// Если форма уже отправлена, то выводим сообщение об успешной отправке
-else: ?>
-    <?php
-    // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
-    echo $data['message'] ?>
-<?php endif; ?>
+</section>

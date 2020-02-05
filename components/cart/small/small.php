@@ -19,6 +19,8 @@ $smallCartRow = function (
 ) {
 
   // Получаем массив миниатюр изображений
+
+  
   $thumbsArr = getThumbsFromUrl($item['image_url_new'], $item['id']);
   ?>
     <tr>
@@ -85,6 +87,7 @@ $smallCartRow = function (
                 </g>
         </svg>
         </div>
+    
         <ul class="c-cart__small--list cart-list">
             <li class="c-cart__small--count">
                 <div class="c-cart__small--text">

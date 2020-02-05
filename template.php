@@ -95,6 +95,13 @@ Version: 1.0.0
             );
         ?>
 
+        <?php
+            component(
+                'cart/popup',
+                $data
+            );
+        ?>
+
         <?php if(MG::get('controller')=="controllers_catalog"): ?>
             <section class="products-section">
                 <?php component('aside', $data);?> 

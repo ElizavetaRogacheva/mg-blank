@@ -1,8 +1,11 @@
-<?php mgAddMeta('components/product-item/css/product-item.css'); ?>
-
 <!--блок карточки товара-->
 <div class="product-block">
-
+<?php console_log($data) ?>
+    <?php if ($data['new'] === '1') : ?>
+    <div class="sale-sticker">
+        <span>new</span>
+    </div>
+    <?php endif ;?>
     <!--картинки карточки товара-->
     <a title="" href="<?php echo $data['link'] ?>" class="product-block__link">
         <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img">
