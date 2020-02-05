@@ -21,9 +21,11 @@
         <!--рейтинг товара-->
         <ul class="rating-block">
             <div class="product-container__rating">
+            <?php if (class_exists('Rating')): ?>
                 <div class="c-product__row">
                     [mg-product-rating id="<?php echo $data['id'] ?>"]
                 </div>
+            <?php endif ;?>
             </div>
         </ul>
 

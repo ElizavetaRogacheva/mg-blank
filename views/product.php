@@ -75,7 +75,7 @@ mgSEO($data);
             <h3 class="product__title"><?php echo ($data['title']); ?> </h3>
             
             <!--рейтинг товара-->
-            <div class="product-container__rating">
+            <div class="product-container__rating">        
                     <div class="c-product__row">
                     [mg-product-rating id="<?php echo $data['id'] ?>"]
                     </div>
