@@ -94,11 +94,11 @@ mgSEO($data);
             <div class="product-info">
                 <ul class="product-info__list">
                     <li class="product-info__item">
-                        <span class="product-info-bold">Product Code:</span>
+                        <span class="product-info-bold"><?php echo lang ('productCode') ?>:</span>
                         <span><?php echo ($data['code']); ?></span>
                     </li>
                     <li class="product-info__item">
-                        <span class="product-info-bold">Availability:</span>
+                        <span class="product-info-bold"><?php echo lang ('Availability')?>:</span>
                         <span><?php echo ($data['count']); ?></span>
                     </li>
                 </ul>
@@ -106,7 +106,7 @@ mgSEO($data);
 
             
             <div class="options">
-                <h3 class="options__title">Available Options</h3>
+                <h3 class="options__title"><?php echo lang('optionsVariants') ?></h3>
                 <div class="variants-container">
                     <form action="<?php echo SITE . $data['liteFormData']['action'] ?>"
                         method="<?php echo $data['liteFormData']['method'] ?>"
@@ -229,9 +229,10 @@ mgSEO($data);
     <!--вкладки описания отзывов и характеристик-->
     <div class="product-tabs-info">
         <ul class="product-tabs-info__nav-list">
-            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link">Description</a></li>
-            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link">Specification</a></li>
-            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link">Reviews <span>([mg-product-count-comments item="<?php echo ($data['id']) ?>"])</span></a></li>
+        <?php console_log($data) ?>
+            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link"><?php echo lang('desc') ?></a></li>
+            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('characteristic') ?></a></li>
+            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('reviews') ?> <span>([mg-product-count-comments item="<?php echo ($data['id']) ?>"])</span></a></li>
         </ul>
         <ul class="products-tabs-info__list">
             <li class="products-tabs-info__item active-item js-desc-item">

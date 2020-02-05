@@ -3,7 +3,7 @@
 
 <div class="categories">
     <div class="categories__title js-categories__title aside-title">
-        <span>categories</span>
+        <span><?php echo lang('categories')?></span>
     </div>
     <ul class="categories__list js-categories__list"> 
 

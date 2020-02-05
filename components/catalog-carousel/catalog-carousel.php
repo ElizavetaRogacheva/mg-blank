@@ -14,6 +14,6 @@
                 </li>
             <?php } ?>  
         </ul>
-        <a title="" href="<?php echo $data['link']; ?>" class="btn__link">view more products</a>
+        <a title="" href="<?php echo $data['link']; ?>" class="btn__link"><?php echo lang('viewMoreBtn')?></a>
     </div>
 </section>

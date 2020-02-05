@@ -10,7 +10,7 @@
     <?php endif; ?>
 
     <div class="filter">
-    <div class="filter-title js-filter-title aside-title">filter</div>
+    <div class="filter-title js-filter-title aside-title"><?php echo lang('filter')?></div>
         <?php
             component(
             'filter',

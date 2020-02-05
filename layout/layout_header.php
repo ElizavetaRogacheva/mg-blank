@@ -62,14 +62,12 @@
                             <ul class="account-menu__list">
                                 <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Register</a></li>
                                 <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Login</a></li>
-                                <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Wish List <span>(0)</span></a></li>
-                                <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Shopping Cart</a></li>
                                 <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Checkout</a></li>
                             </ul>
                         </div>
                         <div class="account__language-menu">
                             <div class="language__title">
-                                <span>Language</span> 
+                                <span><?php echo lang ('language') ?></span> 
                                 <span class="language-current">English</span>
                             </div>
                             <ul class="language-menu__list">
@@ -79,8 +77,7 @@
                         </div>
                         <div class="account__currency-menu">
                             <div class="currency__title">
-                                <span>currency</span>
-                                <span class="currency-current">$</span>
+                                <span><?php echo lang ('currency') ?></span>
                             </div>
                             <ul class="currency-menu__list">
                                 <li class="currency-menu__item"><button class="currency-menu__btn">€</button></li>
