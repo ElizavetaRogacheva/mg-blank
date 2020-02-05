@@ -9,7 +9,11 @@
     <!--картинки карточки товара-->
     <a title="" href="<?php echo $data['link'] ?>" class="product-block__link">
         <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img">
+        <?php if (!(empty($data['images_product'][1]))) : ?>
         <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][1] ?>" alt="" class="product-block__img product-block__img--hover">
+        <?php else : ?>
+            <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img product-block__img--hover">
+        <?php endif ;?>
     </a>
 
     <div class="product-block-content">
