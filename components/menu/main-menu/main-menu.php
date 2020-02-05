@@ -4,7 +4,6 @@
 <nav class="main-nav js-main-nav">
     <ul class="main-nav__list">
         <!--заполнение меню данными о содержащихся страницах-->
-        <?php console_log($data) ?>
         <?php foreach ($data as $page): ?>
             <li class="main-nav__item">
                 <a title="" 

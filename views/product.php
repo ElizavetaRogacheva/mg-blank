@@ -229,7 +229,6 @@ mgSEO($data);
     <!--вкладки описания отзывов и характеристик-->
     <div class="product-tabs-info">
         <ul class="product-tabs-info__nav-list">
-        <?php console_log($data) ?>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link"><?php echo lang('desc') ?></a></li>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('characteristic') ?></a></li>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('reviews') ?> <span>([mg-product-count-comments item="<?php echo ($data['id']) ?>"])</span></a></li>

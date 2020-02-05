@@ -70,10 +70,11 @@
                                 <span><?php echo lang ('language') ?></span> 
                                 <span class="language-current">English</span>
                             </div>
-                            <ul class="language-menu__list">
-                                <li class="language-menu__item"><button class="language-menu__btn language-menu__btn--english">english</button></li>
-                                <li class="language-menu__item"><button class="language-menu__btn language-menu__btn--arabic">arabic</button></li>
-                            </ul>
+                                <?php 
+                                component(
+                                    'select/lang', 
+                                    $data);
+                                ?>
                         </div>
                         <div class="account__currency-menu">
                             <div class="currency__title">
