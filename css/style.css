@@ -547,7 +547,6 @@ button {
     vertical-align: middle;
     width: 16px;
     height: 11px;
-    background: url(../img/en-gb.png) 50% no-repeat;
 }
 .currency-menu__list,
 .language-menu__list {
@@ -555,6 +554,7 @@ button {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 .currency-menu__item,
 .language-menu__item {
@@ -567,19 +567,14 @@ button {
     line-height: 13px;
     border: 1px solid #eee;
     background-color: #fff;
-    padding: 5px 10px 5px 35px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
 }
 .language-menu__btn:hover {
     color: #6ea820;
 }
 .language-menu__btn--active {
     color: #6ea820;
-}
-.language-menu__btn--english {
-    background: url(../img/en-gb.png) 10px 6px no-repeat;
-}
-.language-menu__btn--arabic {
-    background: url(../img/ar.png) 10px 6px no-repeat;
 }
 .currency-menu__btn {
     border: 1px solid #eee;
@@ -1096,7 +1091,7 @@ button {
     display: flex;
     width: auto;
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
     right: -30px;
     opacity: 0;
     -webkit-transition: all 0.5s ease-in-out;
@@ -1107,7 +1102,7 @@ button {
 }
 .product-options__btn {
     width: 25px;
-    height: 25px;
+    height: 20px;
     border: none;
 }
 .product-options__btn--wishlist {
@@ -1305,6 +1300,7 @@ button {
 }
 .featured-product-card .product-options {
     right: 0;
+    bottom: 13px;
 }
 .featured-product-card:hover .product-options {
     opacity: 1;

@@ -1,6 +1,5 @@
 <!--блок карточки товара-->
 <div class="product-block">
-<?php console_log($data) ?>
     <?php if ($data['new'] === '1') : ?>
     <div class="sale-sticker">
         <span>new</span>

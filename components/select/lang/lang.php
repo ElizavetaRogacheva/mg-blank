@@ -12,7 +12,6 @@ if (is_array($multiLang) && !empty($multiLang)) {
 }
 if ($count) { ?>
 
-<?php console_log($multiLang) ?>
     <ul class="language-menu__list">
     <?php $url = str_replace(url::getCutSection(), '', $_SERVER['REQUEST_URI']);?>
     <li class="language-menu__item">
