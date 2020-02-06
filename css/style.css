@@ -1324,7 +1324,9 @@ button {
 }
 .featured-product-card__link img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 .product-block__title {
     margin: 0;

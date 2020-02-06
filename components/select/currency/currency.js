@@ -1,16 +1,17 @@
-$(document).ready(function () {
+'use strict';
+$(document).ready(function() {
     var currBtn = $('#js-currency-select');
 
-    currBtn.change(function () {
+    currBtn.change(function() {
         $.ajax({
-            type: "GET",
-            url: mgBaseDir + "/ajaxrequest",
+            type: 'GET',
+            url: mgBaseDir + '/ajaxrequest',
             data: {
-                userCustomCurrency: currBtn.val()
+                userCustomCurrency: currBtn.val(),
             },
-            success: function (response) {
+            success: function(response) {
                 window.location.reload();
-            }
+            },
         });
     });
 });

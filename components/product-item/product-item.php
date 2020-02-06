@@ -3,7 +3,7 @@
 <?php console_log($data) ?>
     <?php if ($data['new'] === '1') : ?>
     <div class="sale-sticker">
-        <span>new</span>
+        <span><?php echo lang('newSticker')  ?></span>
     </div>
     <?php endif ;?>
     <!--картинки карточки товара-->
@@ -21,11 +21,11 @@
         <!--рейтинг товара-->
         <ul class="rating-block">
             <div class="product-container__rating">
-            <?php if (class_exists('Rating')): ?>
+            <?php //if (class_exists('Rating')): ?>
                 <div class="c-product__row">
                     [mg-product-rating id="<?php echo $data['id'] ?>"]
                 </div>
-            <?php endif ;?>
+            <?php //endif ;?>
             </div>
         </ul>
 

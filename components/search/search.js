@@ -1,3 +1,4 @@
+'use strict';
 $(document).ready(function () {
     // Обработка ввода поисковой фразы в поле поиска
     $('body').on('keyup', 'input[name=search]', function () {

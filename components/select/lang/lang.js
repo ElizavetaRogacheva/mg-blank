@@ -1,12 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var langSelect = document.getElementById('js-lang-select');
+'use strict';
+var langBtns = document.querySelectorAll('.js-lang-select');
+console.log(langBtns);
 
-    var changeLang = function(event) {
-        var select = event.target;
+var changeLang = function(event) {
+    var url = event.currentTarget.dataset.lang;
+    console.log(url);
 
-        window.location.href = select.options[select.selectedIndex].value;
-    };
-    if (langSelect) {
-        langSelect.addEventListener('change', changeLang);
-    }
+    location.href = url;
+};
+
+langBtns.forEach(function(langBtn) {
+    langBtn.addEventListener('click', changeLang);
 });

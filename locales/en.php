@@ -313,5 +313,6 @@ $locale = array(
   'desc' => 'Description',
   'characteristic' => 'Characteristics',
   'reviews' => 'Reviews',
+  'newSticker' => 'New',
 );
 ?>

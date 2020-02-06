@@ -40,20 +40,6 @@
     ?>
 <?php endif; ?>
 
-<!--секция новинок-->
-<?php if(!empty($data['newProducts'])) : ?>
-    <?php
-        component(
-            'catalog-carousel',
-            [
-            'items' => $data['newProducts'],
-            'link' => SITE . '/group?type=latest',
-            'title' => lang('indexNew')
-            ]
-        );
-    ?>
-<?php endif; ?>
-
 <!--секция товары со скидкой-->
 <?php if(!empty($data['saleProducts'])) : ?>
     <?php
@@ -69,7 +55,6 @@
 <?php endif; ?>
 
 <!--секция по шаблону с рекомендованными товарами-->
-<?php viewData(MG::get('templateParams')); ?>
 <section class="featured-products-section">
     <div class="featured-products-wrapper">
     <?php if (MG::get('templateParams')['bannersShow'] == true) :?>
@@ -92,359 +77,31 @@
             </ul>
         </div>
     <?php endif ;?>
+    <!--секция новинок-->
+    <?php // viewData($data) ?>
+    <?php if(!empty($data['newProducts'])) : ?>
         <div class="wrapper">
             <div class="featured-products-container">
                 <div class="featured-products__title">
-                    <h3 class="italic-title">Featured Products</h3>
+                    <h3 class="italic-title"><?php echo $data['newProducts']; ?></h3>
                 </div>
-                <div class="featured-products-carousel js-featured-products-carousel">
-                    
+                <div class="featured-products-carousel js-featured-products-carousel">                   
                     <?php
                     $newsArr = array_chunk($data['newProducts'], 3);
-                    // viewData($newsArr); 
                     foreach($newsArr as $newsBlock) { ?>
                         <ul class="featured-products-carousel__list">
                             <?php foreach($newsBlock as $newsItem) { ?>
-                                <li class="featured-products-carousel__item featured-product-card">
-                                <a title="" href="#" class="featured-product-card__link">
-                                    <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/03-360x302.jpg" alt="">
-                                </a>
-                                <div class="product-block-content">
-                                    <ul class="rating-block">
-                                        <li class="rating-block__item"></li>
-                                        <li class="rating-block__item"></li>
-                                        <li class="rating-block__item"></li>
-                                        <li class="rating-block__item"></li>
-                                        <li class="rating-block__item rating-block__item--empty"></li>
-                                    </ul>
-                                    <h4 class="product-block__title">
-                                        <a title="" href="#">Aliquam Quaerat</a>
-                                    </h4>
-                                    <p class="price">$108.80</p>
-                                    <ul class="product-options">
-                                        <li class="product-options__item">
-                                            <button class="product-options__btn product-options__btn--wishlist"></button>
-                                        </li>
-                                        <li class="product-options__item">
-                                            <button class="product-options__btn product-options__btn--view"></button>
-                                        </li>
-                                        <li class="product-options__item">
-                                            <button class="product-options__btn product-options__btn--compare"></button>
-                                        </li>
-                                        <li class="product-options__item">
-                                            <button class="product-options__btn product-options__btn--cart"></button>
-                                        </li>
-                                    </ul>
-                                </div>
-                             </li>
+                                <?php
+                                    component(
+                                        'product-item-news',
+                                        $newsItem
+                                    );
+                                ?>
                             <?php } ?>
                         </ul>
                     <?php } ?>
-                    <!-- <ul class="featured-products-carousel__list">
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/03-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Aliquam Quaerat</a>
-                                </h4>
-                                <p class="price">$108.80</p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/02-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Accusantium Doloremque</a>
-                                </h4>
-                                <p class="price">$104.00</p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/04-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Praesentium Voluptatum </a>
-                                </h4>
-                                <p class="price">$128.00</p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="featured-products-carousel__list">
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <div class="sale-sticker">
-                                <span>sale</span>
-                            </div>
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/05-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Consectetur Hampden</a>
-                                </h4>
-                                <p class="price">$110.00 <s>$119.60</s></p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/15-160x135.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Necessitatibus</a>
-                                </h4>
-                                <p class="price">$119.60</p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <div class="sale-sticker">
-                                <span>sale</span>
-                            </div>
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/01-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Neque Porro Quisquam</a>
-                                </h4>
-                                <p class="price">$115.00 <s>$118.00</s></p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="featured-products-carousel__list">
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/06-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Exercitat Virginia</a>
-                                </h4>
-                                <p class="price">$116.00</p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/05-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                    <li class="rating-block__item rating-block__item--empty"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Voluptas Assumenda</a>
-                                </h4>
-                                <p class="price">$122.00</p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="featured-products-carousel__item featured-product-card">
-                            <div class="sale-sticker">
-                                <span>sale</span>
-                            </div>
-                            <a title="" href="#" class="featured-product-card__link">
-                                <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/06-360x302.jpg" alt="">
-                            </a>
-                            <div class="product-block-content">
-                                <ul class="rating-block">
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                    <li class="rating-block__item"></li>
-                                </ul>
-                                <h4 class="product-block__title">
-                                    <a title="" href="#">Voluptates Repudiandae</a>
-                                </h4>
-                                <p class="price">$122.00 <s>$140.00</s></p>
-                                <ul class="product-options">
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--wishlist"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--view"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--compare"></button>
-                                    </li>
-                                    <li class="product-options__item">
-                                        <button class="product-options__btn product-options__btn--cart"></button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul> -->
-
                 </div>
+
                 <div class="featured-products__arrows">
                     <button class="featured-products__arrow featured-products__arrow--left"></button>
                     <button class="featured-products__arrow featured-products__arrow--right"></button>
@@ -457,7 +114,8 @@
                    title=""></a>
             </div>    
             <?php endif; ?>
-        </div>
+        </div>       
+    <?php endif; ?>
     </div>
 </section>
 

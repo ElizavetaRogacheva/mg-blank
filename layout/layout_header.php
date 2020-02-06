@@ -28,13 +28,8 @@
                     <button class="search__btn js-search__btn">Search</button>
                     <div class="search-container js-search-container">
                             <?php 
-                            component(
-                                'search', 
-                                $data['menuPages']);
+                            component('search');
                             ?>
-                        <div class="c-search__dropdown wraper-fast-result">
-                            <div class="fastResult"></div>
-                        </div>
                     </div>
                 </div>
 
