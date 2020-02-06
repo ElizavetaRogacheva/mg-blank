@@ -1,8 +1,10 @@
-
+<?php //viewData($data['menuPages']) ?>
 <ul class="footer-info__list js-footer-info__list">
-    <li class="footer-info__item"><a title="" href="#" class="footer-info__link">About Us</a></li>
-    <li class="footer-info__item"><a title="" href="#" class="footer-info__link">Delivery Information</a></li>
-    <li class="footer-info__item"><a title="" href="#" class="footer-info__link">Privacy Policy</a></li>
-    <li class="footer-info__item"><a title="" href="#" class="footer-info__link">Terms & Conditions</a></li>
-    <li class="footer-info__item"><a title="" href="#" class="footer-info__link">Site Map</a></li>
+<?php foreach ($data['menuPages'] as $page): ?>
+    <li class="footer-info__item">
+        <a title="" 
+           href="<?php echo $page['link'] ?>" 
+           class="footer-info__link"><?php echo $page['title'] ?></a>
+    </li>
+<?php endforeach ; ?>
 </ul>
