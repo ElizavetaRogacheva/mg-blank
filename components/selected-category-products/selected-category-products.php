@@ -3,7 +3,13 @@
   <h1 class="products-category-content__title"><?php echo $data['titleCategory'] ?></h1>
 
   <div class="products-category-content__desc">
-    <img title="" src="./img/category-banner-892x200.jpg" alt="" class="products-category-content__img">
+    <?php if (MG::get('templateParams')['catalogBanner'] == true) :?>
+    <a href="#" 
+       class="products-category-content__link"
+       title="">
+       <img title="" src="<?php echo PATH_SITE_TEMPLATE .MG::get('templateParams')['catalogBannerUrl']?>" alt="" class="products-category-content__img">
+    </a>
+    <?php endif ;?>
     <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
   </div>
 

@@ -1,4 +1,7 @@
-<footer class="main-footer">
+<footer class="main-footer" 
+        <?php if(MG::get('templateParams')['bgFooter'] == true) :?>
+        style="background-image: url(<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bgFooterUrl'] ?>)"
+        <?php endif ;?>>
             <div class="main-footer-container">
                 <div class="main-footer-top">
                     <div class="main-footer__block contacts">

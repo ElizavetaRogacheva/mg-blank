@@ -27,8 +27,6 @@ if ($count) { ?>
 
     <label class="select__wrap">
         <?php $url = str_replace(url::getCutSection(), '', $_SERVER['REQUEST_URI']);?>
-        <svg class="select__icon icon icon--flag"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon--flag"></use></svg>
-
         <select name="multiLang-selector"
                 class="select"
                 id="js-lang-select"

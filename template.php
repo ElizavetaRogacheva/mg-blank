@@ -109,7 +109,12 @@ Version: 1.0.0
         // layout/layout_footer.php
         layout('footer', $data);
         ?>
-        <a title="" href="#" class="scroll-top js-scroll-top"></a>
+        <?php if(MG::get('templateParams')['scrollToTopShow'] == true) : ?>
+        <a title="" 
+           href="#" 
+           class="scroll-top js-scroll-top"
+           style="background-image: url(<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['scrollToTopUrl'] ?>)"></a>
+        <?php endif; ?>
     </div>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/hidden-blocks.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/accordion.js"></script>

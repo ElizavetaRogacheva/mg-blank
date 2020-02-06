@@ -72,16 +72,26 @@
 <?php viewData(MG::get('templateParams')); ?>
 <section class="featured-products-section">
     <div class="featured-products-wrapper">
+    <?php if (MG::get('templateParams')['bannersShow'] == true) :?>
         <div class="banners">
             <ul class="banners__list">
                 <li class="banners__item banners__item--left">
-                    <img title="" src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerLeftUrl'] ?>" alt="">
+                    <a href="#" 
+                       class="banners-item__link"
+                       title="">
+                        <img title="" src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerLeftUrl'] ?>" alt="">                   
+                    </a>
                 </li>
                 <li class="banners__item banners__item--right">
-                    <img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/cms-banner-2.jpg" alt="">
+                <a href="#" 
+                   class="banners-item__link"
+                   title="">
+                    <img title="" src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerRightUrl'] ?>" alt="">                 
+                   </a>
                 </li>
             </ul>
         </div>
+    <?php endif ;?>
         <div class="wrapper">
             <div class="featured-products-container">
                 <div class="featured-products__title">
@@ -440,7 +450,13 @@
                     <button class="featured-products__arrow featured-products__arrow--right"></button>
                 </div>
             </div>
-            <div class="featured-products__decor"></div>    
+            <?php if (MG::get('templateParams')['bgShow'] == true) :?>
+            <div class="featured-products__decor" style="background: url(<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['newsBgUrl'] ?>)  50% no-repeat">
+                <a href="#" 
+                   class="featured-products__decor-link" 
+                   title=""></a>
+            </div>    
+            <?php endif; ?>
         </div>
     </div>
 </section>
