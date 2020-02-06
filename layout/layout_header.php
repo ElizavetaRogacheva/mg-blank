@@ -75,7 +75,6 @@
                         <div class="account__language-menu">
                             <div class="language__title">
                                 <span><?php echo lang ('language') ?></span> 
-                                <span class="language-current">English</span>
                             </div>
                                 <?php 
                                 component(
@@ -87,11 +86,11 @@
                             <div class="currency__title">
                                 <span><?php echo lang ('currency') ?></span>
                             </div>
-                            <ul class="currency-menu__list">
-                                <li class="currency-menu__item"><button class="currency-menu__btn">€</button></li>
-                                <li class="currency-menu__item"><button class="currency-menu__btn">£</button></li>
-                                <li class="currency-menu__item"><button class="currency-menu__btn">$</button></li>
-                            </ul>
+                            <?php 
+                                component(
+                                    'select/currency', 
+                                    $data);
+                                ?>
                         </div>  
                     </div>
                 </div> <!--end main-header__account-->

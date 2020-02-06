@@ -28,3 +28,10 @@ if (MG::getSetting('printCurrencySelector') == 'true') {
     </label>
 
 <?php } ?>
+
+
+<!--<ul class="currency-menu__list">
+    <li class="currency-menu__item"><button class="currency-menu__btn">€</button></li>
+    <li class="currency-menu__item"><button class="currency-menu__btn">£</button></li>
+    <li class="currency-menu__item"><button class="currency-menu__btn">$</button></li>
+</ul>-->
