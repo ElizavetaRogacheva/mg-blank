@@ -314,5 +314,8 @@
         'characteristic' => 'Характеристики',
         'reviews' => 'Отзывы',      
         'newSticker' => 'Новинка',
+        'registration' => 'Регистрация',
+        'login' => 'Войти',
+        'personal' => 'Личный кабинет',      
     );
 ?>

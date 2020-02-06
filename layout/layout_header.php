@@ -55,9 +55,21 @@
                     <div class="account-container js-account-container">
                         <div class="account__menu">
                             <ul class="account-menu__list">
-                                <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Register</a></li>
-                                <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Login</a></li>
-                                <li class="account-menu__item"><a title="" href="#" class="account-menu__link">Checkout</a></li>
+                                <li class="account-menu__item">
+                                    <a title="" 
+                                       href="<?php echo SITE .'/registration'; ?>" 
+                                       class="account-menu__link"><?php echo lang('registration') ?></a>
+                                </li>
+                                <li class="account-menu__item">
+                                    <a title="" 
+                                       href="<?php echo SITE .'/enter'; ?>" 
+                                       class="account-menu__link"><?php echo lang('login') ?></a>
+                                </li>
+                                <li class="account-menu__item">
+                                    <a title="" 
+                                       href="<?php echo SITE .'/personal'; ?>" 
+                                       class="account-menu__link"><?php echo lang('personal') ?></a>
+                                </li>
                             </ul>
                         </div>
                         <div class="account__language-menu">

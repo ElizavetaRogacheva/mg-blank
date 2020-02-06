@@ -26,7 +26,7 @@ if ($count) { ?>
     <?php foreach ($multiLang as $mLang) {
                 if ($mLang['active'] != 'true') {continue;} ?>
                 <li class="language-menu__item">
-                    <button class="language-menu__btn js-lang-select language-menu__btn--arabic <?php echo LANG === $mLang['short'] ? 'language-menu__btn--active"':"" ?>"
+                    <button class="language-menu__btn js-lang-select language-menu__btn--arabic  <?php echo LANG === $mLang['short'] ? 'language-menu__btn--active"':"" ?>"
                             aria-label="Выбор языка сайта"
                             data-lang="<?php echo SITE.'/'.$mLang['short'].$url ?>">
                         <?php echo($mLang['full']) ?>

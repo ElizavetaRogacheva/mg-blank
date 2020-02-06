@@ -314,5 +314,8 @@ $locale = array(
   'characteristic' => 'Characteristics',
   'reviews' => 'Reviews',
   'newSticker' => 'New',
+  'registration' => 'Registration',
+  'login' => 'Login',
+  'personal' => 'Personal account',
 );
 ?>

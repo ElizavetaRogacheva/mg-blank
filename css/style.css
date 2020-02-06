@@ -507,13 +507,14 @@ button {
 }
 .account-container {
     position: absolute;
-    top: 75px;
+    top: 85px;
     right: 0;
     width: 250px;
     padding-left: 15px;
     display: none;
     z-index: 40;
     background-color: #fff;
+    border: 1px solid #e5e5e5;
 }
 @media (max-width: 1200px) {
     .account-container {
@@ -569,6 +570,9 @@ button {
     padding: 5px 10px 5px 35px;
 }
 .language-menu__btn:hover {
+    color: #6ea820;
+}
+.language-menu__btn--active {
     color: #6ea820;
 }
 .language-menu__btn--english {
@@ -2341,7 +2345,7 @@ button {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    
+
 }
 .payment__item img:hover {
     -webkit-filter: grayscale(0);
