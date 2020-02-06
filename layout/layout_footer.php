@@ -56,6 +56,7 @@
                 </div>
                 <div class="main-footer-bottom">
                     <div class="copyright"><span><?php echo date('Y') . ' ' . lang('copyright'); ?></span></div>
+                    <?php if (MG::get('templateParams')['paymentShow'] == true) :?>
                     <div class="main-footer-payment">
                         <ul class="payment__list">
                             <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/visa.png" alt=""></li>
@@ -65,6 +66,7 @@
                             <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/paypal.png" alt=""></li>
                         </ul>
                     </div>
+                    <?php endif ; ?>
                 </div>
             </div>
         </footer>

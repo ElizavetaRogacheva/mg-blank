@@ -1,4 +1,3 @@
-<?php //viewData($data['menuPages']) ?>
 <ul class="footer-info__list js-footer-info__list">
 <?php foreach ($data['menuPages'] as $page): ?>
     <li class="footer-info__item">

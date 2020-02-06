@@ -2332,10 +2332,16 @@ button {
 }
 .payment__item {
     margin-right: 10px;
+    width: 32px;
+    height: 20px;
 }
 .payment__item img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
 }
 .payment__item img:hover {
     -webkit-filter: grayscale(0);
