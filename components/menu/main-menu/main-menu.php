@@ -12,7 +12,7 @@
                    title=""><?php echo $page['title'] ?>
                 </a>
                 <?php if (!(empty($page['child']))) : ?>
-                    <ul class="main-nav-submenu main-nav-submenu--big">
+                    <ul class="main-nav-submenu">
                     <?php foreach($page['child'] as $subPage) : ?>
                         <li class="main-nav-submenu__item">
                             <a title="" 

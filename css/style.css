@@ -319,7 +319,8 @@ button {
     transform: scale(0);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
-    padding: 15px 30px 0;
+    padding: 10px;
+    min-width: 250px;
 }
 .main-nav-submenu:hover {
     -webkit-transform: scale(1);
@@ -374,6 +375,7 @@ button {
 .main-nav-submenu__item {
     margin-right: 20px;
 }
+
 @media (max-width: 1200px) {
     .main-nav-submenu__item {
         margin: 0;
@@ -479,11 +481,7 @@ button {
     font-size: 0;
     height: 25px;
     width: 25px;
-    background: url(../img/nav-icon.png) no-repeat scroll 0 -83px;
     border: none;
-}
-.cart__btn:hover {
-    background: url(../img/nav-icon.png) no-repeat scroll 0 -129px;
 }
 .cart__counter {
     position: absolute;
