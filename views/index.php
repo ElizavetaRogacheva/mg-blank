@@ -6,7 +6,7 @@
 <?php endif; ?>
 
 <!--секция с триггерами-->
-<?php if (MG::get('templateParams')['triggersShow'] == true) : ?>
+<?php if (MG::get('templateParams')['triggersShow'] === '1') : ?>
 <section class="services-section">
     <?php component('services', $data); ?>
 </section>

@@ -25,7 +25,7 @@
                     <button class="featured-products__arrow featured-products__arrow--right"></button>
                 </div>
             </div>
-            <?php if (MG::get('templateParams')['bgShow'] == true) :?>
+            <?php if (MG::get('templateParams')['bgShow'] === '1') :?>
             <div class="featured-products__decor">
                 <a href="<?php echo (MG::get('templateParams')['newsBgLink']) ?>" 
                    class="featured-products__decor-link" 

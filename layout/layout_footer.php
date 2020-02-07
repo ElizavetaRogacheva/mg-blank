@@ -1,5 +1,5 @@
 <footer class="main-footer" 
-        <?php if(MG::get('templateParams')['bgFooter'] == true) :?>
+        <?php if(MG::get('templateParams')['bgFooter'] === '1') :?>
         style="background-image: url(<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bgFooterUrl'] ?>)"
         <?php endif ;?>>
             <div class="main-footer-container">
@@ -23,26 +23,26 @@
                         ?>
 
                     </div>     
-                    <?php if (MG::get('templateParams')['socialsShow'] == true) :?>
+                    <?php if (MG::get('templateParams')['socialsShow'] === '1') :?>
                     <div class="main-footer__block footer-newsletter">
                         <div class="main-footer__block-title main-footer__block-title--not-arrow"><span><?php echo lang('socials')?></span></div>
                         <div class="main-footer__socials">
                             <ul class="socials__list">
-                            <?php if (MG::get('templateParams')['footerFacebook'] == true) :?>
+                            <?php if (MG::get('templateParams')['footerFacebook'] === '1') :?>
                                 <li class="socials__item">
                                     <a title="<?php echo (MG::get('templateParams')['footerFbTitle']) ?>" 
                                        href="<?php echo (MG::get('templateParams')['footerFacebookUrl']) ?>" 
                                        class="social__link social__link--fb"></a>
                                 </li>
                             <?php endif ;?>
-                            <?php if (MG::get('templateParams')['footerInstagram'] == true) :?>
+                            <?php if (MG::get('templateParams')['footerInstagram'] === '1') :?>
                                 <li class="socials__item">
                                     <a title="<?php echo (MG::get('templateParams')['footerIgTitle']) ?>" 
                                        href="<?php echo (MG::get('templateParams')['footerInstagramUrl']) ?>" 
                                        class="social__link social__link--ig"></a>
                                 </li>
                             <?php endif ;?>
-                            <?php if (MG::get('templateParams')['footerVk'] == true) :?>
+                            <?php if (MG::get('templateParams')['footerVk'] === '1') :?>
                                 <li class="socials__item">
                                     <a title="<?php echo (MG::get('templateParams')['footerVkTitle']) ?>" 
                                        href="<?php echo (MG::get('templateParams')['footerVkUrl']) ?>" 
@@ -56,7 +56,7 @@
                 </div>
                 <div class="main-footer-bottom">
                     <div class="copyright"><span><?php echo date('Y') . ' ' . lang('copyright'); ?></span></div>
-                    <?php if (MG::get('templateParams')['paymentShow'] == true) :?>
+                    <?php if (MG::get('templateParams')['paymentShow'] === '1') :?>
                     <div class="main-footer-payment">
                         <ul class="payment__list">
                             <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/visa.png" alt=""></li>

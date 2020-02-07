@@ -109,7 +109,7 @@ Version: 1.0.0
         // layout/layout_footer.php
         layout('footer', $data);
         ?>
-        <?php if(MG::get('templateParams')['scrollToTopShow'] == true) : ?>
+        <?php if(MG::get('templateParams')['scrollToTopShow'] === '1') : ?>
         <a title="" 
            href="#" 
            class="scroll-top js-scroll-top"
