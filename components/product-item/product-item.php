@@ -47,10 +47,6 @@
                 component('favorites/btns', $data);
             ?>
             </li>
-            <li class="product-options__item">
-                <button class="product-options__btn product-options__btn--view">
-                </button>
-            </li>
             <li class="product-options__item product-options__item--compare">
                 <?php
                     if (
