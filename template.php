@@ -96,10 +96,10 @@ Version: 1.0.0
         ?>
 
         <?php if(MG::get('controller')=="controllers_catalog"): ?>
-            <section class="products-section">
+            <main class="products-section">
                 <?php component('aside', $data);?> 
                 <?php layout('page'); ?>
-            </section>
+            </main>
         <?php else: ?>
             <?php layout('page'); ?>
         <?php endif; ?>

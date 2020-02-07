@@ -37,7 +37,7 @@ mgSEO($data);
 
 <?php  //viewData($data) ?>
 
-<section class="products-section">
+<main class="products-section">
 <?php
     component(
     'aside',
@@ -52,7 +52,7 @@ mgSEO($data);
     );
   ?>
 
-</section>
+  </main>
 
 
 

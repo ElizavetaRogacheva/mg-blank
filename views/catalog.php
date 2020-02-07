@@ -52,7 +52,6 @@ mgSEO($data);
             class="products-category-content__img">
     </a>
     <?php endif ;?>
-    <?php viewData($data['cat_desc']) ?>
     <?php if(!empty($data['cat_desc'])) :?>
         <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
     <?php endif ; ?>
