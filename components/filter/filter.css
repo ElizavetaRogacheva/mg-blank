@@ -41,7 +41,7 @@
 .filter-buttons {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .ui-slider-range {
@@ -52,10 +52,10 @@
     text-transform: uppercase;
     color: #fff;
     background-color: var(--main-color-green);
-    padding: 10px;
     cursor: pointer;
     font-size: 14px;
     border: none;
+    width: 49%;
 }
 
 .filter-btn:hover {
@@ -64,12 +64,14 @@
 
 .refreshFilter {
     text-transform: uppercase;
-    color: #fff;
-    background-color: var(--main-color-green);
-    border: none;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid var(--main-color-green);
     cursor: pointer;
     font-size: 14px;
-    padding: 8px;
+    width: 49%;
+    display: block;
+    text-align: center;
 }
 .refreshFilter:hover {
     background-color: #000;
