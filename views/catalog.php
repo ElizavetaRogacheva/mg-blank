@@ -52,23 +52,19 @@ mgSEO($data);
     <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
   </div>
 
-  <div class="subcategories">
-    
-    <?php
-    /*
-     * Список подкатегорий, выводим, если разрешено в настройках
-     * */
-    if (MG::getSetting('picturesCategory') == 'true'): ?>
-    
-        <?php
-        // Список категорий каталога
-        component(
-          'catalog/categories',
-          $data['cat_id']
-        );
-        ?>
+  <!--Список подкатегорий, выводим, если разрешено в настройках-->
+  
+    <?php if (MG::getSetting('picturesCategory') == 'true'): ?> 
+        <div class="subcategories">
+            <?php
+                // Список категорий каталога
+                component(
+                'catalog/categories',
+                $data['cat_id']
+                );
+            ?>
+        </div>
     <?php endif; ?>
-  </div>
 
   <div class="filterboard">
     <div class="filterboard__left">
