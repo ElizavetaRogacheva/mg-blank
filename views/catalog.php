@@ -52,7 +52,10 @@ mgSEO($data);
             class="products-category-content__img">
     </a>
     <?php endif ;?>
-    <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
+    <?php viewData($data['cat_desc']) ?>
+    <?php if(!empty($data['cat_desc'])) :?>
+        <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
+    <?php endif ; ?>
   </div>
 
   <!--Список подкатегорий, выводим, если разрешено в настройках-->
