@@ -52,7 +52,9 @@
 <!--секция по шаблону с рекомендованными товарами-->
 <section class="featured-products-section">
     <div class="featured-products-wrapper">
-    <?php if (MG::get('templateParams')['bannersShow'] == true) :?>
+    <?php 
+    viewData(MG::get('templateParams')['bannersShow']);
+    if (MG::get('templateParams')['bannersShow'] === '1') :?>
         <div class="banners">
             <ul class="banners__list">
                 <li class="banners__item banners__item--left">

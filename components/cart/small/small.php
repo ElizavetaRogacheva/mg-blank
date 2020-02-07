@@ -5,6 +5,8 @@ mgAddMeta('components/cart/cart.js');
 mgAddMeta('components/cart/small/small.css');
 mgAddMeta('components/cart/cart.css');
 
+console_log($item);
+
 $smallCartRow = function (
   $item = array(
     'product_url' => 0,
