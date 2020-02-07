@@ -317,5 +317,8 @@ $locale = array(
   'registration' => 'Registration',
   'login' => 'Login',
   'personal' => 'Personal account',
+  'firstTriggerText' => 'Lorem ipsum is simply dummy',
+  'secondTriggerText' => 'Lorem ipsum is simply dummy',
+  'thirdTriggerText' => 'Lorem ipsum is simply dummy',
 );
 ?>
