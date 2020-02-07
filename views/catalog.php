@@ -43,10 +43,13 @@ mgSEO($data);
 
   <div class="products-category-content__desc">
     <?php if (MG::get('templateParams')['catalogBanner'] == true) :?>
-    <a href="#" 
+    <a href="<?php echo MG::get('templateParams')['catalogBannerLink']?>" 
        class="products-category-content__link"
-       title="">
-       <img title="" src="<?php echo PATH_SITE_TEMPLATE .MG::get('templateParams')['catalogBannerUrl']?>" alt="" class="products-category-content__img">
+       title="<?php echo MG::get('templateParams')['catalogBannerTitle']?>">
+       <img title="<?php echo MG::get('templateParams')['catalogBannerImageTitle']?>" 
+            src="<?php echo PATH_SITE_TEMPLATE .MG::get('templateParams')['catalogBannerUrl']?>" 
+            alt="<?php echo MG::get('templateParams')['catalogBannerImageAlt']?>" 
+            class="products-category-content__img">
     </a>
     <?php endif ;?>
     <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
