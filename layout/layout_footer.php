@@ -30,21 +30,21 @@
                             <ul class="socials__list">
                             <?php if (MG::get('templateParams')['footerFacebook'] == true) :?>
                                 <li class="socials__item">
-                                    <a title="" 
+                                    <a title="<?php echo (MG::get('templateParams')['footerFbTitle']) ?>" 
                                        href="<?php echo (MG::get('templateParams')['footerFacebookUrl']) ?>" 
                                        class="social__link social__link--fb"></a>
                                 </li>
                             <?php endif ;?>
                             <?php if (MG::get('templateParams')['footerInstagram'] == true) :?>
                                 <li class="socials__item">
-                                    <a title="" 
+                                    <a title="<?php echo (MG::get('templateParams')['footerIgTitle']) ?>" 
                                        href="<?php echo (MG::get('templateParams')['footerInstagramUrl']) ?>" 
                                        class="social__link social__link--ig"></a>
                                 </li>
                             <?php endif ;?>
                             <?php if (MG::get('templateParams')['footerVk'] == true) :?>
                                 <li class="socials__item">
-                                    <a title="" 
+                                    <a title="<?php echo (MG::get('templateParams')['footerVkTitle']) ?>" 
                                        href="<?php echo (MG::get('templateParams')['footerVkUrl']) ?>" 
                                        class="social__link social__link--vk"></a>
                                 </li>
