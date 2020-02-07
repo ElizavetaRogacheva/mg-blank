@@ -26,10 +26,15 @@
                 </div>
             </div>
             <?php if (MG::get('templateParams')['bgShow'] == true) :?>
-            <div class="featured-products__decor" style="background: url(<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['newsBgUrl'] ?>)  50% no-repeat">
-                <a href="#" 
+            <div class="featured-products__decor">
+                <a href="<?php echo (MG::get('templateParams')['newsBgLink']) ?>" 
                    class="featured-products__decor-link" 
-                   title=""></a>
+                   title="<?php echo (MG::get('templateParams')['newsBgLinkTitle']) ?>">
+                    <img src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['newsBgUrl'] ?>"
+                         title="<?php echo MG::get('templateParams')['newsBgImgTitle'] ?>"
+                         alt="<?php echo MG::get('templateParams')['newsBgImgAlt'] ?>"
+                         class="featured-products__decor-img">
+                </a>
             </div>    
             <?php endif; ?>
         </div>       

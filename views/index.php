@@ -56,17 +56,21 @@
         <div class="banners">
             <ul class="banners__list">
                 <li class="banners__item banners__item--left">
-                    <a href="#" 
+                    <a href="<?php echo (MG::get('templateParams')['bannerLeftLink'])?>" 
                        class="banners-item__link"
-                       title="">
-                        <img title="" src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerLeftUrl'] ?>" alt="">                   
+                       title="<?php echo (MG::get('templateParams')['bannerLeftLinkTitle'])?>">
+                        <img title="<?php echo (MG::get('templateParams')['bannerLeftImgTitle'])?>" 
+                             src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerLeftImageUrl'] ?>" 
+                             alt="<?php echo (MG::get('templateParams')['bannerLeftImgAlt'])?>">                   
                     </a>
                 </li>
                 <li class="banners__item banners__item--right">
-                <a href="#" 
+                <a href="<?php echo (MG::get('templateParams')['bannerRightLink'])?>" 
                    class="banners-item__link"
-                   title="">
-                    <img title="" src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerRightUrl'] ?>" alt="">                 
+                   title="<?php echo (MG::get('templateParams')['bannerRightLinkTitle'])?>">
+                    <img title="<?php echo (MG::get('templateParams')['bannerRightImgTitle'])?>" 
+                         src="<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['bannerRightImageUrl'] ?>" 
+                         alt="<?php echo (MG::get('templateParams')['bannerLeftLinkTitle'])?>">                 
                    </a>
                 </li>
             </ul>
