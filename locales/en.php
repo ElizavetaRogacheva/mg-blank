@@ -320,5 +320,7 @@ $locale = array(
   'firstTriggerText' => 'Lorem ipsum is simply dummy',
   'secondTriggerText' => 'Lorem ipsum is simply dummy',
   'thirdTriggerText' => 'Lorem ipsum is simply dummy',
+  'searchBtn' => 'search',
+  'accountMenuBtn' => 'show',
 );
 ?>

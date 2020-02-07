@@ -319,6 +319,8 @@
         'personal' => 'Личный кабинет',     
         'firstTriggerText' => 'Lorem ipsum is simply dummy',
         'secondTriggerText' => 'Lorem ipsum is simply dummy',
-        'thirdTriggerText' => 'Lorem ipsum is simply dummy',       
+        'thirdTriggerText' => 'Lorem ipsum is simply dummy',    
+        'searchBtn' => 'Поиск',
+        'accountMenuBtn' => 'Развернуть',         
     );
 ?>

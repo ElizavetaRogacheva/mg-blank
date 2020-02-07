@@ -29,6 +29,7 @@
                     <svg id="Capa_1" enable-background="new 0 0 551.13 551.13" height="512" viewBox="0 0 551.13 551.13" width="512" xmlns="http://www.w3.org/2000/svg" width="25px", height="25px">
                         <path d="m551.13 526.776-186.785-186.785c30.506-36.023 49.003-82.523 49.003-133.317 0-113.967-92.708-206.674-206.674-206.674s-206.674 92.707-206.674 206.674 92.707 206.674 206.674 206.674c50.794 0 97.294-18.497 133.317-49.003l186.785 186.785s24.354-24.354 24.354-24.354zm-344.456-147.874c-94.961 0-172.228-77.267-172.228-172.228s77.267-172.228 172.228-172.228 172.228 77.267 172.228 172.228-77.267 172.228-172.228 172.228z"/>
                     </svg>
+                    <span><?php echo lang('searchBtn') ?></span>
                     </button>
                     <div class="search-container js-search-container">
                             <?php 
@@ -67,6 +68,7 @@
                                 c6.641,0,12.03-5.39,12.03-12.03C384.97,270.056,379.58,264.667,372.939,264.667z"/>
                         </g>
                     </svg>
+                    <span><?php echo lang('accountMenuBtn') ?></span>
                     </button>
                     <div class="account-container js-account-container">
                         <div class="account__menu">
