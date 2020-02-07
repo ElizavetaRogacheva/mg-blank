@@ -24,8 +24,11 @@
         </h4>
         <p class="price"><?php echo ($data['price']) ?> <?php echo ($data['currency'])?></p>
         <ul class="product-options">
-            <li class="product-options__item">
-                <button class="product-options__btn product-options__btn--wishlist"></button>
+            <li class="product-options__item--wishlist">
+            <?php
+                // Кнопка добавить-удалить из избранного
+                component('favorites/btns', $data);
+            ?>
             </li>
             <li class="product-options__item">
                 <button class="product-options__btn product-options__btn--view"></button>
