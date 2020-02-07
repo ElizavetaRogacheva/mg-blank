@@ -6,9 +6,11 @@
 <?php endif; ?>
 
 <!--секция с триггерами-->
+<?php if (MG::get('templateParams')['triggersShow'] == true) : ?>
 <section class="services-section">
     <?php component('services', $data); ?>
 </section>
+<?php endif ;?>
 
 <!--секция описание магазина-->
 <?php if (!empty($data['cat_desc'])) :?>
