@@ -11,11 +11,13 @@
 </section>
 
 <!--секция описание магазина-->
+<?php if (!empty($data['cat_desc'])) :?>
 <section class="history-section">
     <div class="history-block">
         <?php echo $data['cat_desc'] ?>
     </div>
 </section>
+<?php endif ;?>
 
 <!--секция товаров со скидкой-->
 <?php if(!empty($data['recommendProducts'])) : ?>
