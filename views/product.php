@@ -75,11 +75,13 @@ mgSEO($data);
             <h3 class="product__title"><?php echo ($data['title']); ?> </h3>
             
             <!--рейтинг товара-->
+            <?php if (class_exists('ProductCommentsRating')): ?>
             <div class="product-container__rating">        
                     <div class="c-product__row">
                     [mg-product-rating id="<?php echo $data['id'] ?>"]
                     </div>
             </div>
+            <?php endif ;?>
 
             <div class="product-compare">
             <?php
@@ -231,7 +233,9 @@ mgSEO($data);
         <ul class="product-tabs-info__nav-list">
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link"><?php echo lang('desc') ?></a></li>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('characteristic') ?></a></li>
+            <?php if (class_exists('ProductCommentsRating')): ?>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('reviews') ?> <span>([mg-product-count-comments item="<?php echo (MG::getSetting('shortLink') == 'true' ? '' : $data['category_url']).'/'.$data['url'] ?>"])</span></a></li>
+            <?php endif ?>
         </ul>
         <ul class="products-tabs-info__list">
             <li class="products-tabs-info__item active-item js-desc-item">
@@ -276,12 +280,14 @@ mgSEO($data);
                     <?php endforeach; ?>
                 </table>
             </li>
+            <?php if (class_exists('ProductCommentsRating')): ?>
             <li class="products-tabs-info__item js-desc-item">
                 <!--плагин с отзывом-->
                 <div class="tab-reviews">
                     [mg-product-comments-rating id="<?php echo $data['id'] ?>"] 
                 </div>
             </li>
+            <?php endif ;?>
         </ul>
     </div>
 

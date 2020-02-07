@@ -11,11 +11,11 @@
     <div class="product-block-content">
         <!--рейтинг товара-->
         <ul class="rating-block">
-            <?php //if (class_exists('Rating')): ?>
+            <?php if (class_exists('ProductCommentsRating')): ?>
                 <div class="c-product__row">
                     [mg-product-rating id="<?php echo $data['id'] ?>"]
                 </div>
-            <?php //endif ;?>
+            <?php endif ;?>
         </ul>
         <h4 class="product-block__title">
             <a 
