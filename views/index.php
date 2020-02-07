@@ -1,7 +1,7 @@
 <!--секция слайдера-->
 <?php if (class_exists('Slider')): ?>
 <section class="promo-slider">
-    [mgslider id='2']
+    [mgslider id='<?php echo MG::get('templateParams')['sliderId']?>']
 </section>
 <?php endif; ?>
 
@@ -9,13 +9,6 @@
 <section class="services-section">
     <?php component('services', $data); ?>
 </section>
-
-<!--секция плагин триггеры-->
-<?php if (class_exists('trigger')): ?>
-<section class="trigger-section">
-    [trigger-guarantee id=" 1"]
-</section>
-<?php endif; ?>
 
 <!--секция описание магазина-->
 <section class="history-section">
