@@ -861,6 +861,16 @@ button {
 }
 .history-block {
     padding: 0 50px 60px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: grey;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.history-block p {
+    margin-bottom: 20px;
 }
 .italic-title {
     text-align: center;
@@ -877,29 +887,6 @@ button {
         font-size: 30px;
         line-height: 30px;
         margin-bottom: 10px;
-    }
-}
-.history-block__description {
-    text-align: center;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: grey;
-}
-.history-block__description--top {
-    padding: 10px 16% 30px;
-}
-@media (max-width: 1200px) {
-    .history-block__description--top {
-        padding: 0;
-    }
-}
-.history-block__description--bottom {
-    padding: 0 20px 10px;
-}
-@media (max-width: 1200px) {
-    .history-block__description--bottom {
-        display: none;
     }
 }
 .popular-products-block {

@@ -13,9 +13,7 @@
 <!--секция описание магазина-->
 <section class="history-section">
     <div class="history-block">
-        <p class="history-block__description history-block__description--top">
-            <?php echo $data['cat_desc'] ?>
-        </p>
+        <?php echo $data['cat_desc'] ?>
     </div>
 </section>
 
