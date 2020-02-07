@@ -504,11 +504,17 @@ button {
     font-size: 0;
     height: 25px;
     width: 25px;
-    background: url(../img/nav-icon.png) no-repeat scroll 0 -168px;
     border: none;
+    padding: 0;
+    background-color: transparent;
 }
-.account__btn:hover {
-    background: url(../img/nav-icon.png) no-repeat scroll 0 -206px;
+
+.account__btn svg {
+    height: 25px;
+    width: 25px;
+}
+.account__btn:hover svg {
+    fill: var(--main-color-green);
 }
 .account-container {
     position: absolute;
