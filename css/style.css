@@ -3593,3 +3593,9 @@ button {
     top: 0;
     right: -14.7px;
 }
+
+.brands-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 70px 0;
+}
