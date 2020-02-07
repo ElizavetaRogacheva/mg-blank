@@ -580,6 +580,7 @@ button {
     border: 1px solid #eee;
     background-color: #fff;
     padding: 5px 15px;
+    margin-bottom: 5px;
 }
 .currency-menu__btn:hover {
     color: #6ea820;

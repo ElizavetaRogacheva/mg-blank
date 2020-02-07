@@ -1,13 +1,13 @@
 'use strict';
-$(document).ready(function() {
-    var currBtn = $('#js-currency-select');
+var currencyBtns = document.querySelectorAll('.js-currency-select');
 
-    currBtn.change(function() {
+currencyBtns.forEach((currencyBtn) => {
+    currencyBtn.addEventListener('click',  function() {
         $.ajax({
             type: 'GET',
             url: mgBaseDir + '/ajaxrequest',
             data: {
-                userCustomCurrency: currBtn.val(),
+                userCustomCurrency: currencyBtn.dataset.currency,
             },
             success: function(response) {
                 window.location.reload();

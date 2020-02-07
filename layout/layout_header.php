@@ -83,9 +83,6 @@
                                 ?>
                         </div>
                         <div class="account__currency-menu">
-                            <div class="currency__title">
-                                <span><?php echo lang ('currency') ?></span>
-                            </div>
                             <?php 
                                 component(
                                     'select/currency', 
