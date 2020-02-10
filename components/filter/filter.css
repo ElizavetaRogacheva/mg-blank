@@ -269,6 +269,14 @@ select {
     width: 40%;
 }
 
+.start-price {
+    width: 100%;
+}
+
+.end-price {
+    width: 100%;
+}
+
 .c-filter .mg-filter-head .price-input {
     padding-right: 34px;
 }
@@ -322,6 +330,12 @@ select {
 
 .c-filter .mg-filter-body .mg-filter-item {
     margin-top: 20px;
+}
+
+.mg-filter-item > span {
+    font-weight: 700;
+    color: #000;
+
 }
 
 .c-filter .mg-filter-body .mg-filter-item select {
@@ -461,24 +475,11 @@ select {
 }
 
 .c-filter .filter-preview {
-    position: absolute;
-    z-index: 99;
-    display: none;
-    margin-top: -15px;
-    margin-bottom: 35px;
-    -webkit-animation-name: arrow;
-    animation-name: arrow;
-    -webkit-animation-duration: .4s;
-    animation-duration: .4s;
-    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-
     background: #fff; 
     padding: 10px; 
     z-index: 1; 
     border: 1px solid #ddd;
+    position: absolute!important;
 
 }
 

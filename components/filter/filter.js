@@ -5,7 +5,6 @@
 //        {callback: 'settings.openTab', param: ['tab-system']},
 // ];
 
-
 var AJAX_CALLBACK_FILTER = [];
 var VIEW_ALL_FILTER = -1;
 
@@ -184,7 +183,7 @@ $(document).ready(function () {
         $('.mg-filter-head .filter-preview span').hide();
         $('.mg-filter-head .filter-preview .loader-search').fadeIn();
         $('.mg-filter-head .filter-preview').show();
-        $('.mg-filter-head .filter-preview').css('top', offset.top + 'px');
+        //$('.mg-filter-head .filter-preview').css('top', offset.top + 'px');
         $('.mg-filter-head .filter-preview .loader-search').fadeOut();
         $('.mg-filter-head .filter-preview span').html(locale.productSearch).fadeIn();
         //
