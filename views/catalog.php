@@ -36,6 +36,7 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
+<?php mgAddMeta('/js/catalog.js'); ?>
 
 <?php // viewData($data['items']) ?>
 <div class="products-category-content">
@@ -73,8 +74,52 @@ mgSEO($data);
 
   <div class="filterboard">
     <div class="filterboard__left">
-        <button class="show-grid show-grid--active">grid</button>
-        <button class="show-list">list</button>
+        <button class="show-grid filterboard-btn--active js-show-grid">
+        <svg  viewBox="-19 -19 600 600" xmlns="http://www.w3.org/2000/svg">
+          <path d="m251.25 12.5c0-6.90625-5.59375-12.5-12.5-12.5h-226.25c-6.90625 0-12.5 5.59375-12.5 12.5v226.25c0 6.90625 5.59375 12.5 12.5 12.5h226.25c6.90625 0 12.5-5.59375 12.5-12.5zm-25 213.75h-201.25v-201.25h201.25zm0 0"/>
+          <path d="m562.5 12.5c0-6.90625-5.59375-12.5-12.5-12.5h-226.25c-6.90625 0-12.5 5.59375-12.5 12.5v226.25c0 6.90625 5.59375 12.5 12.5 12.5h226.25c6.90625 0 12.5-5.59375 12.5-12.5zm-25 213.75h-201.25v-201.25h201.25zm0 0"/>
+          <path d="m251.25 323.75c0-6.90625-5.59375-12.5-12.5-12.5h-226.25c-6.90625 0-12.5 5.59375-12.5 12.5v226.25c0 6.90625 5.59375 12.5 12.5 12.5h226.25c6.90625 0 12.5-5.59375 12.5-12.5zm-25 212.5h-201.25v-200h201.25zm0 0"/>
+          <path d="m562.5 323.75c0-6.90625-5.59375-12.5-12.5-12.5h-226.25c-6.90625 0-12.5 5.59375-12.5 12.5v226.25c0 6.90625 5.59375 12.5 12.5 12.5h226.25c6.90625 0 12.5-5.59375 12.5-12.5zm-25 212.5h-201.25v-200h201.25zm0 0"/>
+        </svg>
+        </button>
+        <button class="show-list js-show-list">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+              <g>
+                <path d="M176,32H16C7.168,32,0,39.168,0,48v160c0,8.832,7.168,16,16,16h160c8.832,0,16-7.168,16-16V48
+                  C192,39.168,184.832,32,176,32z M160,192H32V64h128V192z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M176,288H16c-8.832,0-16,7.168-16,16v160c0,8.832,7.168,16,16,16h160c8.832,0,16-7.168,16-16V304
+                  C192,295.168,184.832,288,176,288z M160,448H32V320h128V448z"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <rect x="256" y="80" width="128" height="32"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <rect x="256" y="144" width="256" height="32"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <rect x="256" y="336" width="128" height="32"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <rect x="256" y="400" width="256" height="32"/>
+              </g>
+            </g>
+          </svg>
+
+        </button>
         <div class="product-compare">
         <?php
                 component(
@@ -89,7 +134,7 @@ mgSEO($data);
 
   <div class="products-block">
 
-    <ul class="products-block__list">
+    <ul class="products-block__list products-block__list--grid js-products-block__list">
     <?php
   // Циклом выводим все товары группы
   foreach ($data['items'] as $item) { ?>
