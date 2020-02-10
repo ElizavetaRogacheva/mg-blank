@@ -5,7 +5,6 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .mg-filter-head {
@@ -389,12 +388,19 @@ select {
 
 .c-filter .mg-filter-body .mg-viewfilter-all,
 .c-filter a.mg-viewfilter {
-    font-size: 12px;
     font-weight: 600;
     display: block;
     margin-top: 16px;
     text-align: center;
-    text-decoration: underline;
+
+    
+}
+
+.mg-viewfilter {
+    font-size: 12px;
+    border-bottom: 1px dashed #878787;
+    color: inherit;
+
 }
 
 .c-filter .mg-filter-body .mg-viewfilter-all:hover,
@@ -464,12 +470,31 @@ select {
     animation-name: arrow;
     -webkit-animation-duration: .4s;
     animation-duration: .4s;
-    color: #fff;
-    background: #cd4449;
     -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .2);
     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+
+    background: #fff; 
+    padding: 10px; 
+    z-index: 1; 
+    border: 1px solid #ddd;
+
+}
+
+.filter-preview a {
+    color: var(--main-color-green);
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid var(--main-color-green);
+    background-color: #fff;
+}
+
+.filter-preview a:hover {
+    color: #333;
+    border: 2px solid #000;
+}
 }
 
 @media (max-width: 767px) {

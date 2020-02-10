@@ -4,6 +4,8 @@
 //        {callback: 'settings.closeAllTab', param: null},
 //        {callback: 'settings.openTab', param: ['tab-system']},
 // ];
+
+
 var AJAX_CALLBACK_FILTER = [];
 var VIEW_ALL_FILTER = -1;
 
