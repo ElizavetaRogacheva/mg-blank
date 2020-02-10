@@ -38,20 +38,28 @@ mgSEO($data);
 ?>
 <?php mgAddMeta('/js/catalog.js'); ?>
 
-<?php // viewData($data['items']) ?>
 <div class="products-category-content">
   <h1 class="products-category-content__title"><?php echo $data['titleCategory'] ?></h1>
-
+  
   <div class="products-category-content__desc">
     <?php if (MG::get('templateParams')['catalogBanner'] == true) :?>
-    <a href="<?php echo MG::get('templateParams')['catalogBannerLink']?>" 
-       class="products-category-content__link"
-       title="<?php echo MG::get('templateParams')['catalogBannerTitle']?>">
-       <img title="<?php echo MG::get('templateParams')['catalogBannerImageTitle']?>" 
-            src="<?php echo PATH_SITE_TEMPLATE .MG::get('templateParams')['catalogBannerUrl']?>" 
-            alt="<?php echo MG::get('templateParams')['catalogBannerImageAlt']?>" 
-            class="products-category-content__img">
-    </a>
+      <?php if ($data['titleCategory'] === 'Каталог') : ?>
+      <a href="<?php echo MG::get('templateParams')['catalogBannerLink']?>" 
+        class="products-category-content__link"
+        title="<?php echo MG::get('templateParams')['catalogBannerTitle']?>">
+        <img title="<?php echo MG::get('templateParams')['catalogBannerImageTitle']?>" 
+              src="<?php echo PATH_SITE_TEMPLATE .MG::get('templateParams')['catalogBannerUrl']?>" 
+              alt="<?php echo MG::get('templateParams')['catalogBannerImageAlt']?>" 
+              class="products-category-content__img">
+      </a>
+      <?php endif ;?>
+      <?php if ($data['cat_img']): ?>
+            <img src="<?php echo SITE . $data['cat_img'] ?>"
+                 alt="<?php echo $data['seo_alt'] ?>"
+                 title="<?php echo $data['seo_title'] ?>"
+                 class="products-category-content__img--category">
+        <?php endif; ?>
+
     <?php endif ;?>
     <?php if(!empty($data['cat_desc'])) :?>
         <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
