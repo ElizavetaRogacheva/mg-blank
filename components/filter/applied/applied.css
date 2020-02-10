@@ -1,9 +1,20 @@
 /* c-apply
 ------------------------------------------------------------------- */
+
+.filter-apply-wrapper {
+    margin-top: 50px;
+}
 .c-apply__title {
-    font-size: 16px;
-    font-weight: 600;
     margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+    font: 600 0.77778;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
 }
 
 @media (min-width: 1025px) {
@@ -14,11 +25,8 @@
 
 .c-apply__form {
     padding: 10px;
-    border: 1px solid #dadada;
-    background: -webkit-gradient(linear, left top, right top, from(#ece9e6), to(#fff));
-    background: -webkit-linear-gradient(left, #ece9e6, #fff);
-    background: -o-linear-gradient(left, #ece9e6, #fff);
-    background: linear-gradient(to right, #ece9e6, #fff);
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 20px;
 }
 
 .c-apply__tags {
@@ -37,16 +45,19 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    min-height: 30px;
+    height: 30px;
     margin-right: 6px;
     margin-bottom: 6px;
     padding: 4px 10px;
-    border: 1px solid #dadada;
-    border-radius: 30px;
     background: #fff;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    color: #333;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    text-align: center;
+    font-weight: 400;
 }
 
 @media (max-width: 767px) {
@@ -102,6 +113,13 @@
     display: flex;
     margin-right: 6px;
     margin-left: 6px;
+    width: 10px;
+    height: 10px;
+}
+
+.c-apply__tags--remove svg {
+    width: 10px;
+    height: 10px;
 }
 
 .c-apply__tags--remove:hover .icon{
@@ -115,5 +133,6 @@
     margin-top: 4px;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    max-width: 200px;
 }

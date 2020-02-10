@@ -138,6 +138,14 @@ mgSEO($data);
         </div>
     </div>
   </div>
+  
+    <?php
+    // Список свойств, которые выбраны в фильтре
+    component(
+      'filter/applied',
+      $data['applyFilter']
+    );
+    ?>
 
 
   <div class="products-block">

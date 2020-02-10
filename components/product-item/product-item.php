@@ -35,8 +35,7 @@
 
         <!--Описание товара-->
         <?php if(!(empty($data['description']))) : ?>
-        <div class="product-block__description">
-            
+        <div class="product-block__description">        
             <p>
                 <?php echo MG::textMore($data['description'], 80)?>
             </p>
