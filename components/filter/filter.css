@@ -474,12 +474,13 @@ select {
     text-decoration: underline;
 }
 
-.c-filter .filter-preview {
+.filter-preview {
     background: #fff; 
     padding: 10px; 
     z-index: 1; 
     border: 1px solid #ddd;
-    position: absolute!important;
+    position: absolute;
+    display: none;
 
 }
 

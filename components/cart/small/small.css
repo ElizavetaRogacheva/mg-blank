@@ -88,15 +88,24 @@
     -ms-transform-origin: top left;
     transform-origin: top left;
     opacity: 0;
-    border-radius: 10px;
     background: #fff;
     -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
 }
 
+.empty-cart-text {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .c-cart__dropdown {
+        width: 310px;
+    }
+}
+
 @media (max-width: 1024px) {
     .c-cart__dropdown {
-        display: none;
+        width: 500px;
     }
 }
 
@@ -109,6 +118,7 @@
     -ms-transform: scaleY(1);
     transform: scaleY(1);
     opacity: 1;  
+    display: block;
 }
 
 .countsht {
@@ -123,4 +133,9 @@
     position: absolute;
     top: -12px;
     right: -12px;
+}
+
+.icon__cart-remove {
+    width: 20px;
+    height: 25px;
 }

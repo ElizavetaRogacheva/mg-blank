@@ -183,7 +183,7 @@ $(document).ready(function () {
         $('.mg-filter-head .filter-preview span').hide();
         $('.mg-filter-head .filter-preview .loader-search').fadeIn();
         $('.mg-filter-head .filter-preview').show();
-        //$('.mg-filter-head .filter-preview').css('top', offset.top + 'px');
+        $('.mg-filter-head .filter-preview').css('top', offset.top + 'px');
         $('.mg-filter-head .filter-preview .loader-search').fadeOut();
         $('.mg-filter-head .filter-preview span').html(locale.productSearch).fadeIn();
         //

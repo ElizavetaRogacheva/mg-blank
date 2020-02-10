@@ -59,6 +59,7 @@ $(document).ready(function() {
                         $('#js-modal__cart').removeClass('c-modal--open');
                         $('.product-cart, .checkout-form-wrapper, .small-cart').hide();
                         $('.empty-cart-block').show();
+                        $('.js-empty-cart-text').show();
 
                     }
                 }
