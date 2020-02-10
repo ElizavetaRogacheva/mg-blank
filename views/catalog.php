@@ -61,7 +61,7 @@ mgSEO($data);
         <?php endif; ?>
 
     <?php endif ;?>
-    <?php if(!empty($data['cat_desc'])) :?>
+    <?php if($cd = str_replace("&nbsp;", "", $data['cat_desc'])) :?>
         <p class="products-category-content__text"><?php echo $data['cat_desc']; ?></p>
     <?php endif ; ?>
   </div>
