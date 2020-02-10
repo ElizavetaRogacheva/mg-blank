@@ -81,8 +81,14 @@
 
 .price-input {
     padding: 10px 0;
+    padding-left: 10px;
+    box-sizing: border-box;
     max-width: 100%;
+    color: #666;
+    font-size: 14px;
 }
+
+
 
 .mg-filter-body {
     margin-bottom: 20px;
@@ -104,8 +110,8 @@ select {
 }
 
 .last-items-dropdown {
-    font-family: 'Poppins', sans-serif;
     color: #878787;
+    font-size: 14px;
 
 }
 
@@ -271,12 +277,9 @@ select {
 .c-filter .mg-filter-head .price-input ~ span,
 .price-slider-list input + span {
     position: absolute;
-    top: 0;
-    right: 15px;
+    top: 32px;
+    right: 5px;
     bottom: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin: auto;
     color: #666;
     -webkit-box-align: end;
