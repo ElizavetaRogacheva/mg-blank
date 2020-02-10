@@ -55,7 +55,7 @@
     cursor: pointer;
     font-size: 14px;
     border: none;
-    width: 49%;
+    width: 47%;
 }
 
 .filter-btn:hover {
@@ -63,18 +63,20 @@
 }
 
 .refreshFilter {
-    text-transform: uppercase;
-    color: #000;
+    color: #333;
+    display: block;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
     background-color: #fff;
-    border: 2px solid var(--main-color-green);
     cursor: pointer;
     font-size: 14px;
-    width: 49%;
-    display: block;
+    width: 47%;
     text-align: center;
+
 }
 .refreshFilter:hover {
-    background-color: #000;
+    border-color: var(--main-color-green);
+    color: var(--main-color-green);
 }
 
 .price-input {
