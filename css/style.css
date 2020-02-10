@@ -2842,6 +2842,14 @@ button {
     flex-wrap: wrap;
 }
 
+.product-block__description {
+    display: none;
+}
+
+.products-block__list--list .product-block__description {
+    display: block;
+}
+
 .products-block__list--grid > li {
     width: 30%;
     padding: 10px;
@@ -2868,21 +2876,33 @@ button {
 .products-block__list--list > li {
     width: 100%;
     padding: 10px;
-    background-color: #fff;
     margin-bottom: 20px;
+}
+
+.products-block__list--list > li:hover {
+    box-shadow: none;
 }
 
 .products-block__list--list > li .product-block {
     display: flex;
-    justify-content: space-between;
+    background-color: transparent;
 }
 
 .products-block__list--list .product-block__link {
     display: block;
     position: relative;
     overflow: hidden;
-    width: 40%;
+    width: 25%;
     padding: 0;
+    margin-right: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.products-block__list--list .product-block__img {
+    padding: 10px;
+    object-fit: contain;
+    box-sizing: border-box;
 }
 
 .products-block__list--list .product-block-content {

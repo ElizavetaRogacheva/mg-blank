@@ -33,6 +33,16 @@
             <a title="" href="#"><?php echo $data['title'] ?></a>
         </h4>
 
+        <!--Описание товара-->
+        <?php if(!(empty($data['description']))) : ?>
+        <div class="product-block__description">
+            
+            <p>
+                <?php echo MG::textMore($data['description'], 80)?>
+            </p>
+        </div>
+        <?php endif ;?>
+
         <!--цена товара на карточке с указанием валюты-->
         <p class="price">
             <?php echo $data['price']; ?>
