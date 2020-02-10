@@ -3,6 +3,8 @@ mgAddMeta('components/cart/cart.js');
 //mgAddMeta('components/cart/cart.amount.js');
 
 mgAddMeta('components/cart/small/small.css');
+mgAddMeta('components/cart/small/small.js');
+
 mgAddMeta('components/cart/cart.css');
 
 console_log($item);
@@ -64,8 +66,8 @@ $smallCartRow = function (
 <?php } ?>
 
 <div class="c-cart mg-desktop-cart">
-    <a class="c-cart__small cart"
-       href="<?php echo SITE ?>/cart">
+    <!--<a class="c-cart__small cart"
+       href="<?php //echo SITE ?>/cart">-->
         <span class="small-cart-icon"></span>
         <div class="c-cart__small--icon">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
@@ -90,20 +92,22 @@ $smallCartRow = function (
         </svg>
         </div>
     
-        <ul class="c-cart__small--list cart-list">
+        <!--<ul class="c-cart__small--list cart-list">
             <li class="c-cart__small--count">
-                <div class="c-cart__small--text">
-                  <?php echo lang('cartCart'); ?>
-                    (<span class="countsht"><?php echo $data['cart_count'] ? $data['cart_count'] : 0 ?></span>)
-                </div>
+                <div class="c-cart__small--text">-->
+                  <?php //echo lang('cartCart'); ?>
+                    <span class="countsht">
+                        <?php echo trim($data['cart_count']) ? trim($data['cart_count']) : 0 ?>
+                    </span>
+                <!--</div>
             </li>
             <li class="c-cart__small--price cart-qty">
                 <span class="pricesht">
-                  <?php echo $data['cart_price'] ? $data['cart_price'] : 0 ?>
+                  <?php //echo $data['cart_price'] ? $data['cart_price'] : 0 ?>
                 </span>
-              <?php echo (!empty($data['currency'])) ? $data['currency'] : ''; ?>
+              <?php //echo (!empty($data['currency'])) ? $data['currency'] : ''; ?>
             </li>
-        </ul>
+        </ul>-->
     </a>
     <div class="c-cart__dropdown small-cart">
         <div class="l-row">
