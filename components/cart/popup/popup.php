@@ -1,6 +1,6 @@
-gfhfghfghgfh
 <?php
 mgAddMeta('components/cart/cart.js');
+mgAddMeta('components/cart/small/small.css');
 
 $popupCartRow = function (
   $item = array('product_url' => 0,
