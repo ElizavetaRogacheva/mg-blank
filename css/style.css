@@ -1240,8 +1240,9 @@ button {
     display: flex;
 }
 .featured-products-container {
-    width: 68.3%;
+    min-width: 68.3%;
     padding-right: 25px;
+    max-width: 100%;
 }
 .featured-products-container:hover .featured-products__arrows {
     opacity: 1;
@@ -1374,7 +1375,8 @@ button {
     color: #fff;
 }
 .featured-products__decor {
-    width: 30%;
+    min-width: 30%;
+    max-width: 31%;
     height: auto;
 }
 

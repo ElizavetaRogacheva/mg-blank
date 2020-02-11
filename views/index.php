@@ -53,7 +53,6 @@
 <section class="featured-products-section">
     <div class="featured-products-wrapper">
     <?php 
-    viewData(MG::get('templateParams')['bannersShow']);
     if (MG::get('templateParams')['bannersShow'] === '1') :?>
         <div class="banners">
             <ul class="banners__list">
