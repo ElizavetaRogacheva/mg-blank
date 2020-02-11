@@ -322,5 +322,6 @@ $locale = array(
   'thirdTriggerText' => 'Lorem ipsum is simply dummy',
   'searchBtn' => 'search',
   'accountMenuBtn' => 'show',
+  'hitSticker' => 'hit',
 );
 ?>

@@ -21,7 +21,6 @@
 </section>
 <?php endif ;?>
 
-<!--секция товаров со скидкой-->
 <?php if(!empty($data['recommendProducts'])) : ?>
     <?php
         component(
@@ -35,7 +34,7 @@
     ?>
 <?php endif; ?>
 
-<!--секция товары со скидкой-->
+
 <?php if(!empty($data['saleProducts'])) : ?>
     <?php
     component(
@@ -49,7 +48,7 @@
   ?>
 <?php endif; ?>
 
-<!--секция по шаблону с рекомендованными товарами-->
+
 <section class="featured-products-section">
     <div class="featured-products-wrapper">
     <?php 
@@ -77,6 +76,7 @@
             </ul>
         </div>
     <?php endif ;?>
+
     <!--секция новинок-->
     <?php // viewData($data) ?>
     <?php if(!empty($data['newProducts'])) : ?>

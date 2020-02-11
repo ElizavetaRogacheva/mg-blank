@@ -3719,6 +3719,10 @@ button {
     background-color: var(--main-color-green);
 }
 
+.sale-sticker--recommend {
+    top: 60px;
+}
+
 .sale-sticker::after {
     position: absolute;
     content: '';

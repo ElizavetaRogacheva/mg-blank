@@ -322,5 +322,6 @@
         'thirdTriggerText' => 'Lorem ipsum is simply dummy',    
         'searchBtn' => 'Поиск',
         'accountMenuBtn' => 'Развернуть',         
+        'hitSticker' => 'Хит',
     );
 ?>

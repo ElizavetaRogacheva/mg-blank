@@ -5,6 +5,11 @@
         <span><?php echo lang('newSticker')  ?></span>
     </div>
     <?php endif ;?>
+    <?php if ($data['recommend'] === '1') : ?>
+        <div class="sale-sticker sale-sticker--recommend">
+        <span><?php echo lang('hitSticker') ?></span>
+    </div>
+    <?php endif ;?>
     <!--картинки карточки товара-->
     <a title="" href="<?php echo $data['link'] ?>" class="product-block__link">
         <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img">
