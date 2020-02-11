@@ -2592,7 +2592,9 @@ button {
 }
 .advertising-block__link img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 .latest-products {
     background-color: #fff;
