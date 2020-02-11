@@ -878,7 +878,9 @@ button {
     margin: 0 auto 30px;
     padding: 0 0 10px;
     color: #000;
-    font: 600 50px/52px Dancing Script, cursive;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 50px;
     text-transform: capitalize !important;
     letter-spacing: 0.2px;
 }
