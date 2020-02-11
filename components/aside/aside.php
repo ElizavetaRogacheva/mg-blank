@@ -24,7 +24,18 @@
             <img title="" src="./img/left-banner-1-278x320.jpg" alt="">
         </a>
     </div>
+
     <div class="latest-products">
+    <?php if (class_exists('RecentlyViewed')) { ?>
+            <div class="l-col min-0--12">             
+                <div class="latest-products__title js-latest-products__title aside-title">
+                    <span><?php echo lang('RecentlyViewed'); ?></span>
+                </div>
+                [recently-viewed countPrint=3 count=3 random=0]
+            </div>
+        <?php } ?>
+    </div>
+    <!--<div class="latest-products">
         <div class="latest-products__title js-latest-products__title aside-title"><span>latest</span></div>
         <ul class="latest-products__list js-latest-products__list">
             <li class="latest-products__item">
@@ -70,6 +81,6 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div>-->
 </aside>
 

@@ -1,0 +1,127 @@
+/*recent products*/
+.mg-recently-viewed-plugin{position: relative;margin: 35px 0;}
+.mg-recently-viewed-plugin h2{font-weight: bold;font-size: 22px;margin: 0 0 20px 0;position: relative;padding: 0 20px 0 0;color: #CC0000;display: inline-block;}
+.mg-recently-viewed-plugin h2 .custom-arrow{position: absolute;width: 15px;height: 20px;right: 0;top: 15px;background: url("../images/arrow.png") no-repeat;}
+.mg-recently-viewed-plugin .product-wrapper .product-image{width: auto;}
+.mg-recently-viewed-plugin .product-wrapper .product-name{height: 28px;line-height: 14px;}
+.mg-recently-viewed-plugin .product-wrapper:hover .product-price{visibility: visible;}
+.mg-recently-viewed-plugin .product-wrapper{margin: 0;}
+.mg-recently-viewed-plugin .bx-next,
+.mg-recently-viewed-plugin .bx-prev{top: 50%;}
+.mg-recently-viewed-plugin .bx-prev{left: 0;}
+.mg-recently-viewed-plugin .bx-next{right: 0;}
+.mg-recently-viewed-plugin .bx-prev:hover{background-position:0 -30px;}
+.mg-recently-viewed-plugin .bx-next{background-position:-30px 0!important}
+.mg-recently-viewed-plugin .bx-next:hover{background-position:-30px -30px!important;}
+.mg-recently-viewed-plugin .m-p-products-slider .bx-prev{left:215px;}
+.mg-recently-viewed-plugin .m-p-products-slider .bx-next{left:250px;}
+.mg-recently-viewed-plugin .bx-prev,
+.mg-recently-viewed-plugin .bx-next{position:absolute;top:50%;width:30px;height:30px;display:block;background:url('../images/second-controls2.png') 0 0 no-repeat;text-indent:-999999px;}
+
+
+.mg-recently-viewed-slider .product-wrapper {
+    margin-bottom: 20px;
+}
+
+.mg-recently-viewed-slider .product-wrapper:last-child {
+    margin-bottom: 0;
+}
+.mg-recently-viewed .mg-recently-product-price {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.mg-recently-product-image {
+    max-width: 40%;
+    margin-right: 20px;
+}
+.latest-products__title  {
+    margin-bottom: 10px;
+}
+.mg-recently-viewed .mg-recently-product-image a {
+    display: block!important;
+    height: 80px;
+    text-align: center;
+    position: relative;
+}
+
+.mg-recently-viewed .mg-recently-product-image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.mg-recently-viewed .mg-recently-product-name a {
+    display: block;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.mg-recently-viewed .mg-recently-product-name {
+    height: 30px;
+}
+
+.mg-recently-viewed .mg-recently-product-name a:hover {
+    color: var(--main-color-green);
+}
+
+.mg-recently-product-wrapper {
+    display: flex;
+}
+
+.mg-recently-viewed .product-info{
+    display: block;
+    border: 1px solid #D3D3D3;
+    text-decoration: none;
+    padding: 5px 10px;
+    text-align: center;
+    color: #000;
+    text-shadow: 1px 1px #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #fcfcfc;
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #e5e5e5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #e5e5e5));
+    background: -webkit-linear-gradient(top, #fcfcfc 0%, #e5e5e5 100%);
+    background: -o-linear-gradient(top, #fcfcfc 0%, #e5e5e5 100%);
+    background: -ms-linear-gradient(top, #fcfcfc 0%, #e5e5e5 100%);
+    background: linear-gradient(to bottom, #fcfcfc 0%, #e5e5e5 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e5e5e5', GradientType=0);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    width: 80px;
+    margin: 10px auto;
+    border-radius: 3px;
+    clear: both;
+}
+.mg-recently-product-wrapper {text-align:center}
+
+.mg-recently-viewed-plugin .bx-viewport {
+    overflow: hidden!important;
+}
+.mg-recently-viewed-plugin {
+    margin: 0;
+}
+
+.mg-recently-viewed .addToCart {
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mg-recently-viewed .addToCart:hover {
+    color: var(--main-color-green);
+    text-decoration: underline;
+    text-decoration: var(--main-color-green);
+}
