@@ -2792,6 +2792,36 @@ button {
 .product-compare {
     margin: 0 20px;
 }
+.product-compare--main-page {
+    position: fixed;
+    bottom: 0;
+    right: 300px;
+    padding: 10px 40px 10px 20px;
+    z-index: 1;
+    background: var(--main-color-green);
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-compare--main-page a {
+    color: #fff;
+}
+
+.product-compare--main-page  .c-compare__link--count {
+    top: 10px;
+    right: 10px;
+}
+
+
+.product-compare--main-page:hover {
+    opacity: 1;
+}
+
+.product-compare--main-page a:hover {
+    color: #fff;
+}
 .product-compare__link {
     color: #555;
 }

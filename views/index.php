@@ -1,4 +1,12 @@
 <!--секция слайдера-->
+<div class="product-compare--main-page">
+    <?php
+        component(
+        'compare/link',
+        $data
+    );
+    ?>
+</div>
 <?php if (class_exists('Slider')): ?>
 <section class="promo-slider">
     [mgslider id='<?php echo MG::get('templateParams')['sliderId']?>']
