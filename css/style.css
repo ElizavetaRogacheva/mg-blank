@@ -1121,6 +1121,9 @@ button {
     top: 5px;
     fill: #878787;
 }
+.product-options__item--cart a:hover svg {
+    fill: var(--main-color-green);
+}
 .product-options__btn {
     width: 25px;
     height: 20px;
@@ -3300,11 +3303,16 @@ button {
 }
 .add-to-cart-btn {
     padding: 15px 40px;
-    color: #fff;
     border: none;
     background-color: #6ea820;
     text-transform: uppercase;
     margin-right: 10px;
+}
+.add-to-cart-btn a {
+    color: #fff;
+}
+.add-to-cart-btn svg {
+    display: none;
 }
 @media (min-width: 320px) and (max-width: 767px) {
     .add-to-cart-btn {

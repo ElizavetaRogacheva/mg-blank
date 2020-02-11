@@ -43,7 +43,8 @@
                     }
                 ?>
             </li>
-            <li class="product-options__item">
+            <li class="product-options__item product-options__item--cart">
+                <?php component('cart/btn/add', $data);?>
                 <button class="product-options__btn product-options__btn--cart"></button>
             </li>
         </ul>

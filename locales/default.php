@@ -323,5 +323,7 @@
         'searchBtn' => 'Поиск',
         'accountMenuBtn' => 'Развернуть',         
         'hitSticker' => 'Хит',
+        'favoritesBtn' => 'В избранное',
+
     );
 ?>

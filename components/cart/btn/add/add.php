@@ -53,7 +53,8 @@ if (!$data['liteFormData']['noneButton'] || (MG::getProductCountOnStorage(0, $da
         <?php echo $styleToggle; ?>
          class="addToCart product-buy <?php echo $jsClass ?>"
          aria-label="<?php echo lang('buttonBuy'); ?>"
-         data-item-id="<?php echo $data["id"]; ?>">
+         data-item-id="<?php echo $data["id"]; ?>"
+         title="<?php echo lang('buttonBuy') ?>">
         <?php echo lang('buttonBuy'); ?>
           <svg height="20px" viewBox="0 -11 414.00226 414" width="20px" xmlns="http://www.w3.org/2000/svg">
             <path d="m202.480469 352.132812c0-21.800781-17.671875-39.472656-39.46875-39.472656-21.800781 0-39.472657 17.671875-39.472657 39.46875 0 21.800782 17.671876 39.472656 39.472657 39.472656 21.785156-.023437 39.445312-17.679687 39.46875-39.46875zm-64.941407 0c0-14.070312 11.402344-25.472656 25.472657-25.472656 14.066406 0 25.46875 11.402344 25.46875 25.46875 0 14.070313-11.402344 25.472656-25.46875 25.472656-14.0625-.015624-25.457031-11.410156-25.472657-25.46875zm0 0"/>

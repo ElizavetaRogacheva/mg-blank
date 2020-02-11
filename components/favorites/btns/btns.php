@@ -49,7 +49,8 @@ if (in_array(EDITION, array('market', 'gipermarket')) && MG::getSetting('useFavo
        href="javascript:void(0);"
        data-item-id="<?php echo $data['id']; ?>"
        class="mg-add-to-favorites js-add-to-favorites <?php if (MG::get('controller') == "controllers_product"): ?>mg-add-to-favorites--product<?php endif; ?>"
-       style="<?php echo $_fav_style_add ?>">
+	   style="<?php echo $_fav_style_add ?>"
+	   title="<?php echo lang('favoritesBtn')?>">
        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="20px" height="20px" viewBox="0 0 511.626 511.626" style="enable-background:new 0 0 511.626 511.626;"
 	 xml:space="preserve">

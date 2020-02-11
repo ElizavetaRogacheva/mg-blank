@@ -323,5 +323,6 @@ $locale = array(
   'searchBtn' => 'search',
   'accountMenuBtn' => 'show',
   'hitSticker' => 'hit',
+  'favoritesBtn' => 'Add to wishlist',
 );
 ?>
