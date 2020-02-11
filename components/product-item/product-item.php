@@ -55,7 +55,7 @@
 
         <!--кнопки опции карточки товара-->
         <ul class="product-options">
-            <li class="product-options__item--wishlist">
+            <li class="product-options__item product-options__item--wishlist">
             <?php
                 // Кнопка добавить-удалить из избранного
                 component('favorites/btns', $data);
@@ -74,7 +74,7 @@
                     }
                     ?>
             </li>
-            <li class="product-options__item">
+            <li class="product-options__item product-options__item--cart">
                 <?php component('cart/btn/add', $data);?>
                 <button class="product-options__btn product-options__btn--cart"></button>
             </li>

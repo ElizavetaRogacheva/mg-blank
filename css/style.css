@@ -1107,34 +1107,25 @@ button {
 .product-options__item {
     margin-right: 10px;
 }
+
+.product-options__item--cart {
+    width: 25px;
+    height: 25px;
+    font-size: 0;
+    position: relative;
+}
+.product-options__item--cart a svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    fill: #878787;
+}
 .product-options__btn {
     width: 25px;
     height: 20px;
     border: none;
-}
-.product-options__btn--wishlist {
-    background: url(../img/icons.png) no-repeat scroll center -253px;
-}
-.product-options__btn--wishlist:hover {
-    background: url(../img/icons.png) no-repeat scroll center -317px;
-}
-.product-options__btn--view {
-    background: url(../img/icons.png) no-repeat scroll center -124px;
-}
-.product-options__btn--view:hover {
-    background: url(../img/icons.png) no-repeat scroll center -189px;
-}
-.product-options__btn--compare {
-    background: url(../img/icons.png) no-repeat scroll center -382px;
-}
-.product-options__btn--compare:hover {
-    background: url(../img/icons.png) no-repeat scroll center -446px;
-}
-.product-options__btn--cart {
-    background: url(../img/icons.png) no-repeat scroll center 6px;
-}
-.product-options__btn--cart:hover {
-    background: url(../img/icons.png) no-repeat scroll center -58px;
+    background-color: transparent;
 }
 .btn__link {
     display: inline-block;
