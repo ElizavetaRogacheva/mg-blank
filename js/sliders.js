@@ -26,7 +26,7 @@ $('.js-promo-slider__list').slick({
     }),
     $('.js-news-block__slider-list').slick({
         infinite: !1,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('.news-slider__btn--left'),
         nextArrow: $('.news-slider__btn--right'),
