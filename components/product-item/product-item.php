@@ -53,6 +53,17 @@
             <?php echo $data['currency']; ?>
         </p>
 
+        <div class="product-card__cart-btn">
+            <div class="add-to-cart-btn">
+            <?php
+                component(
+                    'cart/btn/add',
+                    $data
+                );
+                ?>
+            </div>
+        </div>
+
         <!--кнопки опции карточки товара-->
         <ul class="product-options">
             <li class="product-options__item product-options__item--wishlist">
@@ -76,7 +87,6 @@
             </li>
             <li class="product-options__item product-options__item--cart">
                 <?php component('cart/btn/add', $data);?>
-                <button class="product-options__btn product-options__btn--cart"></button>
             </li>
         </ul>
     </div>
