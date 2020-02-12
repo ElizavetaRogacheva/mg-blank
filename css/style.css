@@ -2730,6 +2730,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
 }
 .subcategories__item {
     margin: 0 10px 5px 0;

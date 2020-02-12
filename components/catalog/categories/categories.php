@@ -3,7 +3,6 @@ mgAddMeta('components/catalog/categories/categories.css');
 
 $categories = MG::get('category')->getHierarchyCategory($data, true);
 if(!empty($categories)): ?>
-    <div class="subcategories">
         <ul class="subcategories__list">
             <?php foreach($categories as $category): ?>
                 <li class="subcategories__item">
@@ -14,7 +13,6 @@ if(!empty($categories)): ?>
                 </li>
             <?php endforeach; ?>
         </ul>
-    </div>
 <?php endif; ?>
 
 
