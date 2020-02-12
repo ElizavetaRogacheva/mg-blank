@@ -2064,7 +2064,7 @@ button {
 }
 @media (max-width: 1200px) {
     .main-footer {
-        background-image: none;
+        background-image: none!important;
     }
 }
 .main-footer-container {
