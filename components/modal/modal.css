@@ -62,8 +62,8 @@
 .c-modal__close {
     font-size: 16px;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -92,6 +92,11 @@
 
 .c-modal__close:hover {
     font-size: 16px;
+}
+
+.c-modal__close svg {
+    width: 30px;
+    height: 30px;
 }
 
 @media (min-width: 768px) {
