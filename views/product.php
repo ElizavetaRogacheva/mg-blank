@@ -54,7 +54,9 @@ mgSEO($data);
 
 <!--хлебные крошки-->
 <?php if (class_exists('BreadCrumbs')): ?>
-    [brcr]
+    <div class="breadcrumbs">
+        [brcr]
+    </div>
 <?php endif; ?>
 
 <!--секция с продуктом-->

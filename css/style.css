@@ -2416,6 +2416,15 @@ button {
     background-color: #f7f7f7;
     padding: 20px 0;
 }
+@media (max-width: 1200px) {
+    .bread-crumbs {
+        flex-wrap: wrap;
+    }
+
+    .bread-crumbs__item {
+        margin-right: 5px!important;
+    }
+}
 .products-section {
     padding: 0 5% 50px;
     display: -webkit-box;
