@@ -1262,6 +1262,12 @@ button {
     display: -ms-flexbox;
     display: flex;
 }
+@media (max-width: 1200px) {
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 .featured-products-container {
     min-width: 68.3%;
     padding-right: 25px;
@@ -1275,6 +1281,7 @@ button {
 @media (max-width: 1200px) {
     .featured-products-container {
         width: 100%;
+        padding: 0;
     }
 }
 .featured-products__title {
@@ -2827,12 +2834,20 @@ button {
     right: 300px;
     padding: 10px 40px 10px 20px;
     z-index: 1;
-    background: var(--main-color-green);
+    background-color: var(--main-color-green);
     font-weight: 100;
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .product-compare--main-page {
+       right: 230px;
+       padding: 10px 30px 10px 10px;
+    }
+}
+
 
 .product-compare--main-page a {
     color: #fff;

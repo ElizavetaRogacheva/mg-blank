@@ -18,6 +18,13 @@
     text-transform: uppercase   ;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+    .favourite {
+       right: 80px;
+       padding: 10px;
+    }
+}
+
 .favourite--open {
     visibility: visible;
     opacity: .6;
