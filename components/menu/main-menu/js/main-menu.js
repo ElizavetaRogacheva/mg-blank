@@ -5,8 +5,9 @@ const menuBtns = document.querySelectorAll('.js-accordion-btn');
 function getAccordion(btns) {
     btns.forEach((btn) => {
         btn.addEventListener('click', (evt) => {
-            evt.preventDefault;
-            console.log(menuBtns);
+            evt.preventDefault();
+            evt.stopPropagation();
+            evt.stopImmediatePropagation();
 
             if(!(btn.parentNode.classList.contains('accordion-active'))) {
                 btns.forEach((elem) => {

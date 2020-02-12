@@ -117,7 +117,6 @@ Version: 1.0.0
         <?php endif; ?>
     </div>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/hidden-blocks.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/accordion.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/slick.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/sliders.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/timer.js"></script>

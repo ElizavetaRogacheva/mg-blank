@@ -177,6 +177,13 @@ button {
     vertical-align: bottom;    
     border: none;
 }
+@media (max-width: 1200px) {
+    .main-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 .main-logo__link {
     display: block;
 }
@@ -218,6 +225,7 @@ button {
         z-index: 30;
         display: none;
         background-color: #fff;
+        min-height: 30vh;
     }
 }
 .main-nav-close {
@@ -234,7 +242,9 @@ button {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        justify-content: space-around;
         padding-left: 15px;
+        height: 100%;
     }
 }
 .main-nav__item {
@@ -297,15 +307,20 @@ button {
 .main-nav__accordion-btn {
     position: relative;
 }
+.main-nav__accordion-btn-bg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    background: url(../img/sprite.png) no-repeat scroll 90% -70px;
+    display: none;
+}
+
 @media (max-width: 1200px) {
-    .main-nav__accordion-btn:before {
-        position: absolute;
-        content: '';
-        top: 10px;
-        right: 15px;
-        width: 15px;
-        height: 15px;
-        background: url(../img/sprite.png) no-repeat scroll 90% -70px;
+    .main-nav__accordion-btn-bg {
+        display: block;
+        z-index: 20;
     }
 }
 .main-nav-collapse:hover + ul {
@@ -411,6 +426,7 @@ button {
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 15%;
+    align-items: center;
 }
 @media (max-width: 1200px) {
     .main-header__wrapper {
@@ -419,7 +435,7 @@ button {
 }
 @media (min-width: 320px) and (max-width: 767px) {
     .main-header__wrapper {
-        width: 30%;
+        width: 35%;
     }
 }
 .main-header__search {
@@ -454,9 +470,15 @@ button {
 @media (max-width: 1200px) {
     .search-container {
         top: 40px;
+        width: 400px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .search-container {
         width: 200px;
     }
 }
+
 .search-form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -612,9 +634,8 @@ button {
         color: #6ea820;
         outline: none;
     }
-    .accordion-active:before {
+    .accordion-active span {
         position: absolute;
-        content: '';
         top: 10px;
         right: 15px;
         width: 15px;
