@@ -1,4 +1,4 @@
-<?php //viewData($data['items']); ?>
+<?php mgAddMeta('components/catalog-carousel/css/catalog-carousel.css') ;?>
 <section class="popular-products-section">
     <div class="popular-products-block">
         <h2 class="popular-products__title italic-title"><?php echo $data['title']; ?></h2>

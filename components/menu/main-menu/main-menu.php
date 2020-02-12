@@ -1,4 +1,6 @@
 <?php mgAddMeta('components/menu/main-menu/js/main-menu.js'); ?>
+<?php mgAddMeta('components/menu/main-menu/css/main-menu.css'); ?>
+
 
 <button class="main-nav__btn js-main-nav__btn">menu</button>
 

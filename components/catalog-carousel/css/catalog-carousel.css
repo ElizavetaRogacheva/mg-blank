@@ -1,0 +1,102 @@
+.popular-products-block {
+    width: 100%;
+    padding: 90px 0 70px;
+    background: url(../img/producttab-bkg.jpg) repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.italic-title {
+    text-align: center;
+    border: none;
+    margin: 0 auto 30px;
+    padding: 0 0 10px;
+    color: #000;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    text-transform: capitalize !important;
+    letter-spacing: 0.2px;
+}
+@media (max-width: 1200px) {
+    .italic-title {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}
+.popular-products__list {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.popular-products__item {
+    width: 30%;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+}
+.popular-products__item:hover .product-block__img {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.popular-products__item:hover .product-block__img--hover {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.popular-products__item:hover .product-options {
+    right: 0;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.popular-products__item:hover .sale-sticker {
+    left: 10px;
+    opacity: 1;
+    -webkit-transition: all 0.4 ease-in-out;
+    transition: all 0.4 ease-in-out;
+}
+@media (max-width: 1200px) {
+    .popular-products__item {
+        width: 45%;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .popular-products__item {
+        width: 100%;
+    }
+}
+.btn__link {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    background-image: none;
+    white-space: nowrap;
+    padding: 8px 30px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    color: #fff;
+    background-color: #6ea820;
+    min-width: 200px;
+    margin: 0 auto;
+}
+.btn__link,
+.btn__link:hover {
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+.btn__link:hover {
+    background-color: #000;
+}
