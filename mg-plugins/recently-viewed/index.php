@@ -197,7 +197,7 @@ class RecentlyViewed {
         </div>
         <div class="recently-product-content">
           <div class="mg-recently-product-name"> 
-          <a href="'.$item['url'].'">'.MG::textMore($item["title"], 20).'</a>
+          <a href="'.$item['url'].'">'.MG::textMore($item["title"], 13).'</a>
           </div>
           <span class="mg-recently-product-price">'.$item["price"].' '.$data['currency'].'</span>
           <form action="http://localhost/gipermarket/catalog" method="POST" class="property-form actionBuy" data-product-id="'.$item['id'].'">

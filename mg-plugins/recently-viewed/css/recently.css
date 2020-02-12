@@ -35,9 +35,25 @@
     font-family: 'Exo 2', sans-serif;
 }
 .mg-recently-product-image {
+    min-width: 40%;
     max-width: 40%;
     margin-right: 20px;
 }
+.recently-product-content {
+    width: 60%;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .mg-recently-product-image {
+        min-width: 30%;
+        max-width: 30%;    
+        margin-right: 10px;
+    }
+
+    .recently-product-content {
+        width: 70%;
+    }
+}
+
 .latest-products__title  {
     margin-bottom: 10px;
 }
