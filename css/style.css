@@ -3392,6 +3392,37 @@ button {
         flex-wrap: wrap;
     }
 }
+.c-buy {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 1200px) {
+    .c-buy__buttons {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mg-remove-to-favorites {
+        margin-bottom: 20px;
+    }
+
+    .mg-add-to-favorites {
+        margin-bottom: 20px;
+    }
+
+    .compare-btn {
+        margin-bottom: 20px;
+    }
+
+    .add-to-cart-btn {
+        margin-bottom: 20px;
+    }
+
+    .amount_change {
+        margin-bottom: 20px;
+    }
+}
 .qty-label {
     color: #000;
     margin-right: 10px;
