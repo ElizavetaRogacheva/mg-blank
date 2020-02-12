@@ -1,6 +1,7 @@
 'use strict'
-
 const menuBtns = document.querySelectorAll('.js-accordion-btn');
+const mainNavBtn = document.querySelector('.js-main-nav__btn');
+const mainNavList = document.querySelector('.js-main-nav');
 
 function getAccordion(btns) {
     btns.forEach((btn) => {
@@ -19,6 +20,10 @@ function getAccordion(btns) {
             }
         })
     }); 
-}
+};
+
+mainNavBtn.addEventListener('click', () => {
+    mainNavList.classList.toggle('main-nav-close');
+})
 
 getAccordion(menuBtns);

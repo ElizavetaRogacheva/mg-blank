@@ -1,3 +1,4 @@
+<?php mgAddMeta('components/aside/js/aside.js'); ?>
 <aside class="products-aside">
     
     <?php if (!(empty($data['menuCategories']))) : ?>
@@ -11,12 +12,14 @@
 
     <div class="filter">
     <div class="filter-title js-filter-title aside-title"><?php echo lang('filter')?></div>
+    <div class="filter__list js-filter__list">
         <?php
             component(
             'filter',
             $data
         );
         ?>
+    </div>
     </div>
     
     <?php if (MG::get('templateParams')['asideBannerShow'] === '1') :?>
@@ -37,7 +40,9 @@
                 <div class="latest-products__title js-latest-products__title aside-title">
                     <span><?php echo lang('RecentlyViewed'); ?></span>
                 </div>
-                [recently-viewed countPrint=3 count=3 random=0]
+                <div class="latest-products__list js-latest-products__list">
+                    [recently-viewed countPrint=3 count=3 random=0]
+                </div>
             </div>
         <?php } ?>
     </div>

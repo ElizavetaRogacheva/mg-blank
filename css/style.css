@@ -2505,7 +2505,7 @@ button {
         position: absolute;
         right: 20px;
         text-align: center;
-        top: 10px;
+        top: 0;
         width: 20px;
     }
 }
@@ -2547,9 +2547,6 @@ button {
     background-color: #fff;
     margin-bottom: 15px;
     padding: 15px;
-}
-.filter__list {
-    padding: 0 15px;
 }
 @media (max-width: 1200px) {
     .filter__list {
@@ -2628,9 +2625,6 @@ button {
 .latest-products {
     background-color: #fff;
     padding: 15px;
-}
-.latest-products__list {
-    padding: 0 15px 15px;
 }
 @media (max-width: 1200px) {
     .latest-products__list {
@@ -3137,6 +3131,7 @@ button {
 .rotate:before {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    top: 5px;
 }
 .product-section {
     background-color: #f7f7f7;
