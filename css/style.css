@@ -3272,3 +3272,98 @@ button {
     margin: 0 auto;
     padding: 70px 0;
 }
+
+.cart-page {
+    width: 90%;
+    margin: 0 auto;
+}
+.c-title {
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 0 15px;
+}
+.c-table__total {
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0 15px;
+}
+.checkout-btn {
+    color: #333;
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.checkout-btn:hover {
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
+}
+
+.deleteItemFromCart {
+    width: 20px;
+    height: 30px;
+    display: block;
+    padding: 30px;
+}
+
+.deleteItemFromCart svg {
+    width: 20px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.deleteItemFromCart:hover svg {
+    fill: var(--main-color-green);
+}
+
+.product-cart {
+    margin-bottom: 30px;
+}
+
+.c-table td {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .cart-table {
+        margin-right: 0;
+        width: 100%;
+    }
+    .cart_form .amount_change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cart_form button {
+        height: 40px;
+    }
+    .cart_form input {
+        height: 35px;
+    }
+    
+    .cart_form button::before {
+        top: 10px;
+    }
+
+    .c-table td {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c-table__total {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

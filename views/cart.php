@@ -31,24 +31,27 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
+<main class="cart-page">
+  <?php
+  // Задаём заголовок страницы
+  mgTitle(lang('cart'));
+  ?>
 
-<?php
-// Задаём заголовок страницы
-mgTitle(lang('cart'));
-?>
+  <?php
+  // Таблица товаров корзины
+  component('cart', $data, 'cart');
+  ?>
+ <?php if(!empty($data['related'])) : ?>
+  <?php
+  // Карусель «С этими товаром покупают»
+  component(
+    'related-product-carousel',
+    [
+      'items' => $data['related']['products'],
+      'title' => lang('relatedAddCart')
+    ]
+  );
+  ?>
+<?php endif ;?>
 
-<?php
-// Таблица товаров корзины
-component('cart', $data, 'cart');
-?>
-
-<?php
-// Карусель «С этими товаром покупают»
-component(
-  'catalog/carousel',
-  [
-    'items' => $data['related']['products'],
-    'title' => lang('relatedAddCart')
-  ]
-);
-?>
+</main>
