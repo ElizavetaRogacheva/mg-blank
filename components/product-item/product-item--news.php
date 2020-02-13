@@ -1,3 +1,4 @@
+
 <!--блок карточки товара-->
 <div class="product-block">
     <?php if ($data['new'] === '1') : ?>
