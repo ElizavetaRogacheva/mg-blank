@@ -17,52 +17,54 @@
  * @subpackage Views
  */
 ?>
+<main class="order-page">
+    <?php if (class_exists('GsSDEC')): ?>
+        [sdec_system]
+    <?php endif; ?>
 
-<?php if (class_exists('GsSDEC')): ?>
-    [sdec_system]
-<?php endif; ?>
+    <?php
+    // Если электронные товары
+    if (!empty($data['fileToOrder'])) {
+        component('order/electro', $data);
+    } else {
+        switch ($data['step']) {
 
-<?php
-// Если электронные товары
-if (!empty($data['fileToOrder'])) {
-    component('order/electro', $data);
-} else {
-    switch ($data['step']) {
+            // Оформление заказа
+            case 1:
+                mgSEO($data);
 
-        // Оформление заказа
-        case 1:
-            mgSEO($data);
+                $model = new Models_Cart();
+                $cartData = $model->getItemsCart();
+                $data['isEmpty'] = $model->isEmptyCart();
+                $data['productPositions'] = $cartData['items'];
+                $data['totalSumm'] = $cartData['totalSumm'];
 
-            $model = new Models_Cart();
-            $cartData = $model->getItemsCart();
-            $data['isEmpty'] = $model->isEmptyCart();
-            $data['productPositions'] = $cartData['items'];
-            $data['totalSumm'] = $cartData['totalSumm'];
+                // Корзина
+                component('cart', $data);
 
-            // Корзина
-            component('cart', $data);
+                // Компонент оформления заказа
+                component('order', $data);
+                break;
 
-            // Компонент оформления заказа
-            component('order', $data);
-            break;
+            // Оплата заказа
+            case 2:
+                component('payment', $data);
+                break;
 
-        // Оплата заказа
-        case 2:
-            component('payment', $data);
-            break;
+            // Подтверждение заказа
+            case 3:
+                component('order/confirm', $data);
+                break;
 
-        // Подтверждение заказа
-        case 3:
-            component('order/confirm', $data);
-            break;
+            // Оплата заказа из личного кабинета
+            case 4:
+                component('payment', $data, 'payment_from_personal');
+                break;
 
-        // Оплата заказа из личного кабинета
-        case 4:
-            component('payment', $data, 'payment_from_personal');
-            break;
+            // Информация о статусе заказа при переходе по ссылке из письма
+            case 5:
+                component('order/info', $data);
+        }
+    } ?>
 
-        // Информация о статусе заказа при переходе по ссылке из письма
-        case 5:
-            component('order/info', $data);
-    }
-} ?>
+</main>

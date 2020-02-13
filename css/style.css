@@ -3274,7 +3274,7 @@ button {
 }
 
 .cart-page {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 .c-title {
@@ -3332,12 +3332,18 @@ button {
 .c-table td {
     box-sizing: border-box;
 }
+.cart-table {
+    margin-right: 0;
+    width: 100%;
+    margin: 0 auto;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .cart-table {
-        margin-right: 0;
         width: 100%;
+        margin: 0;
     }
+    
     .cart_form .amount_change {
         display: flex;
         align-items: center;
@@ -3367,3 +3373,4 @@ button {
         align-items: center;
     }
 }
+

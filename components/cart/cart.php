@@ -3,11 +3,6 @@ mgAddMeta('components/cart/cart.css');
 mgAddMeta('components/cart/cart.js');
 ?>
 
-<div class="l-col min-0--12">
-    <div class="c-title">
-      <?php echo lang('productCart'); ?>
-    </div>
-</div>
 
 <?php if (class_exists('MinOrder')): ?>
     <div class="l-col min-0--12">
@@ -16,6 +11,9 @@ mgAddMeta('components/cart/cart.js');
 <?php endif; ?>
 
 <div class="l-col min-0--12">
+    <div class="c-title">
+      <?php echo lang('productCart'); ?>
+    </div>
     <div class="product-cart"
          style="display:<?php echo $data['isEmpty'] ? 'block' : 'none'; ?>">
         <div class="c-form cart-wrapper">

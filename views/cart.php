@@ -31,6 +31,7 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
+
 <main class="cart-page">
   <?php
   // Задаём заголовок страницы
