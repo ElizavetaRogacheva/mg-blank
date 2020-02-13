@@ -1,0 +1,11 @@
+.order-page {
+    padding: 30px 10%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #f7f7f7;
+}
+.order-page .l-row {
+    padding: 15px;
+    background-color: #fff;
+    
+}

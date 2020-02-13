@@ -3373,4 +3373,31 @@ button {
         align-items: center;
     }
 }
+.order-page {
+    padding: 30px 20%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #f7f7f7;
+}
+.order-page .l-row {
+    padding: 15px;
+    background-color: #fff;   
+}
+
+.order-page .btn {
+    color: #333;
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.order-page .btn:hover {
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
+}
+
+
 

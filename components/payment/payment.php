@@ -1,3 +1,5 @@
+<?php mgMeta('components/payment/css/payment.css'); ?>
+
 <?php
 $data['meta_title'] = lang('orderPayment');
 mgSEO($data); ?>
