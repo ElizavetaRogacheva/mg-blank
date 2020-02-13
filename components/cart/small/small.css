@@ -96,6 +96,7 @@
 @media (min-width: 700px) and (max-width: 1024px) {
     .c-cart__dropdown {
         width: 500px;
+        top: 30px;
     }
 }
 @media (max-width: 700px) {

@@ -185,3 +185,22 @@
 .product-options__item--cart a:hover svg {
     fill: var(--main-color-green);
 }
+.italic-title {
+    text-align: center;
+    border: none;
+    margin: 0 auto 30px;
+    padding: 0 0 10px;
+    color: #000;
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    text-transform: capitalize !important;
+    letter-spacing: 0.2px;
+}
+@media (max-width: 1200px) {
+    .italic-title {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}

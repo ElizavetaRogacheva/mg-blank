@@ -2807,6 +2807,28 @@ button {
         flex-wrap: wrap;
     }
 }
+.add-to-cart-btn {
+    padding: 15px 40px;
+    border: none;
+    background-color: #6ea820;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.add-to-cart-btn a {
+    color: #fff;
+}
+.add-to-cart-btn svg {
+    display: none;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .add-to-cart-btn {
+        margin-bottom: 10px;
+    }
+}
+.add-to-cart-btn:hover {
+    background-color: #000;
+}
+
 .c-buy {
     display: flex;
     flex-direction: column;

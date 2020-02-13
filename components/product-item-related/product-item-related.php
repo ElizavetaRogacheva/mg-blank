@@ -1,3 +1,5 @@
+<?php mgAddMeta('components/product-item-related/css/product-item-related.css') ?>
+
 <!--блок карточки товара-->
 <div class="product-block">
     <?php if ($data['new'] === '1') : ?>
