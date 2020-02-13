@@ -3399,5 +3399,66 @@ button {
     border-color: var(--main-color-green);
 }
 
+.personal-page {
+    padding: 30px 20%;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+}
+
+.personal-name {
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+}
+
+.personal-page .c-tab {
+    padding: 15px;
+    margin: 0;
+}
+
+.personal-page .c-tab__link {
+    padding: 15px 30px;
+    color: #666;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    background: transparent;
+    border: 0;
+    letter-spacing: 0.5px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.personal-page .c-tab__link:hover,
+.personal-page .c-tab__link--active {
+    background-color: #fff;
+    color: var(--main-color-green);
+}
+
+.c-tab__link--active::before {
+    display: none;
+}
+.c-tab__link:hover::before {
+    display: none;
+}
+.c-tab__content {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.c-tab__nav {
+    border: none;
+}
+
+.c-tab__link--logout {
+    color: #000;
+    font-weight: 600;
+}
+
 
 
