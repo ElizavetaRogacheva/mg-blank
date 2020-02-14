@@ -206,3 +206,6 @@
         box-sizing: border-box;
     }
 }
+.order-agreement .agreement__label::before{
+    display: none;
+}
