@@ -3204,7 +3204,7 @@ button {
 #mg-product-comments-rating form button:hover {
     background-color: #000;
 }
-
+/*хлебные крошки*/
 .bread-crumbs {
     background-color: #f7f7f7;
     padding: 30px 0;
@@ -3224,7 +3224,7 @@ button {
 .bread-crumbs__item a:hover {
     color: var(--main-color-green);
 }
-
+/**/
 .c-carousel__title {
     text-align: center !important;
     border: medium none !important;
@@ -3240,27 +3240,6 @@ button {
     display: none;
 }
 
-.feedback-form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.static-page-section {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.feedback-form input,
-.feedback-form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-.static-page-section p {
-    margin-bottom: 20px;
-}
-
 .product-block {
     position: relative;
 }
@@ -3270,6 +3249,8 @@ button {
     margin: 0 auto;
     padding: 70px 0;
 }
+
+/*страница корзины*/
 
 .cart-page {
     width: 80%;
@@ -3371,6 +3352,8 @@ button {
         align-items: center;
     }
 }
+
+/*страница оформления заказа*/
 .order-page {
     padding: 30px 20%;
     margin: 0 auto;
@@ -3396,6 +3379,8 @@ button {
     color: var(--main-color-green);
     border-color: var(--main-color-green);
 }
+
+/*страничка личный кабинет*/
 
 .personal-page {
     padding: 30px 20%;
@@ -3546,6 +3531,7 @@ button {
     width: auto;
     background-color: #fff;
 }
+/*страница входа в личный кабинет*/
 .enter-page {
     padding: 30px 20%;
     background-color: #f7f7f7;
@@ -3603,7 +3589,7 @@ button {
         padding: 30px 10px;
     }
 }
-
+/*страница восстановления пароля*/
 .forgot-pass-page {
     padding: 30px 20%;
     background-color: #f7f7f7;
@@ -3658,7 +3644,7 @@ button {
         padding: 30px 10px;
     }
 }
-
+/*страница регистрации клиента*/
 .registration-page {
     padding: 30px 20%;
     background-color: #f7f7f7;
@@ -3694,7 +3680,7 @@ button {
         padding: 30px 10px;
     }
 }
-
+/*страница избранного*/
 .favourites-page {
     padding: 30px 20%;
     background-color: #f7f7f7;
@@ -3726,18 +3712,16 @@ button {
     box-sizing: border-box;
 }
 
-
-
 .favourites__item:hover .product-options {
     opacity: 1;
-    right: 0
+    right: 0;
 }
 
 @media (max-width: 1200px) {
     .favourites-page {
         padding: 30px 10%;
     }
-    .favourites__item  {
+    .favourites__item {
         width: 45%;
     }
 }
@@ -3770,6 +3754,71 @@ button {
     margin: 0;
     font-family: 'Exo 2', sans-serif;
 }
+/*страница обратной связи*/
+.static-page-section {
+    padding: 30px 20%;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+}
 
+.feedback-form {
+    background-color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.feedback-form input,
+.feedback-form textarea {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: 'Exo 2', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
 
+.feedback-form [type='submit'] {
+    color: #333;
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    display: block;
+    width: 50%;
+    box-sizing: border-box;
+}
 
+.feedback-form [type='submit']:hover {
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
+}
+
+.static-page-section p {
+    margin-bottom: 20px;
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+@media (max-width: 1200px) {
+    .static-page-section {
+        padding: 30px 10%;
+    }
+    .feedback-form input,
+    .feedback-form textarea {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .static-page-section {
+        padding: 30px 10px;
+    }
+}

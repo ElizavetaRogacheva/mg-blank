@@ -119,8 +119,6 @@ Version: 1.0.0
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/hidden-blocks.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/slick.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/sliders.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/timer.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/popup.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/product-table.js"></script>
     <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/favourites-btns.js"></script>
 
