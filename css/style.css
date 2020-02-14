@@ -728,6 +728,9 @@ button {
     }
 }*/
 
+.popular-products-section {
+    background-color: #f7f7f7;
+}
 .popular-products__menu-list {
     text-align: center;
     display: -webkit-box;
