@@ -30,57 +30,59 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
-
-<?php
-// Если форма уже отправлена, то выводим сообщение об успешной отправке
-if ($data['message']): ?>
+<main class="forgot-pass-page">
     <?php
-    // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
-    echo $data['message'] ?>
-<?php endif; ?>
-
-<?php
-// Если ошибка отправки формы, то выводим эту ошибку
-if ($data['error']): ?>
+    // Если форма уже отправлена, то выводим сообщение об успешной отправке
+    if ($data['message']): ?>
+        <?php
+        // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
+        echo $data['message'] ?>
+    <?php endif; ?>
+    
     <?php
-    // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
-    echo $data['error'] ?>
-<?php endif; ?>
+    // Если ошибка отправки формы, то выводим эту ошибку
+    if ($data['error']): ?>
+        <?php
+        // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
+        echo $data['error'] ?>
+    <?php endif; ?>
+    
+    <?php switch ($data['form']) {
+        // Форма ввода email, на который будет отправлена ссылка на восстановления пароля
+        case 1: ?>
+    
+            <form action="<?php echo SITE ?>/forgotpass"
+                  method="POST">
+    
+                <input type="text"
+                       name="email"
+                       placeholder="Email"
+                       required>
+    
+                <input type="submit"
+                       name="forgotpass"
+                       value="<?php echo lang('send'); ?>">
+    
+            </form>
+    
+            <?php break;
+        // Форма для указания нового пароля, которая отобразится при переходе по ссылке восстановления пароля
+        case 2: ?>
+    
+            <form action="<?php echo SITE ?>/forgotpass"
+                  method="POST">
+                <input type="password"
+                       name="newPass"
+                       placeholder="<?php echo lang('forgotPass1'); ?>"
+                       required>
+                <input type="password"
+                       name="pass2"
+                       placeholder="<?php echo lang('forgotPass2'); ?>"
+                       required>
+                <input type="submit"
+                       name="chengePass"
+                       value="<?php echo lang('save'); ?>">
+            </form>
+        <?php } ?>
 
-<?php switch ($data['form']) {
-    // Форма ввода email, на который будет отправлена ссылка на восстановления пароля
-    case 1: ?>
-
-        <form action="<?php echo SITE ?>/forgotpass"
-              method="POST">
-
-            <input type="text"
-                   name="email"
-                   placeholder="Email"
-                   required>
-
-            <input type="submit"
-                   name="forgotpass"
-                   value="<?php echo lang('send'); ?>">
-
-        </form>
-
-        <?php break;
-    // Форма для указания нового пароля, которая отобразится при переходе по ссылке восстановления пароля
-    case 2: ?>
-
-        <form action="<?php echo SITE ?>/forgotpass"
-              method="POST">
-            <input type="password"
-                   name="newPass"
-                   placeholder="<?php echo lang('forgotPass1'); ?>"
-                   required>
-            <input type="password"
-                   name="pass2"
-                   placeholder="<?php echo lang('forgotPass2'); ?>"
-                   required>
-            <input type="submit"
-                   name="chengePass"
-                   value="<?php echo lang('save'); ?>">
-        </form>
-    <?php } ?>
+</main>

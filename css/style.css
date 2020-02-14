@@ -3578,7 +3578,6 @@ button {
     margin-bottom: 20px;
     font-family: 'Exo 2', sans-serif;
     color: #333;
-    font-family: 'Exo 2', sans-serif;
     box-sizing: border-box;
 }
 
@@ -3598,6 +3597,61 @@ button {
 
 @media(max-width: 767px) {
     .enter-page {
+        padding: 30px 10px;
+    }
+}
+
+.forgot-pass-page {
+    padding: 30px 20%;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+
+.forgot-pass-page form {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-pass-page input {
+    width: 50%;
+    padding: 10px;
+    background-color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.forgot-pass-page [type="submit"] {
+    color: #333;
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
+    display: block;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.forgot-pass-page [type="submit"]:hover {
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
+}
+
+@media (max-width: 1200px) {
+    .forgot-pass-page {
+        padding: 30px 10%;
+    }
+    .forgot-pass-page input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .forgot-pass-page {
         padding: 30px 10px;
     }
 }
