@@ -10,12 +10,14 @@
             foreach($newsArr as $newsBlock) { ?>
                 <ul class="featured-products-carousel__list">
                     <?php foreach($newsBlock as $newsItem) { ?>
-                        <?php
-                            component(
-                                'product-item-news',
-                                $newsItem
-                            );
-                        ?>
+                        <li class="featured-products-carousel__item">
+                            <?php
+                                component(
+                                    'product-item-news',
+                                    $newsItem
+                                );
+                            ?>
+                        </li>
                     <?php } ?>
                 </ul>
             <?php } ?>

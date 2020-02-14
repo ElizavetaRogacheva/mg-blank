@@ -120,3 +120,7 @@
         display: none;
     }
 }
+.featured-products-carousel__item {
+    padding: 10px;
+    box-sizing: border-box;
+}
