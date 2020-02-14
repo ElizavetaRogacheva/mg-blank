@@ -22,12 +22,11 @@
     height: 15px;
     vertical-align: sub;
     margin-right: 4px;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     display: none;
 }
-
 
 .mg-add-to-favorites:hover svg,
 .mg-remove-to-favorites svg {
@@ -52,11 +51,10 @@
     display: inline-block;
 }
 
-
 .product-options__item--wishlist a {
-    width: 25px!important;
-    height: 25px!important;
-    border: none!important;
+    width: 25px !important;
+    height: 25px !important;
+    border: none !important;
     padding: 0;
     font-size: 0;
     position: relative;
@@ -75,12 +73,11 @@
     fill: var(--main-color-green);
 }
 
-
 .product-options__item--wishlist a svg {
     display: inline-block;
     position: absolute;
     top: 6px;
-    fill:  #878787;
+    fill: #878787;
 }
 
 .product-options__item--wishlist a:hover svg {
@@ -98,5 +95,4 @@
     margin-right: 10px;
     text-transform: uppercase;
     margin: 0;
-
 }

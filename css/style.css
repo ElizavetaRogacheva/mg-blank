@@ -3725,12 +3725,8 @@ button {
     padding: 10px;
     box-sizing: border-box;
 }
-@media (min-width: 1201px) {
-    .favourites__item:nth-child(3n) {
-        margin-right: 0;
-    }
 
-}
+
 
 .favourites__item:hover .product-options {
     opacity: 1;
@@ -3744,9 +3740,6 @@ button {
     .favourites__item  {
         width: 45%;
     }
-    .favourites__item:nth-child(even) {
-        margin-right: 0;
-    }
 }
 
 @media (max-width: 767px) {
@@ -3758,6 +3751,24 @@ button {
         width: 100%;
         margin-right: 0;
     }
+}
+.favourites__empty {
+    display: none;
+}
+
+.favourites__empty--visible {
+    display: block;
+}
+
+.favourites__empty span {
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
 }
 
 

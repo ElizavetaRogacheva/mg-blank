@@ -324,5 +324,6 @@ $locale = array(
   'accountMenuBtn' => 'show',
   'hitSticker' => 'hit',
   'favoritesBtn' => 'Add to wishlist',
+  'emptyFavourites' => 'Your wishlist is empty',
 );
 ?>

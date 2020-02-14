@@ -324,6 +324,7 @@
         'accountMenuBtn' => 'Развернуть',         
         'hitSticker' => 'Хит',
         'favoritesBtn' => 'В избранное',
+        'emptyFavourites' => 'Список избранных товаров пуст',
 
     );
 ?>

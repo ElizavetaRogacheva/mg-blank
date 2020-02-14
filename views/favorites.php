@@ -38,10 +38,13 @@ mgSEO($data);
       <?php echo $data['titleCategory'] ?>
   </h1>
   <ul class="c-goods favourites__list">
+    <div class="favourites__empty js-fav-empty">
+      <span><?php echo lang('emptyFavourites') ?></span>
+    </div>
     <?php
       // Циклом выводим избранные товары
       foreach ($data['items'] as $item) { ?>
-        <li class="favourites__item">
+        <li class="favourites__item js-favourites-item">
           <?php
           // Миникарточка товара
           component(
