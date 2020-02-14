@@ -2831,6 +2831,9 @@ button {
     display: flex;
     flex-direction: column;
 }
+.c-buy__buttons {
+    margin-top: 30px;
+}
 @media (max-width: 1200px) {
     .c-buy__buttons {
         margin-top: 30px;
@@ -3831,7 +3834,7 @@ button {
 }
 
 .new-products-title,
-.static-page h2  {
+.static-page h2 {
     padding: 15px;
     color: #000;
     text-transform: uppercase;
