@@ -5,19 +5,19 @@ $('.js-promo-slider__list').slick({
     nextArrow: $('.promo-slider__btn--next'),
     dots: !0,
 }),
-    $('.js-featured-products-carousel').slick({
-        infinite: !1,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        prevArrow: $('.featured-products__arrow--left'),
-        nextArrow: $('.featured-products__arrow--right'),
-        responsive: [
-            {
-                breakpoint: 480,
-                settings: { slidesToShow: 1, slidesToScroll: 1 },
-            },
-        ],
-    }),
+$('.js-featured-products-carousel').slick({
+    infinite: !1,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: $('.featured-products__arrow--left'),
+    nextArrow: $('.featured-products__arrow--right'),
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: { slidesToShow: 1, slidesToScroll: 1 },
+        },
+    ],
+}),
     $('.js-special-slider__list').slick({
         autoplay: !1,
         autoplaySpeed: 3e3,

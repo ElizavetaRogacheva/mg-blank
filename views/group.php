@@ -45,12 +45,26 @@ mgSEO($data);
     );
   ?>
 
-<?php
-    component(
-    'selected-category-products',
-    $data
-    );
-  ?>
+<div class="products-category-content">
+<h1 class="products-category-content__title"><?php echo $data['titleCategory'] ?></h1>
+  <div class="products-block">
+    <ul class="products-block__list products-block__list--grid js-products-block__list">
+    <?php
+      // Циклом выводим все товары группы
+      foreach ($data['items'] as $item) { ?>
+      <li class="products-block__item">
+          <?php
+          // Миникарточка товара
+          component(
+            'product-item',
+            $item
+          );
+    ?>
+    </li>
+<?php } ?>
+    </ul>
+  </div>
+</div>
 
   </main>
 

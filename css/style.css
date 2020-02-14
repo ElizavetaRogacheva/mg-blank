@@ -792,11 +792,6 @@ button {
     border: none;
     background-color: transparent;
 }
-.featured-products-wrapper {
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px 0;
-}
 .banners {
     margin-bottom: 60px;
 }
@@ -836,71 +831,6 @@ button {
 .banners__item:hover img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-}
-.featured-product-card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 20px;
-    border: 1px solid #e6e6e6;
-    margin-right: 40px;
-    position: relative;
-}
-@media (max-width: 1200px) {
-    .featured-product-card {
-        margin-right: 20px;
-    }
-}
-@media (min-width: 320px) and (max-width: 767px) {
-    .featured-product-card {
-        margin-right: 0;
-    }
-}
-.featured-product-card .product-block-content {
-    width: 100%;
-}
-.featured-product-card .product-block__title {
-    margin: 0;
-    border: none;
-    padding: 0;
-}
-.featured-product-card .rating-block {
-    padding-top: 10px;
-}
-@media (max-width: 1200px) {
-    .featured-product-card .rating-block {
-        padding-bottom: 5px;
-    }
-}
-.featured-product-card .product-options {
-    right: 0;
-    bottom: 13px;
-}
-.featured-product-card:hover .product-options {
-    opacity: 1;
-}
-.featured-product-card:hover .sale-sticker {
-    opacity: 1;
-    left: 0;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-}
-.featured-product-card__link {
-    display: block;
-    width: 160px;
-    height: 135px;
-    margin-right: 15px;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-    .featured-product-card__link {
-        max-width: 130px;
-    }
-}
-.featured-product-card__link img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
 }
 .special-container {
     background-color: #e6e6e6;
@@ -2282,6 +2212,10 @@ button {
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    z-index: 2;
+}
+.favourite {
+    z-index: 2;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -3851,4 +3785,15 @@ button {
     font-size: 14px;
     box-sizing: border-box;
     font-family: 'Exo 2', sans-serif;
+}
+
+@media (max-width: 1200px) {
+    .static-page {
+        padding: 30px 10%;
+    }
+}
+@media (max-width: 767px) {
+    .static-page {
+        padding: 30px 10px;
+    }
 }
