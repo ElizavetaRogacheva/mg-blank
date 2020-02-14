@@ -1,4 +1,4 @@
-.compare-btn  {
+.compare-btn {
     text-transform: uppercase;
 }
 
@@ -7,10 +7,10 @@
 }
 
 .product-options__item--compare a {
-    width: 25px!important;
-    height: 25px!important;
-    border: none!important;
-    display: block!important;
+    width: 25px !important;
+    height: 25px !important;
+    border: none !important;
+    display: block !important;
     padding: 0;
     font-size: 0;
     position: relative;
@@ -21,12 +21,9 @@
     display: inline-block;
     position: absolute;
     top: 5px;
-    fill:  #878787;
+    fill: #878787;
 }
 
 .product-options__item--compare a:hover svg {
     fill: var(--main-color-green);
 }
-
-
-

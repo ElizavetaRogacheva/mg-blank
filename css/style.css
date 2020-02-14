@@ -2785,6 +2785,7 @@ button {
 
     .compare-btn {
         margin-bottom: 20px;
+        
     }
 
     .add-to-cart-btn {
@@ -2811,17 +2812,19 @@ button {
         margin-bottom: 10px;
     }
 }
-.product-qty-group__btn {
+.compare-btn {
     color: #6ea820;
     border: 1px solid #6ea820;
     background-color: #fff;
     font-size: 15px;
     padding: 12px 15px;
     margin-right: 10px;
+    box-sizing: border-box;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-    .product-qty-group__btn {
-        margin-bottom: 10px;
+    .compare-btn {
+        line-height: 14px;
+        padding: 18px 15px 12px;
     }
 }
 .product-qty-group__btn:hover {
