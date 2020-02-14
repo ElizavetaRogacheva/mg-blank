@@ -36,6 +36,10 @@
 }
 .sale-sticker--recommend {
     top: 60px;
+    background-color: #000;
+}
+.sale-sticker--recommend::after {
+    border-color: transparent transparent transparent #000;
 }
 .product-block__link {
     display: block;

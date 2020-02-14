@@ -71,7 +71,7 @@
 @media (max-width: 1200px) {
     .popular-products__item {
         width: 45%;
-        margin-right: 30px  ;
+        margin-right: 30px;
     }
     .popular-products__item:nth-child(even) {
         margin-right: 0;
