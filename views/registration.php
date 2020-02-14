@@ -27,7 +27,13 @@
  * @subpackage Views
  */
 // Установка значений в метатеги title, keywords, description
-mgSEO($data);
+mgSEO($data); ?>
 
-// Компонент формы регистрации
-component('auth/register', $data);
+<main class="registration-page">
+    <?php
+    // Компонент формы регистрации
+    component('auth/register', $data);
+    ?>
+
+</main>
+

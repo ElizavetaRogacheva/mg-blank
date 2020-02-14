@@ -3504,7 +3504,7 @@ button {
     width: 50%;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
     .personal-page {
         padding: 30px 10%;
     }
@@ -3513,7 +3513,7 @@ button {
     }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .personal-page {
         padding: 30px 10px;
     }
@@ -3585,7 +3585,7 @@ button {
     margin-bottom: 20px;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
     .enter-page {
         padding: 30px 10%;
     }
@@ -3595,7 +3595,7 @@ button {
     }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .enter-page {
         padding: 30px 10px;
     }
@@ -3624,7 +3624,7 @@ button {
     box-sizing: border-box;
 }
 
-.forgot-pass-page [type="submit"] {
+.forgot-pass-page [type='submit'] {
     color: #333;
     display: block;
     padding: 5px 15px;
@@ -3636,7 +3636,7 @@ button {
     box-sizing: border-box;
 }
 
-.forgot-pass-page [type="submit"]:hover {
+.forgot-pass-page [type='submit']:hover {
     color: var(--main-color-green);
     border-color: var(--main-color-green);
 }
@@ -3656,3 +3656,38 @@ button {
     }
 }
 
+.registration-page {
+    padding: 30px 20%;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+.registration-page .l-col {
+    background-color: #fff;
+    padding: 15px;
+}
+.registration-page .c-form {
+    width: 50%;
+}
+.registration-page input {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+}
+@media (max-width: 1200px) {
+    .registration-page {
+        padding: 30px 10%;
+    }
+    .registration-page .c-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .registration-page {
+        padding: 30px 10px;
+    }
+}
