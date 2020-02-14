@@ -22,14 +22,26 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        top: 50px;
+        top: 42px;
         width: 100%;
         z-index: 30;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         background-color: #fff;
         min-height: 30vh;
+        transform: scale(0);
+        transform-origin: 0 0;
+        transition: all 0.5s ease-in-out;
     }
 }
+.main-nav-close {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transform-origin: 0 0;
+    transition: all 0.5s ease-in-out;
+}
+
 .main-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;

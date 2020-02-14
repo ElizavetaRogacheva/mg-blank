@@ -190,9 +190,6 @@ button {
         padding: 25px 0;
     }
 }
-.main-nav-close {
-    display: block;
-}
 .submenu__link {
     color: #878787;
     font-weight: inherit;
