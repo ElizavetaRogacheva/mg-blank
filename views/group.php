@@ -47,6 +47,27 @@ mgSEO($data);
 
 <div class="products-category-content">
 <h1 class="products-category-content__title"><?php echo $data['titleCategory'] ?></h1>
+<div class="filterboard">
+    <div class="filterboard__left">
+        <div class="product-compare">
+        <?php
+                component(
+                'compare/link',
+                $data
+            );
+            ?>
+        </div>
+    </div>
+  </div>
+  
+    <?php
+    // Список свойств, которые выбраны в фильтре
+    component(
+      'filter/applied',
+      $data['applyFilter']
+    );
+    ?>
+
   <div class="products-block">
     <ul class="products-block__list products-block__list--grid js-products-block__list">
     <?php
