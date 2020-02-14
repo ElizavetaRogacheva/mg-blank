@@ -165,9 +165,6 @@
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-.product-options__item {
-    margin-right: 10px;
-}
 
 .product-options__item--cart {
     width: 25px;

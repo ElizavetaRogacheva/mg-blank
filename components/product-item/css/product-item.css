@@ -166,7 +166,7 @@
     transition: all 0.5s ease-in-out;
 }
 .product-options__item {
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 .product-options__item--cart {

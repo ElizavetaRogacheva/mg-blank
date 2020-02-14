@@ -33,21 +33,24 @@
 mgSEO($data);
 ?>
 
+<main class="favourites-page">
+  <h1>
+      <?php echo $data['titleCategory'] ?>
+  </h1>
+  <ul class="c-goods favourites__list">
+    <?php
+      // Циклом выводим избранные товары
+      foreach ($data['items'] as $item) { ?>
+        <li class="favourites__item">
+          <?php
+          // Миникарточка товара
+          component(
+            'product-item-related',
+            $item
+          );
+          ?>
+    </li>
+      <?php } ?>
+      </ul>
 
-<h1>
-    <?php echo $data['titleCategory'] ?>
-</h1>
-<div class="c-goods">
-  <?php
-  // Циклом выводим избранные товары
-  foreach ($data['items'] as $item) { ?>
-      <?php
-      // Миникарточка товара
-      component(
-        'catalog/item',
-        ['item' => $item]
-      );
-      ?>
-  <?php } ?>
-
-</div>
+</main>

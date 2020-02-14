@@ -3691,3 +3691,71 @@ button {
         padding: 30px 10px;
     }
 }
+
+.favourites-page {
+    padding: 30px 20%;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+
+.favourites-page h1 {
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.favourites__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.favourites__item {
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+@media (min-width: 1201px) {
+    .favourites__item:nth-child(3n) {
+        margin-right: 0;
+    }
+
+}
+
+.favourites__item:hover .product-options {
+    opacity: 1;
+    right: 0
+}
+
+@media (max-width: 1200px) {
+    .favourites-page {
+        padding: 30px 10%;
+    }
+    .favourites__item  {
+        width: 45%;
+    }
+    .favourites__item:nth-child(even) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .favourites-page {
+        padding: 30px 10px;
+    }
+
+    .favourites__item {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
