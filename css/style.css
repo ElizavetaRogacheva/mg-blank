@@ -375,18 +375,22 @@ button {
 }
 .account-container {
     position: absolute;
-    top: 85px;
+    top: 76px;
     right: 0;
     width: 250px;
     padding-left: 15px;
-    display: none;
     z-index: 40;
     background-color: #fff;
     border: 1px solid #e5e5e5;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+    transform-origin: 100% 0;
 }
 @media (max-width: 1200px) {
     .account-container {
-        top: 40px;
+        top: 37px;
     }
 }
 .account-menu__link {
@@ -2498,7 +2502,11 @@ button {
     background-color: #f4f4f4;
 }
 .visible {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+    transform-origin: 100% 0;
 }
 .rotate:before {
     -webkit-transform: rotate(180deg);
@@ -2785,7 +2793,6 @@ button {
 
     .compare-btn {
         margin-bottom: 20px;
-        
     }
 
     .add-to-cart-btn {
