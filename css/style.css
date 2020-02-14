@@ -3822,3 +3822,30 @@ button {
         padding: 30px 10px;
     }
 }
+
+/*статические страницы*/
+.static-page {
+    padding: 30px 20%;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+}
+
+.new-products-title,
+.static-page h2  {
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.static-page p {
+    color: #333;
+    padding: 5px 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
