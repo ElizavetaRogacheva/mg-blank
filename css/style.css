@@ -3498,3 +3498,23 @@ button {
     color: #333;
     border-color: #333;
 }
+
+.personal-page .c-form {
+    width: 50%;
+}
+
+.personal-page input,
+.personal-page textarea,
+.personal-page select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #333;
+    font-family: 'Exo 2', sans-serif;
+    margin-bottom: 20px;
+}
+
+.personal-page select {
+    width: auto;
+    background-color: #fff;
+}
