@@ -104,6 +104,7 @@ Version: 1.0.0
             <?php layout('page'); ?>
         <?php endif; ?>
 
+ 
         <?php
         // Шапка сайта
         // layout/layout_footer.php
