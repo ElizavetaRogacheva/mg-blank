@@ -27,10 +27,13 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
-
+<main class="enter-page">
 <h1><?php echo lang('enterTitle'); ?></h1>
 
 <?php
 // Компонент формы авторизации
 component('auth/login');
 ?>
+
+</main>
+

@@ -3543,3 +3543,62 @@ button {
     width: auto;
     background-color: #fff;
 }
+.enter-page {
+    padding: 30px 20%;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+}
+.enter-page h1 {
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.enter-page .l-col {
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.enter-page .c-form,
+.enter-page .c-form__row--line {
+    width: 50%;
+}
+
+.enter-page input {
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Exo 2', sans-serif;
+    color: #333;
+    font-family: 'Exo 2', sans-serif;
+    box-sizing: border-box;
+}
+
+.enter-page .c-button {
+    margin-bottom: 20px;
+}
+
+@media(max-width: 1200px) {
+    .enter-page {
+        padding: 30px 10%;
+    }
+    .enter-page .c-form,
+    .enter-page .c-form__row--line {
+        width: 100%;
+    }
+}
+
+@media(max-width: 767px) {
+    .enter-page {
+        padding: 30px 10px;
+    }
+}
+
