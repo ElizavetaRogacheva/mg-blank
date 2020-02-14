@@ -65,11 +65,14 @@
 }
 
 .product-options__item--wishlist .mg-add-to-favorites {
-    display: block!important;
+    display: block;
+}
+.product-options__item--wishlist .mg-remove-to-favorites {
+    display: block;
 }
 
-.product-options__item--wishlist .mg-remove-to-favorites {
-    display: none!important;
+.product-options__item--wishlist .mg-remove-to-favorites svg {
+    fill: var(--main-color-green);
 }
 
 
