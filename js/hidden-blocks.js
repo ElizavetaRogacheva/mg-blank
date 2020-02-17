@@ -5,11 +5,11 @@
         $('.js-account-container').toggleClass('visible');
     }),
     $('#contact').click(() => {
-        $('.js-contacts__list').toggleClass('visible'),
+        $('.js-contacts__list').toggleClass('accordion-visible'),
             $('#contact').toggleClass('rotate');
     }),
     $('#info').click(() => {
-        $('.js-footer-info__list').toggleClass('visible'),
+        $('.js-footer-info__list').toggleClass('accordion-visible'),
             $('#info').toggleClass('rotate');
     });
 

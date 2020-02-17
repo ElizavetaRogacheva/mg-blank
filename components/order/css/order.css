@@ -171,7 +171,7 @@
     font-weight: 600;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
     .order-page .cart-table tr {
         display: flex;
         flex-direction: column;
@@ -205,7 +205,10 @@
         align-items: center;
     }
     .order-page .l-col {
-        margin-right: 0;
+        margin-right: 10px;
+    }
+
+    .checkout-form-wrapper {
         width: 50%;
     }
     .order-page .deleteItemFromCart {
