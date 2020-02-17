@@ -19,7 +19,8 @@
 
 .amount_change input {
     height: 49px;
-    width: 50px;
+    width: 30px;
+    padding-left: 20px;
 }
 
 .amount_change button {
