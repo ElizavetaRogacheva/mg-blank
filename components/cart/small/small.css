@@ -149,7 +149,7 @@
     color: var(--main-color-green);
     border-color: var(--main-color-green);
 }
-.c-cart__dropdown--open {
+.small-cart-open {
     visibility: visible;
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
