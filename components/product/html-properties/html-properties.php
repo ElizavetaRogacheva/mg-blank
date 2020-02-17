@@ -1,4 +1,5 @@
 <?php mgAddMeta('components/product/product.js'); ?>
+<?php mgAddMeta('components/product/html-properties/html-properties.css') ;?>
 
 <?php
 foreach ($data as $prop) {
@@ -20,8 +21,7 @@ foreach ($data as $prop) {
 
             <p class="select-type">
                 <span class="property-title">
-                    <?php echo $prop['name']; ?>
-                    <span class="property-delimiter">:</span>
+                    <?php echo $prop['name']; ?><span class="property-delimiter">:</span>
                 </span>
                 <select name="<?php echo $prop['name']; ?>"
                         class="last-items-dropdown mg__prop_select js-onchange-price-recalc">
@@ -35,9 +35,8 @@ foreach ($data as $prop) {
 
             <p class="mg__prop_p_radio">
                 <span class="property-title">
-                    <?php echo $prop['name']; ?>
+                    <?php echo $prop['name']; ?><span class="property-delimiter">:</span>
                 </span>
-                <span class="property-delimiter">:</span><br/>
                 <?php foreach ($prop['additional'] as $option) { ?>
                     <label class="mg__prop_label_radio <?php echo($option['checked'] ? 'active' : ''); ?>">
                         <input class="mg__prop_radio <?php echo (!empty($option['price'])) ? 'js-onchange-price-recalc' : '' ?>"
@@ -57,12 +56,10 @@ foreach ($data as $prop) {
 
             <p>
                 <span class="property-title">
-                    <?php echo $prop['name']; ?>
+                    <?php echo $prop['name']; ?><span class="property-delimiter">:</span><br/>
                 </span>
-                <span class="property-delimiter">:</span><br/>
-
                 <?php foreach ($prop['additional'] as $option) { ?>
-                    <label>
+                    <label class="checkbox-label">
                         <input class="mg__prop_check <?php echo (!empty($option['price'])) ? 'js-onchange-price-recalc' : '' ?>"
                                type="checkbox"
                                name="<?php echo $option['name']; ?>"
