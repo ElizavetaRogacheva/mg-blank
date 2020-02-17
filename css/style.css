@@ -458,11 +458,6 @@ button {
 .currency-menu__btn:hover {
     color: #6ea820;
 }
-@media (max-width: 1200px) {
-    .accordion-active + ul {
-        display: block;
-    }
-}
 .invisible {
     position: absolute;
     clip: rect(0 0 0 0);

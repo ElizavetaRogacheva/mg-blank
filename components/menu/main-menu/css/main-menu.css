@@ -156,9 +156,8 @@
     .main-nav-submenu,
     .submenu__list {
         position: static;
-        padding: 15px;
-        display: none;
         border: none;
+        display: none;
     }
 }
 .main-nav-submenu__item {
@@ -192,5 +191,10 @@
         width: 15px;
         height: 15px;
         background: url(../img/sprite.png) no-repeat scroll 90% -100px;
+    }
+}
+@media (max-width: 1200px) {
+    .accordion-active + ul {
+        display: block;
     }
 }

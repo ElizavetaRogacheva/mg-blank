@@ -130,6 +130,17 @@ mgSEO($data);
                             </div>
                         </div>
                         <?php endif; ?>
+                        <div class="c-goods__footer">
+                            <div class="c-form">                                                  
+                                <?php
+                                    // Сложные характеристики – чекбоксы, радиокнопки, селекты
+                                    component(
+                                        'product/html-properties',
+                                        $data['propertyForm']['htmlProperty']
+                                    );
+                                ?>
+                            </div>
+                        </div>
 
 
                         <!--изменяющаяся цена при выборе варианта-->
