@@ -31,8 +31,10 @@ mgSEO($data);
 $prodIds = array();
 $propTable = array(); ?>
 
-А тут пусто!
+<main class="compare-page">
 <?php
 // Компонент страницы сравнения
 component('compare', $data['catalogItems']);
 ?>
+
+</main>

@@ -1,8 +1,8 @@
 <!-- содержимое страниц из папки /views -->
 <?php if (MG::get('isStaticPage')) { ?>
-    <div class="static-page">
+    <main class="static-page">
         <?php layout('content'); ?>
-    </div>
+</main>
 <?php } else { ?>
     <?php layout('content'); ?>
 <?php } ?>

@@ -29,7 +29,7 @@
 // Установка значений в метатеги title, keywords, description.
 mgSEO($data);
 ?>
-<section class="static-page-section">
+<main class="static-page-section">
     <?php
     // Если ошибка отправки формы, то выводим эту ошибку
     if (!empty($data['error'])): ?>
@@ -103,4 +103,4 @@ mgSEO($data);
     <?php endif; ?>
 
 
-</section>
+    </main>
