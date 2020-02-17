@@ -32,6 +32,9 @@ $prodIds = array();
 $propTable = array(); ?>
 
 <main class="compare-page">
+    <div class="compare-empty">
+        <span>Нет товаров для сравнения</span>
+    </div>
 <?php
 // Компонент страницы сравнения
 component('compare', $data['catalogItems']);
