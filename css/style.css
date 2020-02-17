@@ -2735,6 +2735,10 @@ main {
     color: #000;
     font-size: 24px;
 }
+
+.c-product__price--old {
+    margin-bottom: 20px;
+}
 .product-tax,
 .reward-points {
     padding: 2px 0;

@@ -174,6 +174,7 @@ mgSEO($data);
                         </div>
 
                         <!--старая цена-->
+                        <?php if($data['old_price'] !== 0) : ?>
                         <div class="c-product__price c-product__price--old old">
                             <div class="c-product__price--title">
                                 <?php echo lang('productOldPrice'); ?>
@@ -182,7 +183,7 @@ mgSEO($data);
                                 <?php echo MG::numberFormat($data['old_price']) . " " . $data['currency']; ?>
                             </s>
                         </div>
-
+                        <?php endif ; ?>
                         <!--опция выбора количества продукта-->
                         <div class="c-buy js-product-controls">
                             <?php
