@@ -251,7 +251,14 @@
     display: none;
 }
 
-.disabled, [disabled] {
+.disabled,
+[disabled] {
     pointer-events: none;
-    opacity: .5;
+    opacity: 0.5;
+}
+
+.mg-error {
+    color: red;
+    border: 1px solid red;
+    margin-bottom: 20px;
 }
