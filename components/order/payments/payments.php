@@ -1,3 +1,4 @@
+<?php mgAddMeta('components/order/css/order.css') ;?>
 <?php 
 if(!empty($data['rate'])) { 
 	$paymentRate = (abs($data['rate'])*100).'%';
