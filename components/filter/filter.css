@@ -8,7 +8,7 @@
 }
 
 .mg-filter-head {
-    display:  flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -27,7 +27,6 @@
     width: 100%;
 }
 
-
 .price-slider-list {
     position: relative;
     display: flex;
@@ -44,7 +43,7 @@
 }
 
 .ui-slider-range {
-    background-color: var(--main-color-green)!important;
+    background-color: var(--main-color-green) !important;
 }
 
 .filter-btn {
@@ -71,7 +70,6 @@
     font-size: 14px;
     width: 47%;
     text-align: center;
-
 }
 .refreshFilter:hover {
     border-color: var(--main-color-green);
@@ -87,8 +85,6 @@
     font-size: 14px;
 }
 
-
-
 .mg-filter-body {
     margin-bottom: 20px;
 }
@@ -102,7 +98,7 @@ select {
 .label-field {
     font-family: 'Exo 2', sans-serif;
     color: #878787;
-    font-size: 14px ;
+    font-size: 14px;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0.5px;
@@ -111,11 +107,9 @@ select {
 .last-items-dropdown {
     color: #878787;
     font-size: 14px;
-
 }
 
 @media (max-width: 1024px) {
-    
     .c-filter {
         position: fixed;
         z-index: 999;
@@ -124,11 +118,11 @@ select {
         bottom: 0;
         left: 0;
         visibility: hidden;
-        -webkit-transition: all .15s ease-in-out;
-        -o-transition: all .15s ease-in-out;
-        transition: all .15s ease-in-out;
+        -webkit-transition: all 0.15s ease-in-out;
+        -o-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
         opacity: 0;
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .c-filter__content {
@@ -264,7 +258,6 @@ select {
     justify-content: space-between;
 }
 
-
 .price-slider-list li {
     width: 40%;
 }
@@ -319,28 +312,22 @@ select {
     }
 }
 
-.c-filter .mg-filter-body .mg-filter-title {
-    font-size: 12px;
-    font-weight: 600;
+.mg-filter-title {
+    font-size: 14px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 8px;
     padding-bottom: 2px;
-    border-bottom: 1px dotted #dadada;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    font-weight: 700;
+    color: #000;
 }
 
 .c-filter .mg-filter-body .mg-filter-item {
     margin-top: 20px;
-}
-
-.mg-filter-item > span {
-    font-weight: 700;
-    color: #000;
-
 }
 
 .c-filter .mg-filter-body .mg-filter-item select {
@@ -365,10 +352,10 @@ select {
 
 .c-filter .mg-filter-body .disabled-prop {
     pointer-events: none;
-    opacity: .5;
+    opacity: 0.5;
 }
 
-.c-filter .mg-filter-body .mg-tooltip {
+.mg-tooltip {
     font-size: 11px;
     position: relative;
     display: -webkit-box;
@@ -388,20 +375,19 @@ select {
     justify-content: center;
 }
 
-.c-filter .mg-filter-body .mg-tooltip-content {
+.mg-tooltip-content {
     position: absolute;
     z-index: 2;
     bottom: 100%;
     left: 100%;
     width: 200px;
     padding: 10px;
-    border: 1px solid #dadada;
     background: #fff;
-    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
-.c-filter .mg-filter-body .mg-tooltip:hover .mg-tooltip-content {
+.mg-tooltip:hover .mg-tooltip-content {
     display: block !important;
 }
 
@@ -411,15 +397,12 @@ select {
     display: block;
     margin-top: 16px;
     text-align: center;
-
-    
 }
 
 .mg-viewfilter {
     font-size: 12px;
     border-bottom: 1px dashed #878787;
     color: inherit;
-
 }
 
 .c-filter .mg-filter-body .mg-viewfilter-all:hover,
@@ -443,8 +426,8 @@ select {
         height: 60px;
         padding: 10px;
         background: #fff;
-        -webkit-box-shadow: 0 -6px 6px rgba(0, 0, 0, .1);
-        box-shadow: 0 -6px 6px rgba(0, 0, 0, .1);
+        -webkit-box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.1);
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -480,13 +463,12 @@ select {
 }
 
 .filter-preview {
-    background: #fff; 
-    padding: 10px; 
-    z-index: 1; 
+    background: #fff;
+    padding: 10px;
+    z-index: 1;
     border: 1px solid #ddd;
     position: absolute;
     display: none;
-
 }
 
 .filter-preview a {
@@ -503,7 +485,6 @@ select {
     border: 2px solid #000;
 }
 
-
 @media (max-width: 767px) {
     .c-filter .filter-preview {
         display: none !important;
@@ -518,8 +499,8 @@ select {
     content: '';
     -webkit-animation-name: before;
     animation-name: before;
-    -webkit-animation-duration: .2s;
-    animation-duration: .2s;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
     border-top: 25px solid transparent;
     border-right: 25px solid #cd4449;
     border-bottom: 25px solid transparent;
@@ -602,9 +583,21 @@ select {
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .25), rgba(0, 0, 0, .125));
-    background: -o-linear-gradient(135deg, rgba(255, 255, 255, .25), rgba(0, 0, 0, .125));
-    background: linear-gradient(-45deg, rgba(255, 255, 255, .25), rgba(0, 0, 0, .125));
+    background: -webkit-linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(0, 0, 0, 0.125)
+    );
+    background: -o-linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(0, 0, 0, 0.125)
+    );
+    background: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(0, 0, 0, 0.125)
+    );
 }
 
 .c-filter .color-filter label:hover .cbox {
