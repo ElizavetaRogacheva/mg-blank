@@ -186,9 +186,10 @@
     color: #000;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1px;
     font-weight: 600;
+    color: var(--main-color-green);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
