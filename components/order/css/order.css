@@ -104,6 +104,10 @@
     box-sizing: border-box;
 }
 
+.order-block .noneactive {
+    display: flex;
+}
+
 .icon-payment {
     position: absolute;
 }
@@ -111,12 +115,10 @@
 .c-form label {
     position: relative;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    width: auto;
 }
 .c-form label [type='radio'] {
     position: absolute;
