@@ -3222,7 +3222,11 @@ main {
     padding: 30px 15%;
     background-color: #f7f7f7;
 }
-
+@media (max-width: 1200px) {
+    .cart-page {
+        padding: 30px 10px;
+    }
+}
 .c-alert {
     padding: 15px;
 }
