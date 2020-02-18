@@ -246,7 +246,9 @@ mgSEO($data);
     <div class="product-tabs-info">
         <ul class="product-tabs-info__nav-list">
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link"><?php echo lang('desc') ?></a></li>
+            <?php if(!(empty($data['stringPropertiesSorted']['groupProperty'] || $data['stringPropertiesSorted']['unGroupProperty']))) : ?>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('characteristic') ?></a></li>
+            <?php endif ;?>
             <?php if (class_exists('ProductCommentsRating')): ?>
             <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('reviews') ?> <span>([mg-product-count-comments item="<?php echo (MG::getSetting('shortLink') == 'true' ? '' : $data['category_url']).'/'.$data['url'] ?>"])</span></a></li>
             <?php endif ?>
@@ -258,6 +260,7 @@ mgSEO($data);
                 <?php echo ($data['description']); ?>
                 </p>
             </li>
+            <?php if(!(empty($data['stringPropertiesSorted']['groupProperty'] || $data['stringPropertiesSorted']['unGroupProperty']))) : ?>
             <li class="products-tabs-info__item js-desc-item">
                 <!--добавление характеристик продукта-->
                 <table class="products-tabs-info__table">                        
@@ -294,6 +297,7 @@ mgSEO($data);
                     <?php endforeach; ?>
                 </table>
             </li>
+            <?php endif ;?>
             <?php if (class_exists('ProductCommentsRating')): ?>
             <li class="products-tabs-info__item js-desc-item">
                 <!--плагин с отзывом-->
