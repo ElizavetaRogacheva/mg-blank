@@ -3432,7 +3432,6 @@ main {
 .personal-page .c-form {
     width: 50%;
 }
-
 @media (max-width: 1200px) {
     .personal-page {
         padding: 30px 10%;
@@ -3454,6 +3453,17 @@ main {
     .personal-page .c-tab__link {
         width: 100%;
         box-sizing: border-box;
+    }
+    .personal-page .c-history__content--left {
+        width: 100%;
+    }
+    .personal-page .order-total {
+        padding-left: 0 !important;
+    }
+    .personal-page .total-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
