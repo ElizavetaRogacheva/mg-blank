@@ -48,7 +48,7 @@ mgSEO($data);
           <?php
           // Миникарточка товара
           component(
-            'product-item-related',
+            'product-item',
             $item
           );
           ?>
