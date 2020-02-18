@@ -34,8 +34,8 @@
         </div>
     <?php endif ;?>
 
-    <div class="latest-products">
     <?php if (class_exists('RecentlyViewed')) { ?>
+    <div class="latest-products">
             <div class="l-col min-0--12">             
                 <div class="latest-products__title js-latest-products__title aside-title">
                     <span><?php echo lang('RecentlyViewed'); ?></span>
@@ -44,7 +44,7 @@
                     [recently-viewed countPrint=3 count=3 random=0]
                 </div>
             </div>
+        </div>
         <?php } ?>
-    </div>
 </aside>
 
