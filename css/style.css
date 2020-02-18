@@ -3661,6 +3661,12 @@ main {
         padding: 30px 10px;
     }
 }
+
+.registration-page .c-alert--red {
+    border: 1px solid red;
+    color: red;
+    margin-bottom: 10px;
+}
 /*страница избранного*/
 .favourites-page {
     padding: 30px 15%;
