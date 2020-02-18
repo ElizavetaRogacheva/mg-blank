@@ -2908,6 +2908,15 @@ main {
 .products-tabs-info__item {
     display: none;
 }
+.products-tabs-info__description {
+}
+.products-tabs-info__description img {
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: contain;
+    object-position: center;
+
+}
 .products-tabs-info__table {
     border: 1px solid #e5e5e5;
     width: 100%;
