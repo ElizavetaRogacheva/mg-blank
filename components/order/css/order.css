@@ -182,7 +182,8 @@
     font-family: 'Exo 2', sans-serif;
 }
 
-.order-summ span {
+.order-summ span,
+.delivery-summ {
     color: #000;
     text-transform: uppercase;
     font-weight: 600;
@@ -191,6 +192,7 @@
     font-weight: 600;
     color: var(--main-color-green);
 }
+
 
 @media (min-width: 768px) and (max-width: 1200px) {
     .order-page .cart-table tr {
