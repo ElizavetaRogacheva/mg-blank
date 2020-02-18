@@ -64,11 +64,13 @@
     }
 }
 .featured-products__arrows {
-    width: 100px;
+    width: 80px;
     opacity: 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     margin: 0 auto 20px;
+    display: flex;
+    justify-content: space-between;
 }
 .featured-products__arrow {
     width: 35px;
