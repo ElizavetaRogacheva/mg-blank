@@ -70,8 +70,8 @@
 }
 @media (max-width: 1200px) {
     .popular-products__item {
-        width: 45%;
-        margin-right: 30px;
+        width: 48%;
+        margin-right: 4%;
     }
     .popular-products__item:nth-child(even) {
         margin-right: 0;
