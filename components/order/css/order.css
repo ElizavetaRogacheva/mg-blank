@@ -193,7 +193,6 @@
     color: var(--main-color-green);
 }
 
-
 @media (min-width: 768px) and (max-width: 1200px) {
     .order-page .cart-table tr {
         display: flex;
@@ -274,11 +273,11 @@
     padding: 10px 0;
 }
 
-.agreement__label [type="checkbox"] {
+.agreement__label [type='checkbox'] {
     position: absolute;
     top: 15px;
     left: 0;
-    height: 100%!important;
+    height: 100% !important;
     opacity: 0;
 }
 .order-agreement .agreement__label span {
@@ -300,7 +299,7 @@
     top: 15px;
     left: 0;
 }
-.agreement__label [type="checkbox"]:checked + span::before {
+.agreement__label [type='checkbox']:checked + span::before {
     background: url(../img/tick.svg);
 }
 .order-agreement .agreement__label::before {

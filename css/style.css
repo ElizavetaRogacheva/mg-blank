@@ -3472,6 +3472,49 @@ main {
     width: auto;
     background-color: #fff;
 }
+
+.personal-page .status-table {
+    width: 100%;
+    margin: 0;
+}
+.personal-page .order-total {
+    padding: 0;
+    width: 100%;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+.personal-page .close-order,
+.personal-page .change-payment {
+    text-align: center;
+}
+
+.personal-page .c-history__list--item {
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.personal-page .c-history__list--total {
+    color: var(--main-color-green);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    margin: 0;
+}
+
+.personal-page .c-history__list--item button {
+    padding: 15px 40px;
+    border: none;
+    background-color: #6ea820;
+    text-transform: uppercase;
+    margin-right: 10px;
+    color: #fff;
+}
+
 /*страница входа в личный кабинет*/
 .enter-page {
     padding: 30px 15%;
