@@ -250,3 +250,8 @@
 .order-agreement .agreement__label::before {
     display: none;
 }
+
+.disabled, [disabled] {
+    pointer-events: none;
+    opacity: .5;
+}
