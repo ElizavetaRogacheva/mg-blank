@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    // Блокируем скролл body
-    $('body').addClass('l-body_overflow_hidden');
-
     var compareMain = $('.js-compare-page'), // Главный контейнер
         compareItem = $('.js-compare-item'), // Блок товара в сравнении
         scrollContainer = $('.js-scroll-container'); // Блок, к которому будем добавлять двойную прокрутку

@@ -8,22 +8,28 @@
     flex-basis: 100%;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
 
 /* c-compare
 ------------------------------------------------------------------- */
 .c-compare {
-    position: fixed;
+    position: absolute;
     z-index: 999;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 100%;
+    /*     max-width: 100%;
     width: 100%;
     height: 100%;
+ */
     padding: 70px 16px 0;
+    width: 100%;
+    height: 100%;
     background: #fff;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -31,6 +37,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     overflow: hidden auto;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 425px) {
@@ -40,7 +47,7 @@
 }
 
 .c-compare__top {
-    position: fixed;
+    position: absolute;
     z-index: 9;
     top: 0;
     left: 0;
@@ -80,16 +87,17 @@
 }
 
 .c-compare__top__buttons > a {
-    margin-left: 10px;
-    color: #fff;
+    color: #333;
     display: block;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    background-color: var(--main-color-green);
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    background-color: #fff;
 }
 
 .c-compare__top__buttons > a:hover {
-    background-color: #000;
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
 }
 
 .c-compare__top__buttons .icon {
@@ -395,6 +403,8 @@
 .compare-page {
     padding: 30px 15%;
     background-color: #f7f7f7;
+    position: relative;
+    min-height: 100vh;
 }
 .compare-empty {
     padding: 15px;
@@ -408,4 +418,33 @@
     font-size: 14px;
     margin: 0;
     font-family: 'Exo 2', sans-serif;
+}
+
+.compare-page ::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0px;
+}
+
+.compare-page ::-webkit-scrollbar-track {
+    background-color: #dadada;
+}
+
+.compare-page ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: var(--main-color-green);
+}
+
+.compare-page ::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px;
+}
+
+.compare-page ::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
 }
