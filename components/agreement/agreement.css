@@ -1,6 +1,3 @@
-.agreement {
-  text-align: center;
-}
 .agreement__checkbox {
   width: 20px !important;
   height: 20px !important;
@@ -14,6 +11,10 @@
 .agreement__label_error {
   color: red !important;
 }
+.agreement__label_error .agreement__btn {
+  color: red !important;
+}
+
 .agreement__overlay {
   position: fixed;
   z-index: 99998;

@@ -267,6 +267,40 @@
         box-sizing: border-box;
     }
 }
+.order-agreement .agreement__label {
+    position: relative;
+    padding: 10px 0;
+}
+
+.agreement__label [type="checkbox"] {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: 100%!important;
+    opacity: 0;
+}
+.order-agreement .agreement__label span {
+    padding-left: 40px;
+}
+.order-agreement .agreement__label span::before {
+    display: block;
+    min-width: 15px;
+    max-width: 15px;
+    min-height: 15px;
+    max-height: 15px;
+    margin-right: 15px;
+    content: '';
+    border: 1px solid #dadada;
+    background: #fff;
+    -webkit-box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px #fff;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.agreement__label [type="checkbox"]:checked + span::before {
+    background: url(../img/tick.svg);
+}
 .order-agreement .agreement__label::before {
     display: none;
 }
