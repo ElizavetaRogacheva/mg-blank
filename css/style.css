@@ -1865,7 +1865,6 @@ main {
     .products-aside {
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
-        order: 2;
         width: 100%;
     }
 }
@@ -1882,6 +1881,9 @@ main {
     font-weight: 600;
 }
 @media (max-width: 1200px) {
+    .categories {
+        display: none;
+    }
     .aside-title {
         position: relative;
         cursor: pointer;
@@ -2019,6 +2021,9 @@ main {
     padding: 15px;
 }
 @media (max-width: 1200px) {
+    .latest-products {
+        display: none;
+    }
     .latest-products__list {
         display: none;
     }
