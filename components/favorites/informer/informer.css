@@ -6,28 +6,28 @@
     color: #fff;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     z-index: 1;
     text-decoration: none;
     background: var(--main-color-green);
     font-weight: 100;
     font-size: 14px;
     letter-spacing: 1px;
-    text-transform: uppercase   ;
+    text-transform: uppercase;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
     .favourite {
-       right: 80px;
-       padding: 10px;
+        right: 80px;
+        padding: 10px;
     }
 }
 
 .favourite--open {
     visibility: visible;
-    opacity: .6;
+    opacity: 0.6;
     -webkit-animation-name: bounce;
     animation-name: bounce;
     -webkit-animation-duration: 1s;
@@ -37,14 +37,7 @@
 }
 
 .favourite--open:hover {
-    opacity: .9;
-}
-
-.favourite__text svg {
-    width: 20px;
-    height: 20px;
-    fill: #fff;
-    vertical-align: text-bottom;
+    opacity: 0.9;
 }
 
 @-webkit-keyframes bounce {
@@ -81,4 +74,3 @@
         transform: translateY(-15px);
     }
 }
-
