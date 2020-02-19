@@ -18,38 +18,30 @@
 }
 
 .amount_change input {
-    height: 49px;
-    width: 30px;
-    padding-left: 20px;
+    max-width: 55px;
+    height: 30px;
+    padding: 0 5px;
+    text-align: center;
 }
 
 .amount_change button {
     position: relative;
-    height: 55px;
+    height: 35px;
     width: 40px;
     border: none;
-    background-color: var(--main-color-green);
+    background-color: transparent;
+    outline-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.amount_change button:hover {
-    background-color: #000;
+.amount_change button svg {
+    fill: #000;
+    height: 50%;
+    width: 50%;
 }
 
-.down::before {
-    content: '<';
-    color: #fff;
-    position: absolute;
-    top: 17px;
-    left: 10px;
-    font-size: 20px;
+.amount_change button:hover svg {
+    fill: var(--main-color-green);
 }
-.up::before {
-    content: '>';
-    color: #fff;
-    position: absolute;
-    top: 17px;
-    right: 10px;
-    font-size: 20px;
-}
-
-
