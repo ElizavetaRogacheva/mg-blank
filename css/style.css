@@ -406,7 +406,11 @@ main {
     .account-container {
         top: 37px;
     }
+    .account-menu__item {
+        padding: 5px 0;
+    }
 }
+
 .account-menu__link {
     color: #878787;
     display: block;
@@ -470,6 +474,12 @@ main {
 }
 .currency-menu__btn:hover {
     color: #6ea820;
+}
+@media (max-width: 1200px) {
+    .currency-menu__btn {
+        margin-bottom: 5px;
+        padding: 10px 20px;
+    }
 }
 .invisible {
     position: absolute;
@@ -1611,6 +1621,9 @@ main {
     align-items: center;
 }
 @media (max-width: 1200px) {
+    .footer-info__item {
+        padding: 5px 0;
+    }
     .newsletter__list {
         -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2138,6 +2151,12 @@ main {
     margin-right: 8px;
     padding: 0;
     background-color: transparent;
+}
+
+@media (max-width: 1200px) {
+    .show-grid {
+        margin-right: 20px;
+    }
 }
 
 .show-grid svg {

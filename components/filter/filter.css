@@ -497,6 +497,11 @@ select {
     position: absolute;
     display: none;
 }
+@media (max-width: 1200px) {
+    .filter-preview {
+        display: none !important;
+    }
+}
 
 .filter-preview a {
     color: var(--main-color-green);
