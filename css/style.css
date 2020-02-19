@@ -3555,6 +3555,9 @@ main {
     color: red;
     margin-bottom: 10px;
 }
+.registration-page .c-form__row {
+    display: flex;
+}
 /*страница избранного*/
 .favourites-page {
     padding: 30px 15%;
