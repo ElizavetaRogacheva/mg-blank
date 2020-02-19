@@ -95,7 +95,7 @@
     right: 10px;
 }
 .featured-products__arrow:hover {
-    background-color: #6ea820;
+    background-color: var(--main-color-green);
 }
 .featured-products__arrow:hover:before {
     color: #fff;

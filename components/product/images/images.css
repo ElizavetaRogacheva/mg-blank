@@ -76,7 +76,7 @@
 }
 
 .owl-item.current .c-images__slider__item {
-    border: 2px solid #6ea820;
+    border: 2px solid var(--main-color-green);
 }
 
 .c-images .fancy-modal:first-child {

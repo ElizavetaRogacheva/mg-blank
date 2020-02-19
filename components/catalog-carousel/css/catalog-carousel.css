@@ -101,7 +101,7 @@
     letter-spacing: 0.5px;
     line-height: 22px;
     color: #fff;
-    background-color: #6ea820;
+    background-color: var(--main-color-green);
     min-width: 200px;
     margin: 0 auto;
 }

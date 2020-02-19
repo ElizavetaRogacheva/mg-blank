@@ -20,6 +20,6 @@
 }
 
 .subcategories__link:hover {
-    color: #6ea820;;
-    border-color: #6ea820;
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
 }

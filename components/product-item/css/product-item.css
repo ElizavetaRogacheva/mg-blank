@@ -129,7 +129,7 @@
 }
 .price,
 .product-block__title a:hover {
-    color: #6ea820;
+    color: var(--main-color-green);
 }
 .product-block__title {
     margin: 0;

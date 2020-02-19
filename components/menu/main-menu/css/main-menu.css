@@ -87,7 +87,7 @@
 }
 .main-nav__link--active,
 .main-nav__link:hover {
-    color: #6ea820;
+    color: var(--main-color-green);
 }
 @media (max-width: 1200px) {
     .main-nav__link {
@@ -135,7 +135,7 @@
     position: absolute;
     top: 120px;
     left: 0;
-    border-top: 2px solid #6ea820;
+    border-top: 2px solid var(--main-color-green);
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transform-origin: 0 0;
@@ -181,11 +181,11 @@
     display: block;
 }
 .main-nav-submenu__link:hover {
-    color: #6ea820;
+    color: var(--main-color-green);
 }
 @media (max-width: 1200px) {
     .accordion-active {
-        color: #6ea820;
+        color: var(--main-color-green);
         outline: none;
     }
     .accordion-active .main-nav__accordion-btn-bg {
