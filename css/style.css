@@ -3105,7 +3105,6 @@ main {
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 25px;
-    padding: 0 15px;
 }
 .c-table__total {
     color: #000;
@@ -3666,7 +3665,7 @@ main {
 
 .static-page-section p {
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 15px 0;
     color: #000;
     text-transform: uppercase;
     margin-bottom: 20px;
