@@ -147,6 +147,9 @@ main {
     .main-header__top {
         width: 100%;
         border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 .main-header__bottom {
