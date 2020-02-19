@@ -3096,6 +3096,12 @@ main {
         padding: 30px 10px;
     }
 }
+
+.cart-page .l-col {
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
 .c-alert {
     padding: 15px;
 }
