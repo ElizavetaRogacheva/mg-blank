@@ -316,6 +316,7 @@ main {
     width: 25px;
     border: none;
     background-color: transparent;
+    outline-style: none;
 }
 
 .search__btn svg {
@@ -410,6 +411,7 @@ main {
     border: none;
     padding: 0;
     background-color: transparent;
+    outline-style: none;
 }
 
 .account__btn svg {
