@@ -25,6 +25,11 @@
         margin-bottom: 10px;
     }
 }
+
+.popular-products__wrapper {
+    width: 100%;
+    margin-right: -20px;
+}
 .popular-products__list {
     width: 80%;
     margin: 0 auto;
@@ -44,6 +49,7 @@
     position: relative;
     box-sizing: border-box;
     margin-right: 20px;
+    flex-grow: 1;
 }
 
 .popular-products__item:hover .product-block__img {
