@@ -101,12 +101,6 @@
     <?php endif; ?>
     </div>
 </section>
-<?php 
-    component(
-        'news-blog',
-        $data
-    );
-?>
 <!--секция бренды-->
 <section class="brands-section">
     <?php if (class_exists('Brands')): ?>

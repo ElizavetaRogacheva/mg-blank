@@ -3059,7 +3059,7 @@ main {
     color: var(--main-color-green);
 }
 /**/
-.c-carousel__title {
+.c-carousel__title span {
     text-align: center !important;
     border: medium none !important;
     margin: 0 auto 30px !important;
@@ -3068,6 +3068,7 @@ main {
     font: normal 50px 'Lobster', cursive !important;
     text-transform: capitalize !important;
     letter-spacing: 0.2px !important;
+    font-weight: normal !important;
 }
 
 .c-carousel__title::before {
