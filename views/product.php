@@ -245,21 +245,25 @@ mgSEO($data);
     <!--вкладки описания отзывов и характеристик-->
     <div class="product-tabs-info">
         <ul class="product-tabs-info__nav-list">
-            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link"><?php echo lang('desc') ?></a></li>
+            <?php if (!empty($data['description'])) : ?>
+                <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link product-tabs-info__nav-link--active js-product-nav-link"><?php echo lang('desc') ?></a></li>
+            <?php endif ;?>
             <?php if(!(empty($data['stringPropertiesSorted']['groupProperty'] || $data['stringPropertiesSorted']['unGroupProperty']))) : ?>
-            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('characteristic') ?></a></li>
+                <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('characteristic') ?></a></li>
             <?php endif ;?>
             <?php if (class_exists('ProductCommentsRating')): ?>
-            <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('reviews') ?> <span>([mg-product-count-comments item="<?php echo (MG::getSetting('shortLink') == 'true' ? '' : $data['category_url']).'/'.$data['url'] ?>"])</span></a></li>
+                <li class="product-tabs-info__nav-item"><a title="" href="#" class="product-tabs-info__nav-link js-product-nav-link"><?php echo lang('reviews') ?> <span>([mg-product-count-comments item="<?php echo (MG::getSetting('shortLink') == 'true' ? '' : $data['category_url']).'/'.$data['url'] ?>"])</span></a></li>
             <?php endif ?>
         </ul>
         <ul class="products-tabs-info__list">
+            <?php if (!empty($data['description'])) : ?>
             <li class="products-tabs-info__item active-item js-desc-item">
                 <!--добавление описания продукта-->
                 <p class="products-tabs-info__description">
                 <?php echo ($data['description']); ?>
                 </p>
             </li>
+            <?php endif ;?>
             <?php if(!(empty($data['stringPropertiesSorted']['groupProperty'] || $data['stringPropertiesSorted']['unGroupProperty']))) : ?>
             <li class="products-tabs-info__item js-desc-item">
                 <!--добавление характеристик продукта-->
