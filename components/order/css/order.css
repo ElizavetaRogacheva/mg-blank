@@ -76,6 +76,11 @@
     box-sizing: border-box;
 }
 
+.payment-option {
+    position: sticky;
+    top: 0;
+}
+
 .order-block {
     padding: 15px;
     width: 100%;
