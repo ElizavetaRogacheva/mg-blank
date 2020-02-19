@@ -2776,15 +2776,14 @@ main {
         flex-wrap: wrap;
     }
 }
-.add-to-cart-btn {
-    padding: 15px 40px;
-    border: none;
-    background-color: #6ea820;
-    text-transform: uppercase;
-    margin-right: 10px;
-}
 .add-to-cart-btn a {
     color: #fff;
+    padding: 15px 40px;
+    border: none;
+    background-color: var(--main-color-green);
+    text-transform: uppercase;
+    margin-right: 10px;
+    display: block;
 }
 .add-to-cart-btn svg {
     display: none;
@@ -2794,7 +2793,7 @@ main {
         margin-bottom: 10px;
     }
 }
-.add-to-cart-btn:hover {
+.add-to-cart-btn a:hover {
     background-color: #000;
 }
 
