@@ -83,6 +83,35 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 5px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #dadada;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background-color: var(--main-color-green);
+}
+
+::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+}
+
 body {
     margin: 0;
     font-family: 'Exo 2', sans-serif;
