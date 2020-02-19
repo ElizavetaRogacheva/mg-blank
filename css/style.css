@@ -3696,6 +3696,10 @@ main {
     padding: 30px 15%;
     background-color: #f7f7f7;
 }
+.static-page__wrapper {
+    background-color: #fff;
+    padding: 15px;
+}
 
 .new-products-title,
 .static-page h2 {
