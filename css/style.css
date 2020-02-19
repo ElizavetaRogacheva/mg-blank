@@ -3736,3 +3736,41 @@ main {
         padding: 30px 10px;
     }
 }
+
+.order-page {
+    padding: 30px 15%;
+    display: flex;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    .order-page {
+        padding: 30px 10%;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 767px) {
+    .order-page {
+        padding: 30px 10px;
+    }
+}
+.order-page .l-row {
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+}
+.order-page .l-row .payment-form-block input {
+    color: #333;
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid #e6e6e6;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #fff;
+}
+
+.order-page .l-row .payment-form-block input:hover {
+    color: var(--main-color-green);
+    border-color: var(--main-color-green);
+}

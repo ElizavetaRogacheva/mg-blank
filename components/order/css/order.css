@@ -18,10 +18,10 @@
 }
 .order-page .l-row {
     background-color: #fff;
+    width: 100%;
 }
 .order-page .l-row .payment-form-block {
     width: 100%;
-    padding: 15px;
 }
 
 .order-page .l-row .payment-form-block input {
