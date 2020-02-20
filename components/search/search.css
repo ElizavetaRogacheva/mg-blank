@@ -145,6 +145,11 @@
     box-sizing: border-box;
 }
 
+.c-search .search-results__list {
+    max-height: 50vh;
+    overflow: auto;
+}
+
 .c-search .search-results__item {
     padding: 10px 10px;
     background-color: #fff;
