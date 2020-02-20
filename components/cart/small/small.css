@@ -151,7 +151,7 @@
     color: var(--main-color-green);
     border-color: var(--main-color-green);
 }
-.small-cart-open {
+/* .small-cart-open {
     visibility: visible;
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
@@ -159,7 +159,7 @@
     opacity: 1;
     display: block;
 }
-
+ */
 .countsht {
     background-color: var(--main-color-green);
     display: block;
@@ -182,4 +182,13 @@
 .icon__cart-remove {
     width: 20px;
     height: 25px;
+}
+
+.mg-desktop-cart:hover .c-cart__dropdown {
+    visibility: visible;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+    display: block;
 }
