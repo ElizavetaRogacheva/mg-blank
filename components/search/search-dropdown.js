@@ -1,6 +1,11 @@
 'use strict'
 
 const ITEM_TEMPLATE = document.querySelector('.js-search-item-template').content.querySelector('.js-search-item-template-inner');
+const ARR_TOP_KEY_CODE = 38;
+const ARR_BOTTOM_KEY_CODE = 40;
+const MIN_SEARCH_VALUE_LENGTH = 2;
+const ONE_KEY_CODE = 49;
+const BACK_SLASH_KEY_CODE = 220;
 let fragment = document.createDocumentFragment();
 let searchResults = document.querySelector('.js-add-search-results');
 let choseResult = -1;
@@ -9,11 +14,11 @@ document.querySelector('.search-form').addEventListener('keyup', function(e) {
 	e.preventDefault();
 	e.stopPropagation();
 
-	if (e.keyCode === 38 && searchResults.firstChild && choseResult > 0) {
+	if (e.keyCode === ARR_TOP_KEY_CODE && searchResults.firstChild && choseResult > 0) {
 		choseResult -= 1;
 		searchResults.childNodes[choseResult].childNodes[1].focus();
 	} else if (
-			e.keyCode === 40 &&
+			e.keyCode === ARR_BOTTOM_KEY_CODE &&
 		 	searchResults.firstChild && 
 		 	choseResult < searchResults.childNodes.length - 1
 	 	) {
@@ -41,11 +46,11 @@ function searchFunc(e) {
 
 	let text = e.target.value;
 
-	if (text.length < 2 && searchResults.firstChild) {
+	if (text.length < MIN_SEARCH_VALUE_LENGTH && searchResults.firstChild) {
 		searchResults.innerHTML = "";	
 	}
 
-	if (text.length >= 2 && e.keyCode >= 49 && e.keyCode <= 220) {
+	if (text.length >= MIN_SEARCH_VALUE_LENGTH && e.keyCode >= ONE_KEY_CODE && e.keyCode <= BACK_SLASH_KEY_CODE) {
 		let dataObj = {
 		    fastsearch: "true",
 	        text: text
