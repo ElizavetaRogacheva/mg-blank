@@ -3816,3 +3816,13 @@ main {
     color: var(--main-color-green);
     border-color: var(--main-color-green);
 }
+.brands-section .brands__item {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.9;
+}
+.brands-section .brands__item:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
+}
