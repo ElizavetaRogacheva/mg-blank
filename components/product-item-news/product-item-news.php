@@ -3,10 +3,18 @@
     <div class="sale-sticker">
         <span><?php echo lang('newSticker')  ?></span>
     </div>
+    <?php $thumbsArr = getThumbsFromUrl(explode('|', $data['image_url'])[0], $data['id']);?>
+
     <a title="" 
        href="<?php echo ($data['link']) ?>" 
        class="featured-product-card__link">
-        <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['image_url'] ?>" alt="">
+       <img class="featured-product-card__img"
+                 src="<?php echo $thumbsArr[30]['main'] ?>"
+                 srcset="<?php echo $thumbsArr[30]['2x'] ?> 2x"
+                 alt="<?php echo $data['item']['images_alt'][0] ?>"
+                 title="<?php echo $data['item']['images_title'][0] ?>"
+                 data-transfer="true"
+                 data-product-id="<?php echo $data['item']['id'] ?>">
     </a>
     <div class="product-block-content">
         <!--рейтинг товара-->

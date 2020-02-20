@@ -13,16 +13,31 @@
         <span><?php echo lang('hitSticker') ?></span>
     </div>
     <?php endif ;?>
-    <!--картинки карточки товара-->
-    <a title="" href="<?php echo $data['link'] ?>" class="product-block__link">
-        <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img">
-        <?php if (!(empty($data['images_product'][1]))) : ?>
-        <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][1] ?>" alt="" class="product-block__img product-block__img--hover">
-        <?php else : ?>
-            <img title="" src="<?php echo SITE ?>/uploads/<?php echo $data['images_product'][0] ?>" alt="" class="product-block__img product-block__img--hover">
-        <?php endif ;?>
-    </a>
+    <?php 
+        $thumbsArr = getThumbsFromUrl(explode('|', $data['image_url'])[0], $data['id']);
+        $thumbsArrHover = getThumbsFromUrl(explode('|', $data['images_product'][1])[0], $data['id']);
 
+    ?>
+    <a title="" 
+       href="<?php echo $data['link'] ?>" 
+       class="product-block__link">
+            <img class="product-block__img product-block__img--hovered"
+                 src="<?php echo $thumbsArr[70]['main'] ?>"
+                 srcset="<?php echo $thumbsArr[70]['2x'] ?> 2x"
+                 alt="<?php echo $data['item']['images_alt'][0] ?>"
+                 title="<?php echo $data['item']['images_title'][0] ?>"
+                 data-transfer="true"
+                 data-product-id="<?php echo $data['item']['id'] ?>">
+            <?php if(!empty($data['images_product'][1])) : ?>
+            <img class="product-block__img product-block__img--hover"
+                 src="<?php echo $thumbsArrHover[70]['main'] ?>"
+                 srcset="<?php echo $thumbsArrHover[70]['2x'] ?> 2x"
+                 alt="<?php echo $data['item']['images_alt'][0] ?>"
+                 title="<?php echo $data['item']['images_title'][0] ?>"
+                 data-transfer="true"
+                 data-product-id="<?php echo $data['item']['id'] ?>">
+            <?php endif ;?>
+    </a>
     <div class="product-block-content">
 
         <!--рейтинг товара-->

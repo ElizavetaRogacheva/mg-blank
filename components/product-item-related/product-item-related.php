@@ -15,8 +15,8 @@
        href="<?php echo $data['link'] ?>" 
        class="product-block__link">
             <img class="product-block__img"
-                 src="<?php echo $thumbsArr[30]['main'] ?>"
-                 srcset="<?php echo $thumbsArr[30]['2x'] ?> 2x"
+                 src="<?php echo $thumbsArr[70]['main'] ?>"
+                 srcset="<?php echo $thumbsArr[70]['2x'] ?> 2x"
                  alt="<?php echo $data['item']['images_alt'][0] ?>"
                  title="<?php echo $data['item']['images_title'][0] ?>"
                  data-transfer="true"

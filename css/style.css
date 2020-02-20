@@ -2230,7 +2230,7 @@ main {
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-.products-block__item:hover .product-block__img {
+.products-block__item:hover .product-block__img--hovered {
     opacity: 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
