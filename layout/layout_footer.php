@@ -58,15 +58,22 @@
                     <div class="copyright"><span><?php echo date('Y') . ' ' . lang('copyright'); ?></span></div>
                     <?php if (MG::get('templateParams')['paymentShow'] === '1') :?>
                     <div class="main-footer-payment">
-                        <ul class="payment__list">
-                            <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/visa.png" alt=""></li>
-                            <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/discover.png" alt=""></li>
-                            <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/american_express.png" alt=""></li>
-                            <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/google_wallet.png" alt=""></li>
-                            <li class="payment__item"><img title="" src="<?php echo PATH_SITE_TEMPLATE ?>/img/paypal.png" alt=""></li>
-                        </ul>
+                    <ul class="payment__list">
+                        <?php
+                        $res = DB::query(
+                            'SELECT name, id  FROM ' .
+                                PREFIX .
+                                'payment WHERE activity=1 ORDER BY id'
+                        );
+                        while ($payments = DB::fetchAssoc($res)) { ?>
+                                <li title="<?php echo $payments['name']; ?>"
+                                    class="payment__item icon-style <?php echo 'pay-' .
+                                    $payments['id']; ?>"><?php echo $payments['name']; ?></li>
+                            <?php }
+                        ?>
+                    </ul>
                     </div>
                     <?php endif ; ?>
                 </div>
             </div>
-        </footer>
+</footer>
