@@ -30,6 +30,12 @@
     width: 100%;
     margin-right: -20px;
 }
+
+@media(max-width: 1200px) {
+    .popular-products__wrapper {
+        margin-right: 0;
+    }
+}
 .popular-products__list {
     width: 80%;
     margin: 0 auto;
