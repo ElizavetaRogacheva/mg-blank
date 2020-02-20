@@ -1,10 +1,10 @@
 /* c-pagination
 ------------------------------------------------------------------- */
 
-.mg-pager  .link-page {
-    color: #fff!important;
-    border-radius: 0%!important;
-    padding: 20px!important;
+.mg-pager .link-page {
+    color: #fff !important;
+    border-radius: 0% !important;
+    padding: 20px !important;
 }
 
 .pagination-container {
@@ -12,7 +12,6 @@
     display: flex;
     box-sizing: border-box;
 }
-
 
 .c-pagination .allPages,
 .mg-pager .allPages {
@@ -36,8 +35,8 @@
 
 .c-pagination ul a,
 .mg-pager li > a {
-    color: #fff!important;
-    border-radius: 0%!important;
+    color: #fff !important;
+    border-radius: 0% !important;
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -45,9 +44,9 @@
     width: 40px;
     height: 32px;
     margin: 4px;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     color: #666;
     border-radius: 3px;
     background-color: var(--main-color-green);

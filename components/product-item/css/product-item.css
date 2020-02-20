@@ -169,7 +169,7 @@
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
     .product-options {
         opacity: 1;
         right: 0;

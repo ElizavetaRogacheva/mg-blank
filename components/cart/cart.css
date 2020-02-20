@@ -1,4 +1,3 @@
-
 /* c-table
 ------------------------------------------------------------------- */
 .c-table caption,
@@ -42,9 +41,9 @@
 }
 
 .c-table--hover td {
-    -webkit-transition: background-color .1s linear;
-    -o-transition: background-color .1s linear;
-    transition: background-color .1s linear;
+    -webkit-transition: background-color 0.1s linear;
+    -o-transition: background-color 0.1s linear;
+    transition: background-color 0.1s linear;
 }
 
 .c-table--hover tr:hover td {

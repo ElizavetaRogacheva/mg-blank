@@ -1,7 +1,7 @@
 /* c-tab
 ------------------------------------------------------------------- */
 [hidden] {
-    display: none
+    display: none;
 }
 
 .c-tab {
@@ -42,9 +42,9 @@
     margin-right: 10px;
     padding: 0 16px;
     padding-bottom: 10px;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     text-align: center;
     -webkit-appearance: none;
 }
@@ -76,9 +76,9 @@
     width: 100%;
     height: 3px;
     content: '';
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     -webkit-transform: scaleX(0);
     -ms-transform: scaleX(0);
     transform: scaleX(0);
