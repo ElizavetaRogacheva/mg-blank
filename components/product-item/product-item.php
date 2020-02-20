@@ -21,7 +21,7 @@
     <a title="" 
        href="<?php echo $data['link'] ?>" 
        class="product-block__link">
-            <img class="product-block__img product-block__img--hovered"
+            <img class="product-block__img <?php echo !empty($data['images_product'][1]) ?  'product-block__img--hovered' : '' ?>"
                  src="<?php echo $thumbsArr[70]['main'] ?>"
                  srcset="<?php echo $thumbsArr[70]['2x'] ?> 2x"
                  alt="<?php echo $data['item']['images_alt'][0] ?>"
