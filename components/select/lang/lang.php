@@ -34,20 +34,4 @@ if ($count) { ?>
                 </li>
           <?php  } ?>
     </ul>
-
-
-
-    <!-- <label class="select__wrap">
-        <?php // $url = str_replace(url::getCutSection(), '', $_SERVER['REQUEST_URI']);?>
-        <select name="multiLang-selector"
-                class="select"
-                id="js-lang-select"
-                aria-label="Выбор языка сайта">
-            <?php // echo '<option value="'.SITE.$url.'" '.((LANG == 'LANG' || LANG == '')?'selected="selected"':"").'>'.lang('defaultLanguage').'</option>';
-            //foreach ($multiLang as $mLang) {
-            //    if ($mLang['active'] != 'true') {continue;}
-            //    echo '<option value="'.SITE.'/'.$mLang['short'].$url.'" '.((LANG == $mLang['short'])?'selected="selected"':"").'>'.$mLang['full'].'</option>';
-            //} ?>
-        </select>
-    </label> -->
 <?php } ?>
