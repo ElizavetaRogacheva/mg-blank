@@ -354,36 +354,6 @@ main {
     }
 }
 
-.search-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-}
-.search-form__input {
-    width: 100%;
-    background: #fff;
-    padding: 12px 0 10px 10px;
-    font-size: 13px;
-    font-style: italic;
-    text-transform: capitalize;
-    border: 1px solid #e6e6e6;
-}
-.search-form__btn {
-    width: 43px;
-    height: 20px;
-    position: absolute;
-    right: 0;
-    top: 11px;
-    border: none;
-    border-left: 1px solid #ddd;
-    font-size: 0;
-    background-color: #f4a460;
-    background: url(../img/nav-icon.png) no-repeat scroll 8px 2px;
-}
-.search-form__btn:hover {
-    background: url(../img/nav-icon.png) no-repeat scroll 8px -37px;
-}
 .main-header__cart {
     position: relative;
 }
