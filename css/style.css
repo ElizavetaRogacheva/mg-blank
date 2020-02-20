@@ -1610,6 +1610,9 @@ main {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 }
 .payment__item {
