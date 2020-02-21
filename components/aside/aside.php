@@ -12,17 +12,21 @@
         ?>
     <?php endif; ?>
 
-    <div class="filter">
-    <div class="filter-title js-filter-title aside-title"><?php echo lang('filter')?></div>
-    <div class="filter__list js-filter__list">
-        <?php
-            component(
-            'filter',
-            $data
-        );
-        ?>
-    </div>
-    </div>
+    <?php if(isCatalog ()) :?>
+        <?php if(!isSearch())  :?>
+            <div class="filter">
+            <div class="filter-title js-filter-title aside-title"><?php echo lang('filter')?></div>
+            <div class="filter__list js-filter__list">
+                <?php
+                    component(
+                    'filter',
+                    $data
+                );
+                ?>
+            </div>
+            </div>
+        <?php endif; ?>
+    <?php endif ; ?>
     
     <?php if (MG::get('templateParams')['asideBannerShow'] === '1') :?>
         <div class="advertising">

@@ -139,6 +139,7 @@ mgSEO($data);
     </div>
   </div>
   
+  <?php if(!isSearch())  :?>
     <?php
     // Список свойств, которые выбраны в фильтре
     component(
@@ -146,6 +147,7 @@ mgSEO($data);
       $data['applyFilter']
     );
     ?>
+  <?php endif ;?>
   <?php if(isSearch())  :?>
     <h1 class="search-title">
       <?php echo lang('search1'); ?>
