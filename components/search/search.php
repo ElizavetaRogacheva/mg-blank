@@ -1,5 +1,5 @@
 <?php mgAddMeta('components/search/search.css'); ?>
-<?php mgAddMeta('components/search/search-dropdown.js'); ?>
+<?php mgAddMeta('components/search/search.js'); ?>
 
 <div class="c-search">
     <form class="search-form"

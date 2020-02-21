@@ -182,3 +182,16 @@
 .c-search .search-results__info {
     flex: 2;
 }
+
+.search-title {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.search-title span {
+    color: var(--main-color-green);
+}

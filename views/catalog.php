@@ -146,8 +146,27 @@ mgSEO($data);
       $data['applyFilter']
     );
     ?>
-
-
+  <?php if(isSearch())  :?>
+    <h1 class="search-title">
+      <?php echo lang('search1'); ?>
+      <span>
+      «<?php echo $data['searchData']['keyword'] ?>»
+      </span>
+      <?php echo lang('search2'); ?>
+      <span>
+          <?php
+          echo mgDeclensionNum(
+            $data['searchData']['count'],
+            array(
+              lang('search3-1'),
+              lang('search3-2'),
+              lang('search3-3')
+            )
+          );
+          ?>
+      </span>
+  </h1>
+  <?php endif;?>
   <div class="products-block">
 
     <ul class="products-block__list products-block__list--grid js-products-block__list">
