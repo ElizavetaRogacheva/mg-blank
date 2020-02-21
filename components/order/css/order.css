@@ -323,3 +323,8 @@
     border: 1px solid red;
     margin-bottom: 20px;
 }
+
+.deliveryPrice,
+.deliveryCurrency {
+    color: var(--main-color);
+}
