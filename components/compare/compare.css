@@ -97,8 +97,8 @@
     }
 }
 .c-compare__top__buttons > a:hover {
-    color: var(--main-color-green);
-    border-color: var(--main-color-green);
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 .c-compare__top__buttons .icon {
@@ -393,7 +393,7 @@
 }
 
 .c-compare__remove:hover svg {
-    fill: var(--main-color-green);
+    fill: var(--main-color);
 }
 
 .c-goods__price--current {
@@ -403,7 +403,7 @@
     font-size: 15px;
     font-weight: 600;
     padding-top: 10px;
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 .c-goods__title {
@@ -443,7 +443,7 @@
 .compare-page ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 0px;
     border-radius: 0px;
-    background-color: var(--main-color-green);
+    background-color: var(--main-color);
 }
 
 .compare-page ::-webkit-resizer {

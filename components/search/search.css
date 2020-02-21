@@ -52,7 +52,7 @@
     transform: none !important;
 }
 .search-form__btn:hover svg {
-    fill: var(--main-color-green);
+    fill: var(--main-color);
 }
 .c-search__dropdown {
     position: absolute;
@@ -164,11 +164,11 @@
 }
 
 .c-search .search-results__link:focus {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 .c-search .search-results__link:hover {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 .c-search .search-results__img {
@@ -192,5 +192,5 @@
 }
 
 .search-title span {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }

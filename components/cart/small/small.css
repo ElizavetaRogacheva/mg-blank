@@ -121,11 +121,11 @@
 }
 
 .c-table__link:hover {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 .c-table__quantity {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 .checkout-buttons {
@@ -148,8 +148,8 @@
 }
 
 .c-button:hover {
-    color: var(--main-color-green);
-    border-color: var(--main-color-green);
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 /* .small-cart-open {
     visibility: visible;
@@ -161,7 +161,7 @@
 }
  */
 .countsht {
-    background-color: var(--main-color-green);
+    background-color: var(--main-color);
     display: block;
     border-radius: 50%;
     color: #fff;

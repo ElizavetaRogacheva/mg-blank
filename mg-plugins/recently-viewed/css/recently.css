@@ -83,7 +83,7 @@
 }
 
 .mg-recently-viewed .mg-recently-product-name a:hover {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 .mg-recently-product-wrapper {
@@ -134,7 +134,7 @@
 }
 
 .mg-recently-viewed .addToCart:hover {
-    color: var(--main-color-green);
+    color: var(--main-color);
     text-decoration: underline;
-    text-decoration: var(--main-color-green);
+    text-decoration: var(--main-color);
 }

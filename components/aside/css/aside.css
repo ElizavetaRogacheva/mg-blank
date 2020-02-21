@@ -52,5 +52,5 @@
     display: block;
 }
 .latest-products__btn:hover {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }

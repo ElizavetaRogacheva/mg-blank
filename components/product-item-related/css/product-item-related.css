@@ -7,7 +7,7 @@
 }
 .sale-sticker {
     color: #fff;
-    background-color: var(--main-color-green);
+    background-color: var(--main-color);
     font-size: 10px;
     font-weight: 400;
     left: -10px;
@@ -27,7 +27,7 @@
     content: '';
     width: 0;
     height: 0;
-    border-color: transparent transparent transparent var(--main-color-green);
+    border-color: transparent transparent transparent var(--main-color);
     border-style: solid;
     border-width: 0 0 25px 15px;
     position: absolute;
@@ -129,7 +129,7 @@
 }
 .price,
 .product-block__title a:hover {
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 .product-block__title {
     margin: 0;
@@ -184,7 +184,7 @@
     fill: #878787;
 }
 .product-options__item--cart a:hover svg {
-    fill: var(--main-color-green);
+    fill: var(--main-color);
 }
 .italic-title {
     text-align: center;

@@ -35,8 +35,8 @@
 }
 
 .order-page .l-row .payment-form-block input:hover {
-    color: var(--main-color-green);
-    border-color: var(--main-color-green);
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 .cart-form .cart-table {
@@ -60,8 +60,8 @@
 }
 
 .order-page .btn:hover {
-    color: var(--main-color-green);
-    border-color: var(--main-color-green);
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
 .order-page .l-col {
     width: 100%;
@@ -195,7 +195,7 @@
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 600;
-    color: var(--main-color-green);
+    color: var(--main-color);
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

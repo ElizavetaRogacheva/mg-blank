@@ -25,5 +25,5 @@
 }
 
 .product-options__item--compare a:hover svg {
-    fill: var(--main-color-green);
+    fill: var(--main-color);
 }

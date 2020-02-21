@@ -24,7 +24,7 @@
 
 .sizeMap-row .size.active,
 .sizeMap-row .color.active {
-    border-color: var(--main-color-green) !important;
+    border-color: var(--main-color) !important;
 }
 
 

@@ -79,7 +79,7 @@
 }
 
 .property-form [type='radio']:checked + .label-black:before {
-    background-color: var(--main-color-green);
+    background-color: var(--main-color);
 }
 
 .last-items-dropdown {

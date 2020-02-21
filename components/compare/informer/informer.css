@@ -16,7 +16,7 @@
     display: flex;
     padding: 16px;
     color: #fff;
-    background: var(--main-color-green);
+    background: var(--main-color);
     text-transform: uppercase;
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;

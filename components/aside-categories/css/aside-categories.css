@@ -13,7 +13,7 @@
 }
 
 .categories-title-wrapper:hover svg {
-    fill: var(--main-color-green);
+    fill: var(--main-color);
     transition: all 0.3s ease-in-out;
 }
 

@@ -301,9 +301,9 @@
 }
 
 .c-variant [type='radio']:checked + .c-variant__value::before {
-    background-color: var(--main-color-green);
+    background-color: var(--main-color);
 }
 
 .c-variant .active .c-variant__value::before {
-    background-color: var(--main-color-green);
+    background-color: var(--main-color);
 }

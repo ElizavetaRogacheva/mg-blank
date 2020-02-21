@@ -43,5 +43,5 @@
 }
 
 .amount_change button:hover svg {
-    fill: var(--main-color-green);
+    fill: var(--main-color);
 }
