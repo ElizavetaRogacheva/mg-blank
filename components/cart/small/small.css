@@ -131,8 +131,17 @@
 .checkout-buttons {
     display: flex;
 }
-
 .c-button {
+    color: var(--main-color);
+    display: block;
+    padding: 5px 15px;
+    font-size: 14px;
+    border: 2px solid var(--main-color);
+    background-color: #fff;
+    margin-right: 5px;
+}
+
+.c-button--link {
     color: #333;
     display: block;
     padding: 5px 15px;
@@ -140,6 +149,7 @@
     border: 2px solid #e6e6e6;
     background-color: #fff;
     margin-right: 5px;
+
 }
 @media (max-width: 767px) {
     .c-button {
@@ -148,8 +158,13 @@
 }
 
 .c-button:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+.c-button--link:hover {
     color: var(--main-color);
     border-color: var(--main-color);
+    background-color: #fff;
 }
 /* .small-cart-open {
     visibility: visible;

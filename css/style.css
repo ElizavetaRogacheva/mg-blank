@@ -2559,18 +2559,19 @@ main {
     padding: 0 15px;
 }
 .checkout-btn {
-    color: #333;
+    color: var(--main-color) !important;
     display: block;
     padding: 10px 20px;
     font-size: 14px;
-    border: 2px solid #e6e6e6;
+    border: 2px solid var(--main-color);
     background-color: #fff;
     font-family: 'Exo 2', sans-serif;
+    cursor: pointer;
 }
 
 .checkout-btn:hover {
-    color: var(--main-color);
-    border-color: var(--main-color);
+    color: #fff !important;
+    background-color: var(--main-color);
 }
 
 .deleteItemFromCart {
