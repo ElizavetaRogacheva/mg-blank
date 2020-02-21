@@ -1,4 +1,6 @@
 <?php mgAddMeta('components/aside/js/aside.js'); ?>
+<?php mgAddMeta('components/aside/css/aside.css'); ?>
+
 <aside class="products-aside">
     
     <?php if (!(empty($data['menuCategories']))) : ?>
