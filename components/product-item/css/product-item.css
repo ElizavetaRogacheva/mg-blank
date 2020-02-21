@@ -181,14 +181,14 @@
 }
 
 .product-options__item--cart {
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
     font-size: 0;
     position: relative;
 }
 .product-options__item--cart a svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     position: absolute;
     top: 5px;
     fill: #878787;
