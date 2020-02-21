@@ -160,6 +160,7 @@ main {
     top: 0;
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 .main-header__container {
     width: 95%;
