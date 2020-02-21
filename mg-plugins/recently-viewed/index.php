@@ -207,7 +207,7 @@ class RecentlyViewed {
         }
         else {
   
-          $block .= '<a class="addToCart default-btn product-buy" href="'.SITE.'/catalog?inCartProductId='.$item['id'].'" data-item-id="'.$item['id'].'">'.$lang['ADD'].'</a>';
+          $block .= '<a class="addToCart default-btn product-buy js-add-to-cart" href="'.SITE.'/catalog?inCartProductId='.$item['id'].'" data-item-id="'.$item['id'].'">'.$lang['ADD'].'</a>';
         }
           $block .= '<table class="variants-table" style="display:none;">';
           $first = true;
