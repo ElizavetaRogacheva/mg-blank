@@ -6,7 +6,7 @@
         </div>
         <div class="featured-products-carousel js-featured-products-carousel">             
             <?php
-            $newsArr = array_chunk($data['items'], count($data['items']) > 6 ? 3 : 1);
+            $newsArr = array_chunk($data['items'], 3);
             foreach($newsArr as $newsBlock) { ?>
                 <ul class="featured-products-carousel__list">
                     <?php foreach($newsBlock as $newsItem) { ?>
