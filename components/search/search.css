@@ -172,10 +172,9 @@
 }
 
 .c-search .search-results__img {
-    width: 20%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    margin-right: 40px;
     flex: 1;
 }
 
