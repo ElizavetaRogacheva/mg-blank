@@ -40,22 +40,24 @@ mgAddMeta('lib/datepicker.css');
                                                         name="delivery" <?php if ($delivery['checked']) echo 'checked' ?>
                                                         value="<?php echo $delivery['id'] ?>">
                                                 <span class="deliveryName"><?php echo $delivery['description'] ?></span>
-                                                <?php
-                                                if ($delivery['cost'] != 0 || DELIVERY_ZERO == 1) {
-                                                    $deliveryCostShow = true;
-                                                } else {
-                                                    $deliveryCostShow = false;
-                                                }
-                                                ?>
-                                                <span class="deliveryPrice"
-                                                        style="<?php echo $deliveryCostShow ? '' : 'display:none;'; ?>">&nbsp;
-                                                    <?php echo MG::numberFormat($delivery['cost']); ?>
-                                                </span>
-
-                                                <span class="deliveryCurrency"
-                                                        style="<?php echo $deliveryCostShow ? '' : 'display:none;'; ?>">
-                                                    <?php echo '&nbsp;' . $data['currency']; ?>
-                                                </span>
+                                                <div class="delivery-price-block">
+                                                    <?php
+                                                    if ($delivery['cost'] != 0 || DELIVERY_ZERO == 1) {
+                                                        $deliveryCostShow = true;
+                                                    } else {
+                                                        $deliveryCostShow = false;
+                                                    }
+                                                    ?>
+                                                    <span class="deliveryPrice"
+                                                            style="<?php echo $deliveryCostShow ? '' : 'display:none;'; ?>">
+                                                        <?php echo '&nbsp' . MG::numberFormat($delivery['cost']); ?>
+                                                    </span>
+    
+                                                    <span class="deliveryCurrency"
+                                                            style="<?php echo $deliveryCostShow ? '' : 'display:none;'; ?>">
+                                                        <?php echo '&nbsp' . $data['currency']; ?>
+                                                    </span>
+                                                </div>
                                             </label>
 
                                             <!--
