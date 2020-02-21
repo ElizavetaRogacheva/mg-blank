@@ -1627,10 +1627,11 @@ main {
     width: 30%;
     padding: 10px;
     background-color: #fff;
-    margin: 15px;
+    margin: 1%;
+    flex-grow: 1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .products-block__list--grid > li {
         width: 45%;
     }
