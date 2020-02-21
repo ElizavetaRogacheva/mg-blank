@@ -61,6 +61,12 @@
     text-align: center;
 }
 
+.c-table__img img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 .c-table__remove a:hover {
     color: #cd4449;
 }
