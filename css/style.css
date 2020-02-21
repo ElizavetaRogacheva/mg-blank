@@ -2077,6 +2077,11 @@ main {
 .add-to-cart-btn svg {
     display: none;
 }
+
+.products-block__list--list .add-to-cart-btn a {
+    min-width: 170px;
+    padding: 15px 15px;
+}
 @media (min-width: 320px) and (max-width: 767px) {
     .add-to-cart-btn {
         margin-bottom: 10px;
