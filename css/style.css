@@ -153,6 +153,10 @@ main {
 .main-header {
     width: 100%;
     z-index: 20;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .main-header__container {
     width: 95%;
