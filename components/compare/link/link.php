@@ -7,7 +7,7 @@ mgAddMeta('components/compare/link/link.js');
    href="<?php echo SITE ?>/compare"
    title="<?php echo lang('compareToList'); ?>">
     <div class="c-compare__link--count mg-compare-count js-compare-count"
-         style="<?php echo ($_SESSION['compareCount']) ? 'display:block;' : 'display:none;'; ?>">
+         style="<?php echo ($_SESSION['compareCount']) ;?>">
         <div class="c-compare__link--number">
            (<?php if (isset($_SESSION['compareCount'])) {
                 echo $_SESSION['compareCount'];

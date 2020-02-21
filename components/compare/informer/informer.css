@@ -1,6 +1,6 @@
 .c-compare__informer {
     position: fixed;
-    z-index: 999;
+    z-index: 1001;
     top: 16px;
     right: 0;
     left: 0;
