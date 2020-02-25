@@ -37,7 +37,7 @@ $propTable = array(); ?>
     </div>
 <?php
 // Компонент страницы сравнения
-component('compare', $data['catalogItems']);
+component('compare', $data);
 ?>
 
 </main>

@@ -6,7 +6,7 @@ mgAddMeta('components/compare/compare.css');
  */?>
 
 <?php
-if (!empty($data)) { ?>
+if (!empty($data['catalogItems'])) { ?>
     <div class="c-compare mg-compare-products js-compare-page">
         <!-- top - start -->
         <div class="c-compare__top   mg-compare-left-side">
@@ -49,8 +49,8 @@ if (!empty($data)) { ?>
             <!-- items - start -->
             <div class="c-compare__wrapper mg-compare-product-wrapper">
 
-                <?php if (!empty($data)) {
-                    foreach ($data as $item) { ?>
+                <?php if (!empty($data['catalogItems'])) {
+                    foreach ($data['catalogItems'] as $item) { ?>
                         <div class="c-goods__item c-compare__item mg-compare-product js-compare-item" itemscope
                              itemtype="http://schema.org/Product">
                             <div class="c-goods__left">
