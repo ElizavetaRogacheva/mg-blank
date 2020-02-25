@@ -187,10 +187,10 @@
     position: relative;
 }
 .product-options__item--cart a svg {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     position: absolute;
-    top: 5px;
+    top: 8px;
     fill: #878787;
 }
 .product-options__item--cart a:hover svg {
