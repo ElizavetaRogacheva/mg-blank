@@ -1977,6 +1977,10 @@ main {
     color: #000;
     font-weight: 500;
 }
+.product-info-bold--red {
+    color: red;
+    font-weight: 600;
+}
 .product-info__link {
     color: #555;
 }

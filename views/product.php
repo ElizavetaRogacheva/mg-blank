@@ -102,8 +102,15 @@ mgSEO($data);
                         <span><?php echo ($data['code']); ?></span>
                     </li>
                     <li class="product-info__item">
-                        <span class="product-info-bold"><?php echo lang ('Availability')?>:</span>
-                        <span><?php echo ($data['count']); ?></span>
+                        <?php if($data['count'] === '0') { ?>
+                            <span class="product-info-bold--red"><?php echo lang ('countOutOfStock')?></span>
+                        <?php } else { ?>
+                            <span class="product-info-bold"><?php echo lang ('Availability')?>:</span>
+                            <span>
+                                <?php echo ($data['count']); ?>
+                            </span>
+
+                        <?php } ?>
                     </li>
                 </ul>
             </div>
