@@ -196,3 +196,11 @@
     margin: 0;
     position: static;
 }
+
+.product-block .c-variant__scroll label {
+    position: relative;
+}
+
+.product-block .c-variant__value {
+    margin-left: 20px;
+}
