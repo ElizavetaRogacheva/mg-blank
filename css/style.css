@@ -1624,7 +1624,8 @@ main {
 }
 
 .products-block__list--grid > li {
-    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
     padding: 10px;
     background-color: #fff;
     margin: 1%;
@@ -1633,12 +1634,15 @@ main {
 
 @media (max-width: 1024px) {
     .products-block__list--grid > li {
-        width: 45%;
+        min-width: 45%;
+        max-width: 45%;
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
     .products-block__list--grid > li {
-        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-right: 0;
     }
 }
 
