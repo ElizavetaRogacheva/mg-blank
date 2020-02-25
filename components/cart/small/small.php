@@ -7,7 +7,6 @@ mgAddMeta('components/cart/small/small.js');
 
 mgAddMeta('components/cart/cart.css');
 
-console_log($item);
 
 $smallCartRow = function (
   $item = array(

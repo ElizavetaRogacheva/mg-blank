@@ -7,6 +7,23 @@
                     <div class="main-footer__block contacts">
                         <div class="main-footer__block-title" id="contact"><span><?php echo lang('contactUs')?></span></div>
                         <ul class="contacts__list js-contacts__list">
+                            <li class="contacts__item">
+                                <span>
+                                    <?php
+                                        $workTime = explode(',', MG::getSetting('timeWork'));
+                                        $workTimeDays = explode(',', MG::getSetting('timeWorkDays'));
+                                        foreach ($workTime as $key => $time) { ?>
+                                        <div class="c-contact__row">
+                                        <div class="c-contact__schedule">
+                                        <span class="c-contact__span">
+                                        <?php echo !empty($workTimeDays[$key]) ? htmlspecialchars($workTimeDays[$key]) : ''; ?>
+                                        </span>
+                                        <?php echo htmlspecialchars($workTime[$key]); ?>
+                                        </div>
+                                        </div>
+                                    <?php } ?>
+                                </span>
+                            </li>
                             <li class="contacts__item"><span><?php echo MG::getSetting('shopName')?></span></li>
                             <li class="contacts__item"><span><?php echo MG::getSetting('shopPhone')?></span></li>
                             <li class="contacts__item"><span><?php echo MG::getSetting('shopAddress')?></span></li>
