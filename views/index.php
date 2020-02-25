@@ -1,3 +1,4 @@
+<?php mgSEO($data); ?>
 <!--секция слайдера-->
 <div class="product-compare--main-page">
     <?php
