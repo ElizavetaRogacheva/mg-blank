@@ -197,7 +197,7 @@
         'countMany' => 'много',
         'countInStock' => 'Есть в наличии',
         'countOutOfStock' => 'Нет в наличии',
-        'countMessage' => 'Сообщить когда будет',
+        'countMessage' => 'Сообщить о поступлении',
         'groupSale' => 'Акции',
         'groupNew' => 'Новинки',
         'groupHit' => 'Хиты продаж',
