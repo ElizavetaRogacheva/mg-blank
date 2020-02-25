@@ -3149,7 +3149,7 @@ main {
 
 .new-products-title,
 .static-page h2 {
-    padding: 15px;
+    padding: 15px 0;
     color: #000;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -3161,7 +3161,7 @@ main {
 
 .static-page p {
     color: #333;
-    padding: 5px 15px;
+    padding: 5px 0;
     font-size: 14px;
     box-sizing: border-box;
     font-family: 'Exo 2', sans-serif;
