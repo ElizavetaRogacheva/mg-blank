@@ -14,17 +14,19 @@
 
     <?php if(isCatalog ()) :?>
         <?php if(!isSearch())  :?>
-            <div class="filter">
-            <div class="filter-title js-filter-title aside-title"><?php echo lang('filter')?></div>
-            <div class="filter__list js-filter__list">
-                <?php
-                    component(
-                    'filter',
-                    $data
-                );
-                ?>
-            </div>
-            </div>
+            <? if(MG::getSetting('filterCatalogMain') != "false" && $_REQUEST['category_id'] === 0) :?>
+                <div class="filter">
+                <div class="filter-title js-filter-title aside-title"><?php echo lang('filter')?></div>
+                <div class="filter__list js-filter__list">
+                    <?php
+                        component(
+                        'filter',
+                        $data
+                    );
+                    ?>
+                </div>
+                </div>
+            <?php endif ;?>
         <?php endif; ?>
     <?php endif ; ?>
     
