@@ -2,7 +2,6 @@
     margin-right: 20px;
     color: #000;
     font-weight: 400;
-
 }
 
 .sizeMap-row .size {
@@ -27,6 +26,17 @@
     border-color: var(--main-color) !important;
 }
 
+.product-block .color-block {
+    padding: 10px 0;
+}
+
+.product-block .color-block span,
+.product-block .size-block span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
 
 .color-block span {
     margin-right: 20px;
@@ -45,6 +55,13 @@
     border: 2px solid #e6e6e6;
 }
 
+.product-block .color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
 .product-wrapper .rating-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -61,7 +78,7 @@
 .product-wrapper .sizeMap-row .color,
 .product-wrapper .sizeMap-row .size {
     display: inline-block;
-    width: 10px!important;
+    width: 10px !important;
     height: 10px;
     margin: 0 2px 3px 0;
     padding: 3px;
@@ -82,18 +99,36 @@
 }
 
 .sizeMap-row .color {
-    background: -webkit-linear-gradient(top left, rgba(255, 255, 255, .25), rgba(0, 0, 0, .125));
-    background: -o-linear-gradient(top left, rgba(255, 255, 255, .25), rgba(0, 0, 0, .125));
-    background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, .25)), to(rgba(0, 0, 0, .125)));
-    background: linear-gradient(to bottom right, rgba(255, 255, 255, .25), rgba(0, 0, 0, .125));
+    background: -webkit-linear-gradient(
+        top left,
+        rgba(255, 255, 255, 0.25),
+        rgba(0, 0, 0, 0.125)
+    );
+    background: -o-linear-gradient(
+        top left,
+        rgba(255, 255, 255, 0.25),
+        rgba(0, 0, 0, 0.125)
+    );
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba(255, 255, 255, 0.25)),
+        to(rgba(0, 0, 0, 0.125))
+    );
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.25),
+        rgba(0, 0, 0, 0.125)
+    );
 }
 
 .sizeMap-row .color,
 .sizeMap-row .size,
 .c-filter .color-filter .cbox {
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 .sizeMap-row .color:hover,
@@ -141,9 +176,23 @@
 }
 
 @media screen and (max-width: 450px) {
-    .color-block, .size-block {
+    .color-block,
+    .size-block {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+}
+
+.product-block .size {
+    padding: 0;
+    border-radius: 50%;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.product-block .size span {
+    font-size: 10px;
+    margin: 0;
+    position: static;
 }
