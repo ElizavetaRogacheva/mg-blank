@@ -123,6 +123,7 @@ body {
     letter-spacing: 0.5px;
     overflow-x: hidden;
     min-height: 100vh;
+    background-color: #f7f7f7;
 }
 ul {
     list-style: none;
@@ -621,13 +622,14 @@ main {
 /* описание магазина */
 
 .history-block {
-    padding: 0 50px 60px;
+    padding: 30px 50px;
     font-size: 13px;
     font-weight: 400;
     letter-spacing: 1px;
     color: grey;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 50px;
+    background-color: #fff;
 }
 .history-block p {
     margin-bottom: 20px;
@@ -1201,14 +1203,19 @@ main {
 .breadcrumbs {
     background-color: #f7f7f7;
     padding: 20px 0;
+    flex-wrap: wrap;
+    width: 1230px;
+    margin: 0 auto;
 }
 @media (max-width: 1200px) {
     .bread-crumbs {
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .bread-crumbs__item {
         margin-right: 5px !important;
+        width: 100%;
     }
 }
 .breadcrumbs__list {
@@ -1245,7 +1252,6 @@ main {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background-color: #f7f7f7;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1372,6 +1378,7 @@ main {
 .products-category-content {
     width: 75%;
     background-color: #f7f7f7;
+    margin-top: 15px;
 }
 @media (max-width: 1200px) {
     .products-category-content {
@@ -1832,22 +1839,25 @@ main {
 /* стили страницы продукта */
 
 .product-section {
-    background-color: #f7f7f7;
     padding-bottom: 50px;
 }
-.product-container {
+.product-container-top {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+.product-container {
     width: 1230px;
     max-width: 100%;
     margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 30px 0;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-    .product-container {
+    .product-container-top {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2174,9 +2184,8 @@ main {
     display: flex;
 }
 .product-tabs-info {
-    width: 1230px;
     max-width: 100%;
-    margin: 0 auto 40px;
+    margin: 0 15px 40px;
 }
 @media (max-width: 1200px) {
     .product-tabs-info {
@@ -2184,6 +2193,7 @@ main {
         padding: 0 10px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+        margin: 0 auto 40px;
     }
 }
 .product-tabs-info__nav-list {
@@ -2534,7 +2544,6 @@ main {
 
 .cart-page {
     padding: 30px 15%;
-    background-color: #f7f7f7;
 }
 @media (max-width: 1200px) {
     .cart-page {
@@ -2651,6 +2660,9 @@ main {
 
 .personal-page {
     padding: 30px 15%;
+}
+
+.personal-container {
     background-color: #f7f7f7;
 }
 
@@ -2852,7 +2864,10 @@ main {
 /*страница входа в личный кабинет*/
 .enter-page {
     padding: 30px 15%;
-    background-color: #f7f7f7;
+}
+
+.enter-container {
+    background-color: #fff;
 }
 .enter-page h1 {
     padding: 15px;
@@ -2963,7 +2978,6 @@ main {
 /*страница регистрации клиента*/
 .registration-page {
     padding: 30px 15%;
-    background-color: #f7f7f7;
 }
 .registration-page .l-col {
     background-color: #fff;
@@ -3080,7 +3094,6 @@ main {
 /*страница обратной связи*/
 .static-page-section {
     padding: 30px 15%;
-    background-color: #f7f7f7;
 }
 
 .feedback-form {
@@ -3120,7 +3133,7 @@ main {
 
 .static-page-section p {
     margin-bottom: 20px;
-    padding: 15px 0;
+    padding: 15px;
     color: #000;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -3128,6 +3141,7 @@ main {
     font-size: 14px;
     margin: 0;
     font-family: 'Exo 2', sans-serif;
+    background-color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -3148,7 +3162,6 @@ main {
 /*статические страницы*/
 .static-page {
     padding: 30px 15%;
-    background-color: #f7f7f7;
 }
 .static-page__wrapper {
     background-color: #fff;
@@ -3189,7 +3202,6 @@ main {
 .order-page {
     padding: 30px 15%;
     display: flex;
-    background-color: #f7f7f7;
     box-sizing: border-box;
 }
 

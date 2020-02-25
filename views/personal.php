@@ -34,71 +34,74 @@
 mgSEO($data);
 ?>
 <main class="personal-page">
-    <?php switch ($data['status']) {
-        // Доступ пользователя к личному кабинету блокирован
-        case 1: ?>
+    <div class="personal-container">
+        <?php switch ($data['status']) {
+            // Доступ пользователя к личному кабинету блокирован
+            case 1: ?>
+        
+                <?php echo lang('personalBlocked'); ?>
+        
+                <?php break;
+            // Пользователь не подтвердил регистрацию
+            case 2: ?>
+        
+                <?php echo lang('personalNotActivated'); ?>
+        
+                <!-- Форма повторной отправки подтверждения  -->
+                <form action="<?php echo SITE ?>/registration"
+                      method="POST">
+                    <input name="activateEmail"
+                           placeholder="Email"
+                           required>
+                    <input type="submit"
+                           name="reActivate"
+                           value="<?php echo lang('send'); ?>">
+                </form>
+        
+                <?php break;
+            // Страница личного кабинета
+            case 3:
+                $userInfo = $data['userInfo']; ?>
+               <div class="personal-name">
+                    <?php
+                    // Имя пользователя
+                    echo $userInfo->name ?>
     
-            <?php echo lang('personalBlocked'); ?>
-    
-            <?php break;
-        // Пользователь не подтвердил регистрацию
-        case 2: ?>
-    
-            <?php echo lang('personalNotActivated'); ?>
-    
-            <!-- Форма повторной отправки подтверждения  -->
-            <form action="<?php echo SITE ?>/registration"
-                  method="POST">
-                <input name="activateEmail"
-                       placeholder="Email"
-                       required>
-                <input type="submit"
-                       name="reActivate"
-                       value="<?php echo lang('send'); ?>">
-            </form>
-    
-            <?php break;
-        // Страница личного кабинета
-        case 3:
-            $userInfo = $data['userInfo']; ?>
-           <div class="personal-name">
+               </div>
+        
+        
                 <?php
-                // Имя пользователя
-                echo $userInfo->name ?>
+                // Если есть сообщение, выводим его
+                if ($data['message']): ?>
+                    <?php
+                    // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
+                    echo $data['message'] ?>
+                <?php endif; ?>
+        
+                <?php
+                // Если ошибка отправки, то выводим эту её
+                if ($data['error']): ?>
+                    <?php
+                    // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
+                    echo $data['error'] ?>
+                <?php endif; ?>
+        
+        
+                <?php
+                // Вкладки личного кабинета:
+                // Список заказов, смена пароля, личные данные
+                component('tabs', $data, 'tabs_personal');
+                ?>
+        
+                <?php break;
+        
+            // Пользователь не авторизован
+            default : ?>
+        
+                <?php echo lang('personalNotAuthorised'); ?>
+        
+            <?php } ?>
 
-           </div>
-    
-    
-            <?php
-            // Если есть сообщение, выводим его
-            if ($data['message']): ?>
-                <?php
-                // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
-                echo $data['message'] ?>
-            <?php endif; ?>
-    
-            <?php
-            // Если ошибка отправки, то выводим эту её
-            if ($data['error']): ?>
-                <?php
-                // Текст сообщения задаётся в разделе «Настройки/Шаблоны/Уведомления»
-                echo $data['error'] ?>
-            <?php endif; ?>
-    
-    
-            <?php
-            // Вкладки личного кабинета:
-            // Список заказов, смена пароля, личные данные
-            component('tabs', $data, 'tabs_personal');
-            ?>
-    
-            <?php break;
-    
-        // Пользователь не авторизован
-        default : ?>
-    
-            <?php echo lang('personalNotAuthorised'); ?>
-    
-        <?php } ?>
+    </div>
 
 </main>

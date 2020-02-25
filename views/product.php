@@ -64,6 +64,7 @@ mgSEO($data);
 <section class="product-section">
     <div class="product-container">
         <!--блок с картинками одного товара-->
+    <div class="product-container-top">
         <div class="product-container__left">
             <?php
                 component(
@@ -247,9 +248,8 @@ mgSEO($data);
                 </div>
             </div>
         </div> <!--end prodict-container__right-->
-    </div> <!--end prodict-container-->
-
-    <!--вкладки описания отзывов и характеристик-->
+                                </div>
+            <!--вкладки описания отзывов и характеристик-->
     <div class="product-tabs-info">
         <ul class="product-tabs-info__nav-list">
             <?php if (!empty($data['description'])) : ?>
@@ -333,4 +333,7 @@ mgSEO($data);
         );
         ?>
     <?php endif; ?>
+
+    </div> <!--end prodict-container-->
+
 </section>

@@ -5,7 +5,8 @@
 .popular-products-block {
     width: 100%;
     padding: 90px 0 70px;
-    background: url(../img/producttab-bkg.jpg) repeat;
+    background-color: #f7f7f7;
+    background-image: url(../../../img/producttab-bkg.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;

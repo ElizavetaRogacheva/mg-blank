@@ -28,12 +28,15 @@
 mgSEO($data);
 ?>
 <main class="enter-page">
-<h1><?php echo lang('enterTitle'); ?></h1>
+    <div class="enter-container">
+        <h1><?php echo lang('enterTitle'); ?></h1>
 
-<?php
-// Компонент формы авторизации
-component('auth/login');
-?>
+        <?php
+        // Компонент формы авторизации
+        component('auth/login');
+        ?>
+
+    </div>
 
 </main>
 

@@ -34,7 +34,7 @@
     }
 }
 
-.c-carousel__title--span {
+.brands .c-carousel__title--span {
     font-weight: 600;
     position: relative;
     display: -webkit-inline-box;
@@ -42,14 +42,14 @@
     display: inline-flex;
     flex-direction: column;
     padding: 0 26px;
-    background: #fff;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+    background: transparent!important;
 }
 
 @media (max-width: 767px) {
-    .c-carousel__title--span {
+    .brands .c-carousel__title--span { 
         padding: 0 16px;
     }
 }
