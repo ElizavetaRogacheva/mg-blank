@@ -116,13 +116,11 @@ Version: 1.0.0
            style="background-image: url(<?php echo PATH_SITE_TEMPLATE . MG::get('templateParams')['scrollToTopUrl'] ?>)"></a>
         <?php endif; ?>
     </div>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/hidden-blocks.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/slick.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/sliders.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/product-table.js"></script>
-    <script src="<?php echo PATH_SITE_TEMPLATE ?>/js/favourites-btns.js"></script>
-
-
+    <?php mgAddMeta('js/hidden-blocks.js') ; ?>
+    <?php mgAddMeta('js/slick.js') ; ?>
+    <?php mgAddMeta('js/sliders.js') ; ?>
+    <?php mgAddMeta('js/product-table.js') ; ?>
+    <?php mgAddMeta('js/favourites-btns.js') ; ?>
 
 
 <?php
