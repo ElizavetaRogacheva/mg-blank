@@ -35,10 +35,9 @@ if (!empty($data['variants'])) {
 
 if (!$data['liteFormData']['noneButton'] || (MG::getProductCountOnStorage(0, $data['id'], 0, 'all') != 0)) { ?>
   <?php
-  if (
-    ($data['count'] != 0 || $data['count'] == "много") &&
-    MG::getSetting('actionInCatalog') == 'true'
-  ) {
+  $isAvailable = $data['count'] != 0 || $data['count'] == "много";
+  $isProduct = MG::get('controller') === "controllers_product";
+  if ($isAvailable && ($isProduct || MG::getSetting('actionInCatalog') === 'true')) {
 
     // Добавляем класс, на который вешается событие сlick из add.js
     $jsClass = 'js-add-to-cart';
@@ -71,7 +70,7 @@ if (!$data['liteFormData']['noneButton'] || (MG::getProductCountOnStorage(0, $da
           </a>
     <?php } ?>
 
-  <?php } elseif (!URL::isSection('product')) { ?>
+  <?php } else { ?>
       <a href="<?php echo SITE . '/' . ((MG::getSetting('shortLink') != 'true') && ($data["category_url"] == '') ? 'catalog/' : $data["category_url"]) . $data["product_url"]; ?>"
          class="product-info <?php echo $data['liteFormData']['classForButton'] ?>">
          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
