@@ -1040,13 +1040,13 @@ main {
         padding: 30px 0;
     }
 }
-.payment__list {
+.main-footer-payment {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 @media (max-width: 1200px) {
-    .payment__list {
+    .main-footer-payment {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1;
@@ -1058,120 +1058,22 @@ main {
 .payment__item {
     margin-right: 5px;
     font-size: 0;
-    width: 20px;
+    width: 15px;
+    height: 15px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    margin-bottom: 5px;
 }
 .payment__item:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
 }
 
-.icon-style {
-    list-style: none !important;
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 15px 15px;
-    line-height: 22px;
-    margin-bottom: 10px;
-    margin-left: 0 !important;
-}
-
-.icon-style.pay-5 {
-    background-size: contain;
-}
-
-.icon-style.pay-1 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/webmoney.png);
-}
-
-.icon-style.pay-2 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/ya.png);
-}
-
-.icon-style.pay-3,
-.icon-style.pay-4 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/cash.png);
-}
-
-.icon-style.pay-12 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/ya.png);
-}
-
-.icon-style.pay-12,
-.icon-style.pay-13 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/cash.png);
-}
-
-.icon-style.pay-5 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/robo.png);
-}
-
-.icon-style.pay-6 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/qiwi.png);
-}
-
-.icon-style.pay-7 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/cash.png);
-}
-
-.icon-style.pay-8 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/sci.png);
-}
-
-.icon-style.pay-9 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/payanyway.png);
-}
-
-.icon-style.pay-10 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/paymaster.png);
-}
-
-.icon-style.pay-11 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/alfabank.png);
-}
-
-.icon-style.pay-14 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/yandexkassa.png);
-}
-
-.icon-style.pay-15 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/privat24.png);
-}
-
-.icon-style.pay-16 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/liqpay.png);
-}
-
-.icon-style.pay-17 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/sber.png);
-}
-
-.icon-style.pay-18 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/tinkoff.png);
-}
-
-.icon-style.pay-19 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/paypal.png);
-}
-
-.icon-style.pay-21 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/paykeeper.png);
-}
-
-.icon-style.pay-20 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/comepay.svg);
-}
-
-.icon-style.pay-22 {
-    background-image: url(../../../../moguta/mg-admin/design/images/icons/cloudpayments.png);
-}
-
-.icon-style.pay-23,
-.icon-style.pay-24,
-.icon-style.pay-26,
-.icon-style.pay-28 {
-    display: none;
+.payment__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
 }
 
 @media (max-width: 1200px) {
