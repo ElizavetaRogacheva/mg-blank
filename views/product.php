@@ -108,7 +108,6 @@ mgSEO($data);
                         <?php } else { ?>
                             <span class="product-info-bold"><?php echo lang ('Availability')?>:</span>
                             <span>
-                               <?php console_log($data) ;?>
                                 <?php if (!empty($data['count_hr'])) {
                                     echo $data['count_hr'] ;
                                 } else {
@@ -117,6 +116,15 @@ mgSEO($data);
                             </span>
 
                         <?php } ?>
+                    </li>
+                    <li class="c-product__row product-opfields-data">
+                        <?php
+                        // Дополнительные поля товара
+                        component(
+                            'product/opfields',
+                            $data
+                        );
+                        ?>
                     </li>
                 </ul>
             </div>
