@@ -65,30 +65,40 @@ mgSEO($data);
                       name="message"><?php echo !empty($_REQUEST['message']) ? $_REQUEST['message'] : '' ?></textarea>
     
     
-            <?php
-            // Если включена captcha и выключена ReCaptcha, то выводим капчу
-            if (
-              MG::getSetting('useCaptcha') == "true"
-              && MG::getSetting('useReCaptcha') != 'true'
-            ): ?>
-                <img src="captcha.html"
-                     width="140"
-                     height="36">
-    
-                <input type="text"
-                       name="capcha"
-                       class="captcha">
-    
-            <?php else: ?>
-                <?php
-                // А если нет, выводим ReCaptcha
-                echo MG::printReCaptcha(); ?>
-            <?php endif; ?>
-    
-            <input type="submit"
-                   name="send"
-                   value="<?php echo lang('send'); ?>">
-        </form>
+                      <?php
+                        // Подключаем captcha, если reCaptcha отключена в настройках
+                        if (
+                            MG::getSetting('useCaptcha') == "true" &&
+                            MG::getSetting('useReCaptcha') != 'true'
+                        ): ?>
+                            <div class="c-form__row">
+                                <b><?php echo lang('captcha'); ?></b>
+                            </div>
+
+                            <div class="c-form__row">
+                                <img style="background: url('<?php echo PATH_TEMPLATE ?>/images/cap.png');"
+                                    alt="captcha"
+                                    src="captcha.html"
+                                    width="140" height="36">
+                            </div>
+
+                            <div class="c-form__row">
+                                <input type="text"
+                                    aria-label="capcha"
+                                    name="capcha"
+                                    class="captcha"
+                                    required>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php
+                        // Подключаем ReCaptcha, если включено в настройках
+                        echo MG::printReCaptcha(); ?>
+                
+                        <input type="submit"
+                            name="send"
+                            value="<?php echo lang('send'); ?>">
+                    </form>
     
         <?php
         // Функция валидации формы

@@ -80,24 +80,24 @@
                 if (
                     MG::getSetting('useCaptcha') == "true" &&
                     MG::getSetting('useReCaptcha') != 'true'
-                ):?>
+                ): ?>
                     <div class="c-form__row">
                         <b><?php echo lang('captcha'); ?></b>
                     </div>
 
                     <div class="c-form__row">
                         <img style="background: url('<?php echo PATH_TEMPLATE ?>/images/cap.png');"
-                             alt="captcha"
-                             src="captcha.html"
-                             width="140" height="36">
+                            alt="captcha"
+                            src="captcha.html"
+                            width="140" height="36">
                     </div>
 
                     <div class="c-form__row">
                         <input type="text"
-                               aria-label="capcha"
-                               name="capcha"
-                               class="captcha"
-                               required>
+                            aria-label="capcha"
+                            name="capcha"
+                            class="captcha"
+                            required>
                     </div>
                 <?php endif; ?>
 
