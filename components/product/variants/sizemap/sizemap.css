@@ -207,7 +207,7 @@
     margin-left: 20px;
 }
 
-@media (max-height: 1024px) {
+@media (max-width: 1024px) {
     .product-block .color-block {
         padding: 20px 0;
     }

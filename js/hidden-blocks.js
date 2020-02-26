@@ -1,6 +1,6 @@
-    $('.js-search__btn').click(() => {
-        $('.js-search-container').toggleClass('visible');
-    }),
+$('.js-search__btn').click(() => {
+    $('.js-search-container').toggleClass('visible');
+}),
     $('.js-account__btn').click(() => {
         $('.js-account-container').toggleClass('visible');
     }),
@@ -12,7 +12,6 @@
         $('.js-footer-info__list').toggleClass('accordion-visible'),
             $('#info').toggleClass('rotate');
     });
-
 
 const btnTop = $('.js-scroll-top');
 $(window).scroll(() => {

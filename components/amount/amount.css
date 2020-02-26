@@ -55,3 +55,7 @@
 .amount_change button:hover svg {
     fill: var(--main-color);
 }
+
+.products-block__list--list .amount_change {
+    justify-content: flex-start;
+}
