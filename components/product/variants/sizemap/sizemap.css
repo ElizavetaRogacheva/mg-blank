@@ -28,6 +28,8 @@
 
 .product-block .color-block {
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .product-block .color-block span,
@@ -203,4 +205,18 @@
 
 .product-block .c-variant__value {
     margin-left: 20px;
+}
+
+@media (max-height: 1024px) {
+    .product-block .color-block {
+        padding: 20px 0;
+    }
+    .product-block .color {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    .product-block .size {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
 }
