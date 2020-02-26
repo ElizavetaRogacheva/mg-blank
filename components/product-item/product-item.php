@@ -2,7 +2,7 @@
 
 
 <!--блок карточки товара-->
-<div class="product-block">
+<div class="product-block js-catalog-item">
     <?php if ($data['new'] === '1'): ?>
     <div class="sale-sticker">
         <span><?php echo lang('newSticker'); ?></span>
@@ -30,7 +30,7 @@
                 $data['images_product'][1]
             )
                 ? 'product-block__img--hovered'
-                : ''; ?>"
+                : 'js-catalog-item-image'; ?>"
                  src="<?php echo $thumbsArr[70]['main']; ?>"
                  srcset="<?php echo $thumbsArr[70]['2x']; ?> 2x"
                  alt="<?php echo $data['item']['images_alt'][0]; ?>"
@@ -38,7 +38,7 @@
                  data-transfer="true"
                  data-product-id="<?php echo $data['item']['id']; ?>">
             <?php if (!empty($data['images_product'][1])): ?>
-            <img class="product-block__img product-block__img--hover"
+            <img class="product-block__img product-block__img--hover js-catalog-item-image"
                  src="<?php echo $thumbsArrHover[70]['main']; ?>"
                  srcset="<?php echo $thumbsArrHover[70]['2x']; ?> 2x"
                  alt="<?php echo $data['item']['images_alt'][0]; ?>"
@@ -74,53 +74,41 @@
         <?php endif; ?>
 
         <form action="<?php echo SITE . $data['liteFormData']['action']; ?>"
-                        method="<?php echo $data['liteFormData']['method']; ?>"
-                        class="property-form js-product-form <?php echo $data[
-                            'liteFormData'
-                        ]['catalogAction']; ?>"
-                        data-product-id='<?php echo $data['liteFormData'][
-                            'id'
-                        ]; ?>'>
-        <?php if (!empty($data['variants'])): ?>
-                        <!--блок с выбором вариантов товара-->
-                        <div class="c-goods__footer">
-                            <div class="c-form">                                                  
-                                <?php component('product/variants', $data); ?>
-                            </div>
-                        </div>
-        <?php endif; ?>
+              method="<?php echo $data['liteFormData']['method']; ?>"
+              class="property-form js-product-form <?php echo $data['liteFormData']['catalogAction']; ?>"
+              data-product-id='<?php echo $data['liteFormData']['id']; ?>'>
+            <?php if (!empty($data['variants'])): ?>
+                <!--блок с выбором вариантов товара-->
+                <div class="c-goods__footer">
+                    <div class="c-form">                                                  
+                        <?php component('product/variants', $data); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
         <!--цена товара на карточке с указанием валюты-->
-        <p class="price">
-            <?php echo $data['price']; ?>
-            <?php echo $data['currency']; ?>
-        </p>
+            <p class="price js-change-product-price">
+                <?php echo priceFormat($data['price']); ?>
+                <?php echo $data['currency']; ?>
+            </p>
+            <ul class="product-options">
+                <li class="product-options__item product-options__item--wishlist">
+                <?php // Кнопка добавить-удалить из избранного
+                component('favorites/btns', $data); ?>
+                </li>
+                <li class="product-options__item product-options__item--compare">
+                    <?php if (
+                        (EDITION == 'gipermarket' || EDITION == 'market') &&
+                        $data['liteFormData']['printCompareButton'] == 'true'
+                    ) {
+                        component('compare/btn/add', $data);
+                    } ?>
+                </li>
+                <li class="product-options__item product-options__item--cart">
+                    <?php component('cart/btn/add', $data); ?>
+                </li>
+            </ul>
         </form>
 
-
-
-<!--         <div class="product-card__cart-btn">
-            <div class="add-to-cart-btn">
-            <?php //component('cart/btn/add', $data); ?>
-            </div>
-        </div>
-
- -->        <!--кнопки опции карточки товара-->
-        <ul class="product-options">
-            <li class="product-options__item product-options__item--wishlist">
-            <?php // Кнопка добавить-удалить из избранного
-            component('favorites/btns', $data); ?>
-            </li>
-            <li class="product-options__item product-options__item--compare">
-                <?php if (
-                    (EDITION == 'gipermarket' || EDITION == 'market') &&
-                    $data['liteFormData']['printCompareButton'] == 'true'
-                ) {
-                    component('compare/btn/add', $data);
-                } ?>
-            </li>
-            <li class="product-options__item product-options__item--cart">
-                <?php component('cart/btn/add', $data); ?>
-            </li>
-        </ul>
+        <!--кнопки опции карточки товара-->
     </div>
 </div> <!--end product-block-->

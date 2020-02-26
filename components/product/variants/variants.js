@@ -199,7 +199,7 @@ function changeMainImgToVariant(elem) {
                     // Заменяем его
                     changeImgSrc(
                         itemImg,
-                        '30',
+                        '70',
                         response.data.image_thumbs
                     );
                 }

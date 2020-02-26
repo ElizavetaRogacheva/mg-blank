@@ -6,6 +6,8 @@
 
 .variants-table {
     width: 100%;
+    border-collapse: collapse;
+    border: none;
 }
 
 .c-variant__column label {
@@ -14,7 +16,6 @@
 }
 
 .c-variant__scroll {
-    overflow: auto;
     max-height: 100%;
 }
 
