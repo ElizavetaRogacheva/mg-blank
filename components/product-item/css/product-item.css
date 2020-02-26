@@ -163,7 +163,7 @@
     display: flex;
     width: auto;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     right: -30px;
     opacity: 0;
     -webkit-transition: all 0.5s ease-in-out;
@@ -177,18 +177,18 @@
     }
 }
 .product-options__item {
-    margin-right: 0;
+    margin-right: 5px;
 }
 
 .product-options__item--cart {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     font-size: 0;
     position: relative;
 }
 .product-options__item--cart a svg {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 8px;
     fill: #878787;

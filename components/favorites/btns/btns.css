@@ -18,10 +18,9 @@
 
 .mg-add-to-favorites svg,
 .mg-remove-to-favorites svg {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     vertical-align: sub;
-    margin-right: 4px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -51,9 +50,15 @@
     display: inline-block;
 }
 
+.product-options__item--wishlist {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
 .product-options__item--wishlist a {
-    width: 25px !important;
-    height: 25px !important;
+    width: 20px !important;
+    height: 20px !important;
     border: none !important;
     padding: 0;
     font-size: 0;
@@ -71,6 +76,8 @@
 
 .product-options__item--wishlist .mg-remove-to-favorites svg {
     fill: var(--main-color);
+    width: 18px;
+    height: 18px;
 }
 
 .product-options__item--wishlist a svg {
