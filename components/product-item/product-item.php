@@ -85,11 +85,26 @@
                     </div>
                 </div>
             <?php endif; ?>
+            <?php
+             if (MG::getSetting('printQuantityInMini') == 'true') {
+                component(
+                    'amount',
+                    [
+                        'id' => $data['id'],
+                        'maxCount' => $data['liteFormData']['maxCount'],
+                        'count' => '1',
+                    ]
+                );
+            }
+            ?>
+
         <!--цена товара на карточке с указанием валюты-->
             <p class="price js-change-product-price">
                 <?php echo priceFormat($data['price']); ?>
                 <?php echo $data['currency']; ?>
             </p>
+            <!--опция выбора количества продукта-->
+            <div class="c-buy js-product-controls">
             <ul class="product-options">
                 <li class="product-options__item product-options__item--wishlist">
                 <?php // Кнопка добавить-удалить из избранного
@@ -107,8 +122,8 @@
                     <?php component('cart/btn/add', $data); ?>
                 </li>
             </ul>
+        </div>
         </form>
 
         <!--кнопки опции карточки товара-->
-    </div>
 </div> <!--end product-block-->

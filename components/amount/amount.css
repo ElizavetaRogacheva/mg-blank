@@ -3,6 +3,10 @@
     height: 40px;
 }
 
+.product-block .cart_form {
+    margin-top: 10px;
+}
+
 .c-buy {
     display: flex;
     justify-content: space-between;
@@ -15,6 +19,12 @@
 .amount_change {
     display: flex;
     width: 100%;
+}
+
+.product-block .amount_change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .amount_change input {
