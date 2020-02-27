@@ -194,8 +194,15 @@ mgSEO($data);
             <?php component('pagination', $data['pager']); ?>
         <?php endif; ?>
     </div>
-
+    <div class="category-description-seo">
+      <?php if (!empty($data['cat_desc_seo'])) { ?>
+             <?php
+            // Выводим дополнительное описание страницы, если оно заполнено в админке
+            echo $data['cat_desc_seo'] ?>
+        <?php } ?>
+    </div>
   </div>
+
 </div>
 
 

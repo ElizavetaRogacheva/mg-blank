@@ -1558,6 +1558,10 @@ main {
     }
 }
 
+.category-description-seo {
+    padding: 15px;
+}
+
 .products-block__list--list {
     display: flex;
     flex-direction: column;
