@@ -22,9 +22,15 @@
 }
 
 .product-block .amount_change {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+@media (max-width: 767px) {
+    .product-block .amount_change {
+        margin-top: 100px !important;
+    }
 }
 
 .amount_change input {

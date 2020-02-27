@@ -1539,12 +1539,14 @@ main {
     background-color: #fff;
     margin: 1%;
     flex-grow: 1;
+    box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
     .products-block__list--grid > li {
-        min-width: 45%;
-        max-width: 45%;
+        min-width: 48%;
+        max-width: 48%;
+        flex-grow: 1;
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {

@@ -186,6 +186,11 @@
     }
 }
 
+.product-block .size-block,
+.product-block .color-block {
+    flex-wrap: wrap;
+}
+
 .product-block .size {
     padding: 0;
     border-radius: 50%;

@@ -173,7 +173,7 @@
     .product-options {
         opacity: 1;
         right: 0;
-        bottom: -20px;
+        bottom: 15px;
     }
 }
 .product-options__item {
