@@ -2921,6 +2921,31 @@ main {
 .registration-page .c-form__row {
     display: flex;
 }
+
+.registration-page .g-recaptcha {
+    margin-bottom: 20px;
+}
+
+.registration-page a {
+    border: none;
+    text-decoration: underline;
+    background-color: transparent;
+}
+.registration-page a:hover {
+    border: none;
+    background-color: transparent;
+    color: #000;
+}
+
+.registration-page .c-form__row:last-child {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-page .c-form__row:last-child .c-button {
+    margin-bottom: 15px;
+}
 /*страница избранного*/
 .favourites-page {
     padding: 30px 15%;

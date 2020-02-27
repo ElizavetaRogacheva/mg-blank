@@ -316,6 +316,7 @@ $locale = array(
   'newSticker' => 'New',
   'registration' => 'Registration',
   'login' => 'Login',
+  'loginRegistration' => 'I already have an account, log in',
   'personal' => 'Personal account',
   'firstTriggerText' => 'Lorem ipsum is simply dummy',
   'secondTriggerText' => 'Lorem ipsum is simply dummy',

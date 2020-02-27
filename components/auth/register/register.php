@@ -114,7 +114,7 @@
                     <a  class="c-button"
                         name="registration"
                         href="<?php echo SITE .'/enter'; ?>">
-                        <?php echo lang('login') ?>
+                        <?php echo lang('loginRegistration') ?>
                     </a>
                 </div>                
             </form>

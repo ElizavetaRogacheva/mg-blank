@@ -316,6 +316,7 @@
         'newSticker' => 'Новинка',
         'registration' => 'Регистрация',
         'login' => 'Войти',
+        'loginRegistration' => 'У меня уже есть аккаунт, войти',
         'personal' => 'Личный кабинет',     
         'firstTriggerText' => 'Lorem ipsum is simply dummy',
         'secondTriggerText' => 'Lorem ipsum is simply dummy',
