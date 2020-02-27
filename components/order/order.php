@@ -81,7 +81,8 @@ mgAddMeta('lib/datepicker.css');
                                         aria-label="<?php echo lang('orderDeliveryDate'); ?>"
                                         name="date_delivery"
                                         placeholder="<?php echo lang('orderDeliveryDate'); ?>"
-                                        value="<?php echo $_POST['date_delivery'] ?>">
+                                        value="<?php echo $_POST['date_delivery'] ?>"
+                                        autocomplete="off">
                             </div>
 
                             <!-- Выбор времени доставки -->
