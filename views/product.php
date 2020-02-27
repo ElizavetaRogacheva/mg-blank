@@ -135,6 +135,15 @@ mgSEO($data);
                         );
                         ?>
                     </li>
+                    <li class="c-product__row">
+                        <?php
+                        // СКЛАДЫ
+                        component(
+                            'product/storages',
+                            $data
+                        );
+                        ?>
+                    </li>
                 </ul>
             </div>
 
