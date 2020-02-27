@@ -1,0 +1,12 @@
+.name-group {
+    color: #000;
+    font-weight: 500;
+}
+
+.prop-text,
+.prop-name,
+.prop-price,
+.prop-unit {
+    display: inline-block;
+    width: 150px;
+}

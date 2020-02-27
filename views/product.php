@@ -126,6 +126,15 @@ mgSEO($data);
                         );
                         ?>
                     </li>
+                    <li class="c-product__row wholesales-data">
+                        <?php
+                        // Оптовые цены
+                        component(
+                            'product/wholesales',
+                            $data['wholesalesData']
+                        );
+                        ?>
+                    </li>
                 </ul>
             </div>
 
