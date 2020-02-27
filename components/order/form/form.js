@@ -93,11 +93,54 @@ $(document).ready(function () {
     var deliverySumm = 0;
 
     // действия при оформлении заказа
+    $('body').on('change', '.c-order__checkbox input', function () {
+        if ($(this).attr('type') == 'text') {
+            return false;
+        }
+        $("p#auxiliary").html('');
+
+        $('.c-order__checkbox input[type=checkbox]').parent().addClass('noneactive');
+        $('.c-order__checkbox input[type=checkbox]').parent().removeClass('active');
+        $('.c-order__checkbox input[type=checkbox]:checked').parent().removeClass('noneactive');
+        $('.c-order__checkbox input[type=checkbox]:checked').parent().addClass('active');
+    });
+
+    $('body').on('change', '.c-order__radiobutton input', function () {
+        if ($(this).attr('type') == 'text') {
+            return false;
+        }
+        $("p#auxiliary").html('');
+
+        $('.c-order__radiobutton input[type=radio]').parent().addClass('noneactive');
+        $('.c-order__radiobutton input[type=radio]').parent().removeClass('active');
+        $('.c-order__radiobutton input[type=radio]:checked').parent().removeClass('noneactive');
+        $('.c-order__radiobutton input[type=radio]:checked').parent().addClass('active');
+    });
+
+    $('body').on('change', '.order-storage input', function () {
+        if ($(this).attr('type') == 'text') {
+            return false;
+        }
+        $("p#auxiliary").html('');
+
+        $('.order-storage input[name=storage]').parent().addClass('noneactive');
+        $('.order-storage input[name=storage]').parent().removeClass('active');
+        $('.order-storage input[name=storage]:checked').parent().removeClass('noneactive');
+        $('.order-storage input[name=storage]:checked').parent().addClass('active');
+    });
+
+
     $('body').on('change', '.delivery-details-list input', function () {
         if ($(this).attr('type') == 'text') {
             return false;
         }
         $("p#auxiliary").html('');
+
+        $('.order-storage input[name=storage]').parent().addClass('noneactive');
+        $('.order-storage input[name=storage]').parent().removeClass('active');
+        $('.order-storage input[name=storage]:checked').parent().removeClass('noneactive');
+        $('.order-storage input[name=storage]:checked').parent().addClass('active');
+
         $('.delivery-details-list input[name=delivery]').parent().addClass('noneactive');
         $('.delivery-details-list input[name=delivery]').parent().removeClass('active');
 
