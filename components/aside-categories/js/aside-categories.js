@@ -1,13 +1,15 @@
-'use strict'
+'use strict';
 
-const categoryTitleWrapper = document.querySelectorAll('.js-categories-wrapper');
-const asideSubcategoriesList = document.querySelectorAll('.js-aside-subcategories');
+const asideSubcategoriesList = document.querySelectorAll(
+    '.js-aside-subcategories'
+);
+const asideCategoriesBtns = document.querySelectorAll(
+    '.js-categories-title-btn'
+);
 
-categoryTitleWrapper.forEach((category) => {
-    category.addEventListener('click', (evt) => {
-        if(category.parentNode.querySelector('.js-aside-subcategories') !== null) {
-            evt.preventDefault();
-            category.classList.toggle('visible');
-        }
+asideCategoriesBtns.forEach((categoryBtn) => {
+    categoryBtn.addEventListener('click', (evt) => {
+        evt.stopPropagation();
+        categoryBtn.parentNode.classList.toggle('visible');
     });
 });

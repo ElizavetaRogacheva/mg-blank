@@ -5,7 +5,6 @@ if (EDITION == 'gipermarket') {
     $fields = $opFieldsM->get();
 
     foreach ($fields as $key => $value) {
-        console_log($value['name']) ;
         if ($value['active'] == 0 || (empty($value['value']) && empty($value['variant']) )) continue;
         if ($data['variant']) { ?>
             <div class="product-opfield">

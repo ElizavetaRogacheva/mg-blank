@@ -1,6 +1,5 @@
 //пересчет цены товара аяксом (страница товара, миникарточка)
 $(document.body).on('change', '.js-onchange-price-recalc', function () {
-
     var form = '.js-product-form';
     var request = $(form).formSerialize();
     var productId = $(form).data('product-id');
@@ -57,6 +56,7 @@ $(document.body).on('change', '.js-onchange-price-recalc', function () {
             if (response.status === 'success') {
                 if ($(priceBlock).find('.product-default-price').length) {
                     $(priceBlock).find('.product-default-price').html(response.data.price);
+
                 } else {
                     $(priceBlock).html(response.data.price);
                 }
